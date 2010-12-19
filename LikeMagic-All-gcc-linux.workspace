@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="BulletBindings/BulletBindings-Linux.cbp" />
+		<Project filename="CustomBindings/CustomBindings-Linux.cbp" />
+		<Project filename="Interpreter/Interpreter-Linux.cbp" active="1">
+			<Depends filename="BulletBindings/BulletBindings-Linux.cbp" />
+			<Depends filename="CustomBindings/CustomBindings-Linux.cbp" />
+			<Depends filename="IrrlichtBindings/IrrlichtBindings-Linux.cbp" />
+			<Depends filename="LikeMagic/LikeMagic-Linux.cbp" />
+		</Project>
+		<Project filename="IrrlichtBindings/IrrlichtBindings-Linux.cbp" />
+		<Project filename="LikeMagic/LikeMagic-Linux.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
