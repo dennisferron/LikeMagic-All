@@ -1,3 +1,7 @@
+# Don't allow adding of files of libraries we can't redistribute.
+raknet/*
+irrklang/*
+
 # Ignore binaries
 Interpreter/bin/*
 Interpreter/NetbeansLinux/Interpreter/dist/Debug/GNU-Linux-x86/*
