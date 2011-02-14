@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1292730679 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
+1297627922 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
 	"Interpreter/Bindings.hpp"
 	"Bindings/Irrlicht/Bindings.hpp"
 	"Bindings/Bullet/Bindings.hpp"
 	"Bindings/Custom/Bindings.hpp"
 	"Bindings/IrrKlang/Bindings.hpp"
+	"Bindings/RakNet/Bindings.hpp"
 	"LikeMagic/Utility/UserMacros.hpp"
 
 1292730679 /home/dennis/code/LikeMagic-All/Interpreter/Include/Interpreter/Bindings.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/RuntimeTypeSystem.hpp
+1297636397 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/RuntimeTypeSystem.hpp
 	"boost/type_traits/is_enum.hpp"
 	"LikeMagic/Utility/EnumHelper.hpp"
 	"LikeMagic/AbstractTypeSystem.hpp"
@@ -742,8 +743,9 @@
 	<boost/type_traits/msvc/typeof.hpp>
 	<boost/type_traits/is_reference.hpp>
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/EnumHelper.hpp
+1297636397 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/EnumHelper.hpp
 	<iostream>
+	"boost/lexical_cast.hpp"
 
 1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/AbstractTypeSystem.hpp
 	"LikeMagic/TypeConv/TypeConvGraph.hpp"
@@ -5479,7 +5481,7 @@
 	<tuple>
 	"IndexPack.hpp"
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/Class.hpp
+1297627482 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/Class.hpp
 	"AbstractClass.hpp"
 	"LikeMagic/Marshaling/MethodCallGenerator.hpp"
 	"ConstructorCallTarget.hpp"
@@ -5651,7 +5653,7 @@
 1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/SetField.hpp
 	"FieldPtrTraits.hpp"
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/FieldPtrTraits.hpp
+1297627436 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/FieldPtrTraits.hpp
 	<tuple>
 	<vector>
 	"IndexPack.hpp"
@@ -5677,7 +5679,7 @@
 	"../SFMO/MethodCall.hpp"
 	"../SFMO/CppObjProxy.hpp"
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/ArrayFieldSetterTarget.hpp
+1297629732 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/ArrayFieldSetterTarget.hpp
 	"../Utility/SetField.hpp"
 	"AbstractCallTargetSelector.hpp"
 	"boost/utility/enable_if.hpp"
@@ -5803,12 +5805,13 @@
 	<boost/preprocessor/tuple/elem.hpp>
 	<boost/preprocessor/tuple/rem.hpp>
 
-1292730679 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Protos.cpp
+1297627922 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Protos.cpp
 	"Interpreter/Protos.hpp"
 	"Bindings/Irrlicht/Protos.hpp"
 	"Bindings/Bullet/Protos.hpp"
 	"Bindings/Custom/Protos.hpp"
 	"Bindings/IrrKlang/Protos.hpp"
+	"Bindings/RakNet/Protos.hpp"
 
 1292730679 /home/dennis/code/LikeMagic-All/Interpreter/Include/Interpreter/Protos.hpp
 	"LikeMagic/Backends/Io/IoVM.hpp"
@@ -6151,4 +6154,44 @@
 	"Bindings/IrrKlang/Protos.hpp"
 	"irrKlang.h"
 	"LikeMagic/Utility/UserMacros.hpp"
+
+1297620913 /home/dennis/code/LikeMagic-All/RakNetBindings/Include/Bindings/RakNet/Bindings.hpp
+	"LikeMagic/RuntimeTypeSystem.hpp"
+	"LikeMagic/Utility/DLLHelper.hpp"
+
+1297620913 /home/dennis/code/LikeMagic-All/RakNetBindings/Include/Bindings/RakNet/Protos.hpp
+	"LikeMagic/Backends/Io/IoVM.hpp"
+	"LikeMagic/Utility/DLLHelper.hpp"
+
+1292730967 /home/dennis/code/LikeMagic-All/boost/boost/lexical_cast.hpp
+	<climits>
+	<cstddef>
+	<istream>
+	<string>
+	<typeinfo>
+	<exception>
+	<boost/config.hpp>
+	<boost/limits.hpp>
+	<boost/mpl/if.hpp>
+	<boost/throw_exception.hpp>
+	<boost/type_traits/is_pointer.hpp>
+	<boost/type_traits/make_unsigned.hpp>
+	<boost/call_traits.hpp>
+	<boost/static_assert.hpp>
+	<boost/detail/lcast_precision.hpp>
+	<boost/detail/workaround.hpp>
+	<locale>
+	<strstream>
+	<sstream>
+
+1292730967 /home/dennis/code/LikeMagic-All/boost/boost/detail/lcast_precision.hpp
+	<climits>
+	<ios>
+	<limits>
+	<boost/config.hpp>
+	<boost/integer_traits.hpp>
+	<boost/mpl/if.hpp>
+	<boost/type_traits/is_abstract.hpp>
+	<boost/assert.hpp>
+	<boost/static_assert.hpp>
 

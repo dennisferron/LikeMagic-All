@@ -12,10 +12,14 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="/home/dennis/code/wayup/Script/wayup.io" />
+				<Option parameters="../Irrliscope/Server/Irrliscope.io" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<ExtraCommands>
+					<Add before="rm bin/Debug/LikeMagicDebugBuild" />
+					<Mode after="always" />
+				</ExtraCommands>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/LikeMagic" prefix_auto="1" extension_auto="1" />
@@ -43,6 +47,7 @@
 			<Add option="-Wno-unused-parameter" />
 			<Add option="-Wno-deprecated" />
 			<Add option="-Wno-ignored-qualifiers" />
+			<Add option="-DUSE_RAKNET" />
 			<Add directory="../BulletBindings/Include" />
 			<Add directory="../CustomBindings/Include" />
 			<Add directory="../Interpreter/Include" />
@@ -53,6 +58,7 @@
 			<Add directory="../bullet/src" />
 			<Add directory="../irrlicht/include" />
 			<Add directory="../IrrKlangBindings/Include" />
+			<Add directory="../RakNetBindings/Include" />
 		</Compiler>
 		<Linker>
 			<Add option="-L/usr/X11R6/lib" />
@@ -62,6 +68,7 @@
 			<Add option="-lXext" />
 			<Add option="-lX11" />
 			<Add option="-ldl" />
+			<Add option="-lpthread" />
 			<Add library="../BulletBindings/libBulletBindings-Linux.a" />
 			<Add library="../IrrlichtBindings/libIrrlichtBindings-Linux.a" />
 			<Add library="../CustomBindings/libCustomBindings-Linux.a" />
@@ -72,6 +79,8 @@
 			<Add library="../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
 			<Add library="../LikeMagic/libLikeMagic-Linux.a" />
 			<Add library="../io/_build/lib/libiovmall_static.a" />
+			<Add library="../RakNetBindings/libRakNetBindings-Linux.a" />
+			<Add library="../raknet/build-gcc-linux/Lib/LibStatic/libRakNetStatic.a" />
 		</Linker>
 		<Unit filename="../Interpreter/Include/Interpreter/Bindings.hpp" />
 		<Unit filename="../Interpreter/Include/Interpreter/Protos.hpp" />

@@ -16,6 +16,10 @@
 #include "Bindings/IrrKlang/Protos.hpp"
 #endif
 
+#ifdef USE_RAKNET
+#include "Bindings/RakNet/Protos.hpp"
+#endif
+
 using namespace LikeMagic::Backends::Io;
 
 namespace Interpreter{
@@ -25,9 +29,15 @@ void add_protos(IoVM& vm)
     Bindings::Irrlicht::add_protos(vm);
     Bindings::Bullet::add_protos(vm);
     Bindings::Custom::add_protos(vm);
+
 #ifdef USE_IRRKLANG
     Bindings::IrrKlang::add_protos(vm);
 #endif
+
+#ifdef USE_RAKNET
+    Bindings::RakNet::add_protos(vm);
+#endif
+
 }
 
 

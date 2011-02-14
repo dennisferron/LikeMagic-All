@@ -11,8 +11,13 @@
 #include "Bindings/Irrlicht/Bindings.hpp"
 #include "Bindings/Bullet/Bindings.hpp"
 #include "Bindings/Custom/Bindings.hpp"
+
 #ifdef USE_IRRKLANG
 #include "Bindings/IrrKlang/Bindings.hpp"
+#endif
+
+#ifdef USE_RAKNET
+#include "Bindings/RakNet/Bindings.hpp"
 #endif
 
 #include "LikeMagic/Utility/UserMacros.hpp"
@@ -26,9 +31,15 @@ void add_bindings(RuntimeTypeSystem& type_sys)
     Bindings::Irrlicht::add_bindings(type_sys);
     Bindings::Bullet::add_bindings(type_sys);
     Bindings::Custom::add_bindings(type_sys);
+
 #ifdef USE_IRRKLANG
     Bindings::IrrKlang::add_bindings(type_sys);
 #endif
+
+#ifdef USE_RAKNET
+    Bindings::RakNet::add_bindings(type_sys);
+#endif
+
 }
 
 }
