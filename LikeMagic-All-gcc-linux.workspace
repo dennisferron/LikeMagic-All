@@ -14,7 +14,9 @@
 		<Project filename="LikeMagic/LikeMagic-Linux.cbp" />
 		<Project filename="RakNetBindings/RakNetBindings-Linux.cbp" />
 		<Project filename="Irrliscope/Server/IrrliscopeServer.cbp" />
-		<Project filename="Irrliscope/Example/IrrliscopeExample-Linux.cbp" />
+		<Project filename="Irrliscope/Example/IrrliscopeExample-Linux.cbp">
+			<Depends filename="Irrliscope/Client/IrrliscopeClient-Linux.cbp" />
+		</Project>
 		<Project filename="Irrliscope/Client/IrrliscopeClient-Linux.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

@@ -17,7 +17,7 @@
 					<Add option="-g" />
 				</Compiler>
 				<ExtraCommands>
-					<Add before="rm bin/Debug/LikeMagicDebugBuild" />
+					<Add before="rm -f bin/Debug/LikeMagicDebugBuild" />
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>
