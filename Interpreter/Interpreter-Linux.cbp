@@ -69,9 +69,11 @@
 			<Add option="-lX11" />
 			<Add option="-ldl" />
 			<Add option="-lpthread" />
+			<Add library="../RakNetBindings/libRakNetBindings-Linux.a" />
 			<Add library="../BulletBindings/libBulletBindings-Linux.a" />
 			<Add library="../IrrlichtBindings/libIrrlichtBindings-Linux.a" />
 			<Add library="../CustomBindings/libCustomBindings-Linux.a" />
+			<Add library="../raknet/build-gcc-linux/Lib/LibStatic/libRakNetStatic.a" />
 			<Add library="../irrlicht/lib/Linux/libIrrlicht.a" />
 			<Add library="../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
 			<Add library="../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
@@ -79,8 +81,6 @@
 			<Add library="../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
 			<Add library="../LikeMagic/libLikeMagic-Linux.a" />
 			<Add library="../io/_build/lib/libiovmall_static.a" />
-			<Add library="../RakNetBindings/libRakNetBindings-Linux.a" />
-			<Add library="../raknet/build-gcc-linux/Lib/LibStatic/libRakNetStatic.a" />
 		</Linker>
 		<Unit filename="../Interpreter/Include/Interpreter/Bindings.hpp" />
 		<Unit filename="../Interpreter/Include/Interpreter/Protos.hpp" />
