@@ -766,6 +766,57 @@ Irrlicht comes with the binaries pre-built in the submodule.  There are no addit
 # Open the Code::Blocks workspace C:\code\LikeMagic-All\LikeMagic-All-gcc-win32.workspace
 </pre>
 </div>
+<div title="Common GCC Errors" modifier="DennisFerron" created="201102280622" modified="201102280629" changecount="5">
+<pre>This is a list of GCC error messages I've and their possible causes and resolutions.
+
+LikeMagic uses very advanced C++ and can sometimes hit some edge cases or trigger unusual errors if you make a mistake with it.  GCC is particularly unhelpful here, tending to report something wacky or trivial rather than the real problem, because GCC tends to interpret the input in the stupidest way possible and go off into never-never-land rather than back up and say, &quot;Maybe you really meant to type this...&quot;
+
+// &quot;Error: no matching function for 'blah blah blah &lt;unresolved overloaded function type&gt;'&quot;//
+
+You can't use LM_FUNC for overloaded functions.  Use LM_FUNC_OVERLOAD instead.  Already using LM_FUNC_OVERLOAD?  Double check your parameter types, they must match exactly.  Remember that the first argument to LM_FUNC_OVERLOAD after class name, use name, and function name, is the //return type// of the function, which may be void.  The argument types, if any, come after.  Also check whether the function is a const member function (if it is followed by the word const); you need to use LM_FUNC_OVERLOAD_CONST in that case.
+
+(FYI:  Whether the function is virtual or not shouldn't have anything to do with getting this error message with LikeMagic.)
+
+
+// &quot;error: ‘BOOST_PP_IIF_0’ was not declared in this scope&quot; //
+
+This can be caused by leaving off the parenthesis inside function lists for LM_FUNC (or for LM_FIELD).  The syntax for LM_FUNC is &quot;LM_FUNC(class_name, (func1)(func2)(func3)(etc.))&quot;.  Even if you are only declaring one function, you still need the parenthesis around its name, e.g. &quot;LM_FUNC(class_name, (func))&quot;.  Note that you do not put commas between the function names.  Spaces and line breaks are ok though.
+
+
+// &quot;Error:  'f' cannot be used as a member pointer, ...&quot; //
+
+You're trying to bind a static member function as if it were a regular member function.  Check your LM_FUNC definitions.  (Static member functions should be bound using the same facility as for namespace level functions.)
+
+
+// &quot;error: cannot declare pointer to 'void' member&quot; //
+
+GCC's error messages are always based on the worst possible interpretation of the input.  You probably got this message because the compiler decided the argument types list for a pointer-to-member declaration isn't an argument list after all.  Instead, GCC parsed the pointer-to-member declaration as an initialization of a &quot;&quot;field&quot;&quot; with the return type of the function as its type.
+
+Resolution:  One of the parameter types isn't being recognized as a type.  Figure out which parameter is causing the problem.  (One way to do this is to selectively remove one arg at a time and see if the error goes away.)  Once you know which it is, treat it as you would a &quot;type has not been declared&quot; error.  It could be caused by a misspelling, or maybe you need to qualify the type with a struct/class/namespace or add a &quot;using namespace&quot; declaration.
+
+See also // &quot;error: typedef is initialized&quot; //
+
+
+// &quot;error: typedef is initialized&quot; //
+
+Another GCC error-attribution meltdown.  This is caused by the compiler misinterpreting one of the types in the args list of a pointer-to-member-function declaration as an undeclared variable instead.  When C++ compilers don't know what something is, they don't just assume it's a type by default (as I wish they would).  Instead, they assume it is an undeclared variable of type &quot;int&quot; (because that's what C once allowed, like, a million years ago).  Then the compiler interprets the list of arg types as a constructor argument value, and 
+
+Resolution:  One of the parameter types isn't being recognized as a type.  Figure out which parameter is causing the problem.  (One way to do this is to selectively remove one arg at a time and see if the error goes away.)  Once you know which it is, treat it as you would a &quot;type has not been declared&quot; error.  It could be caused by a misspelling, or maybe you need to qualify the type with a struct/class/namespace or add a &quot;using namespace&quot; declaration.
+
+See also // &quot;error: cannot declare pointer to 'void' member&quot; //
+
+
+//  &quot;error: ‘f’ cannot be used as a member pointer, since it is of type ‘const return_type&amp; (*)()’&quot; //
+
+This can be caused by trying to bind a static function as if it were a member function.  (Note the lack of a class name in the signature; if it were a pointer-to-member-function, it should say ‘const return_type&amp; (ClassName::*)()’.)  Unfortunately due to GCC's horrible error reporting, it doesn't tell you WHICH function name that was bound was the one that caused the error, and the line number it reports will be the last line in the binding file.  This is exemplary of what is wrong with all of GCC's error reporting:  it reports the error deep down in the code where a problem was first encountered, but doesn't give you the higher level information that is actually useful.  And I say GCC, not C++ in general, because although it is difficult to give good error reporting for C++ and template code, it is not impossible, as the Clang project is currently demonstrating.
+
+OK, enough ranting:  what you'll need to do is examine the function signature carefully and make a guess which function it might be.  Then, you can use LM_STATIC_FUNC(type_sys, class_name, func_name) to bind that function.
+
+(You can also use LM_STATIC_FUNC to register global functions; it will always place a &quot;::&quot; between class_name and func_name, but you can pass a blank class name, so LM_STATIC_FUNC(type_sys, , func_name) will bind '::func_name' (in the global namespace) while LM_STATIC_FUNC(type_sys, Namespace::NestedNamespace, func_name) will bind &quot;Namespace::NestedNamespace::func_name&quot;.)
+
+
+</pre>
+</div>
 <div title="DefaultTiddlers" modifier="DennisFerron" created="201001122119" changecount="1">
 <pre>[[LikeMagic]]</pre>
 </div>
@@ -775,29 +826,12 @@ Irrlicht comes with the binaries pre-built in the submodule.  There are no addit
 <div title="Dropecho Studios" modifier="DennisFerron" created="201001122108" changecount="1">
 <pre>http://dropecho.com/</pre>
 </div>
-<div title="FAQ" modifier="DennisFerron" created="201001122251" modified="201005100034" changecount="28">
+<div title="FAQ" modifier="DennisFerron" created="201001122251" modified="201102280623" changecount="33">
 <pre>//Note:  These are in completely random order; I'm going to break this into subtopics once there are enough of them to get an idea what subtopics are needed.  It might be somewhat incorrect to call these &quot;questions&quot; as no one has asked them yet, but they are random pieces of trivia I've been jotting down as they come up, which seem to fit best in the FAQ format.//
 
-Q: //  &quot;error: ‘f’ cannot be used as a member pointer, since it is of type ‘const return_type&amp; (*)()’&quot; //
-A:  This can be caused by trying to bind a static function as if it were a member function.  (Note the lack of a class name in the signature; if it were a pointer-to-member-function, it should say ‘const return_type&amp; (ClassName::*)()’.)  Unfortunately due to GCC's horrible error reporting, it doesn't tell you WHICH function name that was bound was the one that caused the error, and the line number it reports will be the last line in the binding file.  This is exemplary of what is wrong with all of GCC's error reporting:  it reports the error deep down in the code where a problem was first encountered, but doesn't give you the higher level information that is actually useful.  And I say GCC, not C++ in general, because although it is difficult to give good error reporting for C++ and template code, it is not impossible, as the Clang project is currently demonstrating.
-
-OK, enough ranting:  what you'll need to do is examine the function signature carefully and make a guess which function it might be.  Then, you can use LM_STATIC_FUNC(type_sys, class_name, func_name) to bind that function.
-
-(You can also use LM_STATIC_FUNC to register global functions; it will always place a &quot;::&quot; between class_name and func_name, but you can pass a blank class name, so LM_STATIC_FUNC(type_sys, , func_name) will bind '::func_name' (in the global namespace) while LM_STATIC_FUNC(type_sys, Namespace::NestedNamespace, func_name) will bind &quot;Namespace::NestedNamespace::func_name&quot;.)
-
-Q: // &quot;error: ‘BOOST_PP_IIF_0’ was not declared in this scope&quot; //
-A:  This can be caused by leaving off the parenthesis inside function lists for LM_FUNC (or for LM_FIELD).  The syntax for LM_FUNC is &quot;LM_FUNC(class_name, (func1)(func2)(func3)(etc.))&quot;.  Even if you are only declaring one function, you still need the parenthesis around its name, e.g. &quot;LM_FUNC(class_name, (func))&quot;.  Note that you do not put commas between the function names.  Spaces and line breaks are ok though.
 
 Q: // &quot;No type converter from double&amp; to &lt;some pointer type&gt;&quot; //
 A: In C++, the number zero and the null pointer are the same thing, but in Io they are different.  If you need to pass NULL to a C++ function that takes a pointer, use [[nil]].  LikeMagic has special fancy magic to turn Io's [[nil]] into a C++ null pointer of any type, so that you can pass NULL's when you need to.  On the other hand, were you to pass a &quot;0&quot; in Io it will always come through to LikeMagic as the number 0, not a pointer at all.  Io's native number type is double, hence the error message saying it can't convert a number to a pointer.
-
-Q: // &quot;Error:  'f' cannot be used as a member pointer, ...&quot; //
-A:  You're trying to bind a static member function as if it were a regular member function.  Check your LM_FUNC definitions.  (Static member functions should be bound using the same facility as for namespace level functions.)
-
-Q: // &quot;Error: no matching function for 'blah blah blah &lt;unresolved overloaded function type&gt;'&quot;//
-A: You can't use LM_FUNC for overloaded functions.  Use LM_FUNC_OVERLOAD instead.  Already using LM_FUNC_OVERLOAD?  Double check your parameter types, they must match exactly.  Remember that the first argument to LM_FUNC_OVERLOAD after class name, use name, and function name, is the //return type// of the function, which may be void.  The argument types, if any, come after.  Also check whether the function is a const member function (if it is followed by the word const); you need to use LM_FUNC_OVERLOAD_CONST in that case.
-
-(FYI:  Whether the function is virtual or not shouldn't have anything to do with getting this error message with LikeMagic.)
 
 Q: // Where's position2d? //
 A: Irrlicht deprecated position2d.  Vector2d and position2d now are the same thing in the Irrlicht C++ code; in LikeMagic, just use vector2d.  For position2d&lt;s32&gt;, use &quot;vector2di&quot;.
