@@ -17,7 +17,7 @@
 					<Add option="-g" />
 				</Compiler>
 				<ExtraCommands>
-					<Add before="rm -f bin/Debug/LikeMagicDebugBuild" />
+					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild   ../RakNetBindings/libRakNetBindings-Linux.a ../BulletBindings/libBulletBindings-Linux.a ../IrrlichtBindings/libIrrlichtBindings-Linux.a ../CustomBindings/libCustomBindings-Linux.a ../raknet/build-gcc-linux/Lib/LibStatic/libRakNetStatic.a ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>
