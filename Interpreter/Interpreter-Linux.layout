@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="../Interpreter/Source/Bindings.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="905" topLine="0" />
+	<File name="../Interpreter/Include/Interpreter/Protos.hpp" open="0" top="0" tabpos="0">
+		<Cursor position="411" topLine="0" />
 	</File>
-	<File name="../Interpreter/Source/Protos.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="854" topLine="0" />
+	<File name="../Interpreter/Source/Bindings.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="718" topLine="0" />
+	</File>
+	<File name="../Interpreter/Source/Protos.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="668" topLine="0" />
 	</File>
 	<File name="../Interpreter/Source/main.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="726" topLine="4" />

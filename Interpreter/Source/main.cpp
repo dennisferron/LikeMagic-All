@@ -20,6 +20,7 @@ using namespace Interpreter;
 
 #include "boost/algorithm/string/trim.hpp"
 #include "LikeMagic/Utility/UserMacros.hpp"
+#include "LikeMagic/Backends/Io/IoVM.hpp"
 
 // Predicate for trimming characters up to a directory marker.
 struct IsNotDir { bool operator()(char c) { return c != '/' && c != '\\'; } };
@@ -33,7 +34,7 @@ int main(int argc, char const* argv[])
 
         IoVM vm(type_sys);
         vm.add_proto("CppFalse", false, false);
-        add_protos(vm);
+        add_protos(vm, type_sys);
 
         if (argc != 2)
         {

@@ -20,13 +20,14 @@
 #include "Bindings/RakNet/Protos.hpp"
 #endif
 
+using namespace LikeMagic;
 using namespace LikeMagic::Backends::Io;
 
 namespace Interpreter{
 
-void add_protos(IoVM& vm)
+void add_protos(IoVM& vm, RuntimeTypeSystem& type_sys)
 {
-    Bindings::Irrlicht::add_protos(vm);
+    //Bindings::Irrlicht::add_protos(vm, type_sys);
     Bindings::Bullet::add_protos(vm);
     Bindings::Custom::add_protos(vm);
 
