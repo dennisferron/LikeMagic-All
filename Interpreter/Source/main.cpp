@@ -59,15 +59,15 @@ int main(int argc, char const* argv[])
     }
     catch (std::logic_error e)
     {
-        std::cout << "LikeMagic crashed with exception '" << e.what() << "'" << std::endl;
+        std::cout << "LikeMagic exited with exception '" << e.what() << "'" << std::endl;
     }
     catch (std::exception e)
     {
-        std::cout << "LikeMagic crashed with exception " << e.what() << std::endl;
+        std::cout << "LikeMagic exited with exception " << e.what() << std::endl;
     }
     catch (...)
     {
-        std::cout << "LikeMagic crashed with unknown error." << std::endl;
+        std::cout << "LikeMagic exited with unknown error." << std::endl;
     }
 
     std::cout << "Press enter..." << std::endl;

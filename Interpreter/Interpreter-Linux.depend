@@ -11,13 +11,14 @@
 1292730679 /home/dennis/code/LikeMagic-All/Interpreter/Include/Interpreter/Bindings.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 
-1303965666 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/RuntimeTypeSystem.hpp
+1304396606 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/RuntimeTypeSystem.hpp
 	"boost/type_traits/is_enum.hpp"
 	"LikeMagic/Utility/EnumHelper.hpp"
 	"LikeMagic/AbstractTypeSystem.hpp"
 	"LikeMagic/Marshaling/Class.hpp"
 	"LikeMagic/Marshaling/StaticMethods.hpp"
 	"LikeMagic/Marshaling/ProxyMethods.hpp"
+	"LikeMagic/Marshaling/NamespaceTypeInfo.hpp"
 	"LikeMagic/TypeConv/NumberConv.hpp"
 	"LikeMagic/TypeConv/ImplicitConv.hpp"
 	"LikeMagic/TypeConv/VectorConv.hpp"
@@ -1113,7 +1114,7 @@
 	<boost/current_function.hpp>
 	<assert.h>
 
-1303964632 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/AbstractTypeSystem.hpp
+1304222756 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/AbstractTypeSystem.hpp
 	"LikeMagic/TypeConv/TypeConvGraph.hpp"
 	"LikeMagic/TypeConv/ImplicitConv.hpp"
 	"LikeMagic/SFMO/NullExpr.hpp"
@@ -1124,6 +1125,7 @@
 	"LikeMagic/Utility/TupleForEach.hpp"
 	"LikeMagic/Utility/KeyWrapper.hpp"
 	"LikeMagic/ITypeSystemObserver.hpp"
+	"LikeMagic/NamespaceForward.hpp"
 	"boost/utility/enable_if.hpp"
 	"boost/type_traits.hpp"
 	"boost/unordered_map.hpp"
@@ -5512,7 +5514,7 @@
 	<tuple>
 	"IndexPack.hpp"
 
-1303965554 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/Class.hpp
+1304389415 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/Class.hpp
 	"AbstractClass.hpp"
 	"LikeMagic/Marshaling/MethodCallGenerator.hpp"
 	"ConstructorCallTarget.hpp"
@@ -5531,7 +5533,7 @@
 	"CustomFieldSetterTarget.hpp"
 	"LikeMagic/SFMO/ClassExpr.hpp"
 
-1303954761 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/AbstractClass.hpp
+1304394864 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/AbstractClass.hpp
 	<string>
 	<stdexcept>
 	<typeinfo>
@@ -5541,6 +5543,7 @@
 	"boost/unordered_map.hpp"
 	"LikeMagic/Utility/AbstractTypeInfo.hpp"
 	"LikeMagic/ITypeSystemObserver.hpp"
+	"LikeMagic/NamespaceForward.hpp"
 
 1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/MethodCallGenerator.hpp
 	"../Utility/FuncPtrTraits.hpp"
@@ -5560,7 +5563,7 @@
 	"LikeMagic/Utility/MakeCall.hpp"
 	"LikeMagic/SFMO/methodcall_args.hpp"
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/MakeCall.hpp
+1304389955 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/MakeCall.hpp
 	"FuncPtrTraits.hpp"
 
 1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/SFMO/methodcall_args.hpp
@@ -5698,7 +5701,7 @@
 	"BetterTypeInfo.hpp"
 	"boost/type_traits/is_same.hpp"
 
-1298435150 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/MarkableObjGraph.hpp
+1304192376 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/MarkableObjGraph.hpp
 	"LikeMagic/IMarkable.hpp"
 	<set>
 	"boost/type_traits.hpp"
@@ -5762,13 +5765,14 @@
 	<iostream>
 	<stdexcept>
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/StaticMethods.hpp
+1304389166 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/StaticMethods.hpp
 	"AbstractClass.hpp"
 	"MethodCallGenerator.hpp"
 	"LikeMagic/SFMO/ClassExpr.hpp"
 	"LikeMagic/Marshaling/DummyClass.hpp"
+	"NamespaceTypeInfo.hpp"
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/DummyClass.hpp
+1304389491 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/DummyClass.hpp
 	"AbstractClass.hpp"
 	"CallTargetSelector.hpp"
 	"ConstructorCallTarget.hpp"
@@ -5791,7 +5795,7 @@
 	"LikeMagic/Utility/FuncPtrTraits.hpp"
 	<boost/type_traits.hpp>
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/ProxyMethods.hpp
+1304221250 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/ProxyMethods.hpp
 	"AbstractClass.hpp"
 	"ProxyMethodSelector.hpp"
 	"LikeMagic/SFMO/ClassExpr.hpp"
@@ -5835,8 +5839,9 @@
 	"LikeMagic/RuntimeTypeSystem.hpp"
 	"LikeMagic/Utility/DLLHelper.hpp"
 
-1298436774 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/UserMacros.hpp
+1304223142 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/UserMacros.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
+	"LikeMagic/Namespace.hpp"
 	"boost/preprocessor/seq/for_each.hpp"
 	"boost/preprocessor/stringize.hpp"
 	<vector>
@@ -5861,11 +5866,11 @@
 
 1303872564 /home/dennis/code/LikeMagic-All/Interpreter/Include/Interpreter/Protos.hpp
 
-1303964412 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Backends/Io/IoVM.hpp
+1304389526 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Backends/Io/IoVM.hpp
+	"LikeMagic/RuntimeTypeSystem.hpp"
 	"LikeMagic/Backends/Io/API_Io.hpp"
 	"LikeMagic/SFMO/CppObjProxy.hpp"
 	"LikeMagic/ITypeSystemObserver.hpp"
-	"LikeMagic/RuntimeTypeSystem.hpp"
 	"boost/unordered_map.hpp"
 	"boost/unordered_set.hpp"
 
@@ -5891,7 +5896,7 @@
 	"LikeMagic/Backends/Io/IoVM.hpp"
 	"LikeMagic/Utility/DLLHelper.hpp"
 
-1303872626 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/main.cpp
+1304216127 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/main.cpp
 	"Interpreter/Bindings.hpp"
 	"Interpreter/Protos.hpp"
 	<sstream>
@@ -6230,7 +6235,15 @@
 	"../SFMO/CppObjProxy.hpp"
 	"LikeMagic/SFMO/Reference.hpp"
 
-1303964378 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/ITypeSystemObserver.hpp
+1304201149 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/ITypeSystemObserver.hpp
 	"LikeMagic/Utility/TypeInfoCache.hpp"
 	<string>
+
+1304222620 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/NamespaceForward.hpp
+
+1304395698 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Namespace.hpp
+	"LikeMagic/RuntimeTypeSystem.hpp"
+
+1304389762 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/NamespaceTypeInfo.hpp
+	"LikeMagic/Utility/AbstractTypeInfo.hpp"
 
