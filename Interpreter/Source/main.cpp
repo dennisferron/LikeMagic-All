@@ -33,8 +33,6 @@ int main(int argc, char const* argv[])
         add_bindings(type_sys);
 
         IoVM vm(type_sys);
-        vm.add_proto("CppFalse", false, false);
-        add_protos(vm, type_sys);
 
         if (argc != 2)
         {
