@@ -5442,16 +5442,8 @@
 	<ostream>
 	<boost/smart_ptr/detail/operator_bool.hpp>
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/TypeInfoCache.hpp
-	<typeinfo>
-	<stdexcept>
-	<iostream>
-	<vector>
-	<memory>
-	<map>
-	"boost/intrusive_ptr.hpp"
-	"boost/functional/hash.hpp"
-	"boost/unordered_map.hpp"
+1304736639 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/TypeInfoCache.hpp
+	"LikeMagic/Utility/TypeIndex.hpp"
 	"LikeMagic/Utility/KeyWrapper.hpp"
 
 1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/KeyWrapper.hpp
@@ -5866,15 +5858,17 @@
 
 1303872564 /home/dennis/code/LikeMagic-All/Interpreter/Include/Interpreter/Protos.hpp
 
-1304389526 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Backends/Io/IoVM.hpp
+1304740023 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Backends/Io/IoVM.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
+	"LikeMagic/Backends/Io/IoBlock.hpp"
 	"LikeMagic/Backends/Io/API_Io.hpp"
 	"LikeMagic/SFMO/CppObjProxy.hpp"
 	"LikeMagic/ITypeSystemObserver.hpp"
+	"LikeMagic/MarkableObjGraph.hpp"
 	"boost/unordered_map.hpp"
 	"boost/unordered_set.hpp"
 
-1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Backends/Io/API_Io.hpp
+1304793773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Backends/Io/API_Io.hpp
 	"LikeMagic/SFMO/AbstractCppObjProxy.hpp"
 	"LikeMagic/Utility/BetterTypeInfo.hpp"
 
@@ -5896,7 +5890,7 @@
 	"LikeMagic/Backends/Io/IoVM.hpp"
 	"LikeMagic/Utility/DLLHelper.hpp"
 
-1304216127 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/main.cpp
+1304473193 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/main.cpp
 	"Interpreter/Bindings.hpp"
 	"Interpreter/Protos.hpp"
 	<sstream>
@@ -6246,4 +6240,23 @@
 
 1304389762 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Marshaling/NamespaceTypeInfo.hpp
 	"LikeMagic/Utility/AbstractTypeInfo.hpp"
+
+1304793907 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Backends/Io/IoBlock.hpp
+	"LikeMagic/Backends/Io/API_Io.hpp"
+	"LikeMagic/AbstractTypeSystem.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+	"LikeMagic/IMarkable.hpp"
+	<tuple>
+
+1304736558 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/TypeIndex.hpp
+	<typeinfo>
+	<stdexcept>
+	<iostream>
+	<vector>
+	<memory>
+	<map>
+	"boost/intrusive_ptr.hpp"
+	"boost/functional/hash.hpp"
+	"boost/unordered_map.hpp"
+	"LikeMagic/Utility/KeyWrapper.hpp"
 
