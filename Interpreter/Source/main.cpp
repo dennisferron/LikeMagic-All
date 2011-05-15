@@ -22,8 +22,32 @@ using namespace Interpreter;
 #include "LikeMagic/Utility/UserMacros.hpp"
 #include "LikeMagic/Backends/Io/IoVM.hpp"
 
+using namespace std;
+
 // Predicate for trimming characters up to a directory marker.
 struct IsNotDir { bool operator()(char c) { return c != '/' && c != '\\'; } };
+
+void do_cli(IoVM& vm)
+{
+    cout << std::endl;
+    cout << "LikeMagic Io binding library." << std::endl;
+    cout << "To run file from system commandline: LikeMagic <filename.io>" << std::endl;
+    cout << "To run file from the Io> prompt: doFile(\"<filename.io>\")" << std::endl;
+    cout << "" << std::endl;
+    cout << "Type 'exit' to quit." << std::endl;
+    vm.run_cli();
+}
+
+void do_file(IoVM& vm, string file_name)
+{
+    std::string scriptPath(file_name);
+    boost::algorithm::trim_right_if(scriptPath, IsNotDir());
+    vm.add_proto("scriptPath", scriptPath, true);
+
+    std::stringstream code;
+    code << "doFile(\"" << file_name << "\")";
+    vm.do_string(code.str());
+}
 
 int main(int argc, char const* argv[])
 {
@@ -34,41 +58,28 @@ int main(int argc, char const* argv[])
 
         IoVM vm(type_sys);
 
-        if (argc != 2)
+        for (int i=1; i<argc; ++i)
         {
-            std::cout << std::endl;
-            std::cout << "LikeMagic Io binding library." << std::endl;
-            std::cout << "To run file from system commandline: LikeMagic <filename.io>" << std::endl;
-            std::cout << "To run file from the Io> prompt: doFile(\"<filename.io>\")" << std::endl;
-            std::cout << "" << std::endl;
-            std::cout << "Type 'exit' to quit." << std::endl;
-            vm.run_cli();
-        }
-        else
-        {
-            std::string scriptPath(argv[1]);
-            boost::algorithm::trim_right_if(scriptPath, IsNotDir());
-            vm.add_proto("scriptPath", scriptPath, true);
-
-            std::stringstream code;
-            code << "doFile(\"" << argv[1] << "\")";
-            vm.do_string(code.str());
+            if (string(argv[i]) == "--runCLI")
+                do_cli(vm);
+            else
+                do_file(vm, argv[i]);
         }
     }
     catch (std::logic_error e)
     {
-        std::cout << "LikeMagic exited with exception '" << e.what() << "'" << std::endl;
+        cout << "LikeMagic exited with exception '" << e.what() << "'" << std::endl;
     }
     catch (std::exception e)
     {
-        std::cout << "LikeMagic exited with exception " << e.what() << std::endl;
+        cout << "LikeMagic exited with exception " << e.what() << std::endl;
     }
     catch (...)
     {
-        std::cout << "LikeMagic exited with unknown error." << std::endl;
+        cout << "LikeMagic exited with unknown error." << std::endl;
     }
 
-    std::cout << "Press enter..." << std::endl;
+    cout << "Press enter..." << std::endl;
     std::cin.ignore( 99, '\n' );
 
     return 0;
