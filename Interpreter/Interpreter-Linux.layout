@@ -10,7 +10,7 @@
 	<File name="../Interpreter/Source/Protos.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="668" topLine="0" />
 	</File>
-	<File name="../Interpreter/Source/main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="1415" topLine="40" />
+	<File name="../Interpreter/Source/main.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="1415" topLine="26" />
 	</File>
 </CodeBlocks_layout_file>

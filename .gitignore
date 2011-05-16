@@ -8,6 +8,12 @@ Interpreter/NetbeansLinux/Interpreter/dist/Debug/GNU-Linux-x86/*
 Projects/CodeBlocksLinux/Interpreter/bin/Debug/*
 Projects/CodeBlocksLinux/Interpreter/bin/Release/*
 
+# Ignore symbolic directory link I had to add to make codeblocks stupid a$$ able to find my LikeMagic include directory.
+# (It insists on looking for LikeMagic/Include files under Interpreter/Include.)
+Interpreter/Include/LikeMagic
+Interpreter/Include/LikeMagic/
+Interpreter/Include/LikeMagic/*
+
 #Ignore profile/trace files
 gmon.out
 *.gcda
