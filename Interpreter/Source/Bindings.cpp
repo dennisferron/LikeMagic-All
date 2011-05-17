@@ -18,11 +18,13 @@
 
 #ifdef USE_RAKNET
 #include "Bindings/RakNet/Bindings.hpp"
+#include "Bindings/RakNet/Protos.hpp"
 #endif
 
 #include "LikeMagic/Utility/UserMacros.hpp"
 
 using namespace LikeMagic;
+using namespace LikeMagic::Backends::Io;
 
 namespace Interpreter{
 
@@ -37,7 +39,10 @@ void add_bindings(RuntimeTypeSystem& type_sys)
 #endif
 
 #ifdef USE_RAKNET
-    Bindings::RakNet::add_bindings(type_sys);
+    //Bindings::RakNet::add_bindings(type_sys);
+    //auto ns_raknet = Namespace::global(type_sys).subspace("RakNet");
+    //LM_STATIC_FUNC(ns_raknet, Bindings::RakNet, add_bindings)
+    //LM_STATIC_FUNC(ns_raknet, Bindings::RakNet, add_protos)
 #endif
 
 }

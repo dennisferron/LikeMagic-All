@@ -36,7 +36,7 @@ void add_protos(IoVM& vm, RuntimeTypeSystem& type_sys)
 #endif
 
 #ifdef USE_RAKNET
-    Bindings::RakNet::add_protos(vm);
+    //Bindings::RakNet::add_protos(vm);
 #endif
 
 }
