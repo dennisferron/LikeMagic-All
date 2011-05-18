@@ -28,11 +28,11 @@ namespace Interpreter{
 void add_protos(IoVM& vm, RuntimeTypeSystem& type_sys)
 {
     //Bindings::Irrlicht::add_protos(vm, type_sys);
-    Bindings::Bullet::add_protos(vm);
-    Bindings::Custom::add_protos(vm);
+    //Bindings::Bullet::add_protos(vm);
+    //Bindings::Custom::add_protos(vm);
 
 #ifdef USE_IRRKLANG
-    Bindings::IrrKlang::add_protos(vm);
+    //Bindings::IrrKlang::add_protos(vm);
 #endif
 
 #ifdef USE_RAKNET
