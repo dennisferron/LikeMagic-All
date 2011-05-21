@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="../Interpreter/Source/Bindings.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="708" topLine="5" />
+	<File name="../Interpreter/Include/Interpreter/Bindings.hpp" open="0" top="0" tabpos="0">
+		<Cursor position="361" topLine="0" />
 	</File>
-	<File name="../Interpreter/Source/Protos.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="821" topLine="0" />
+	<File name="../Interpreter/Source/Bindings.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="747" topLine="10" />
 	</File>
 	<File name="../Interpreter/Source/main.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="0" topLine="33" />
+		<Cursor position="1565" topLine="41" />
+	</File>
+	<File name="../IrrKlangBindings/Include/Bindings/IrrKlang/Bindings.hpp" open="0" top="0" tabpos="0">
+		<Cursor position="375" topLine="0" />
+	</File>
+	<File name="../IrrKlangBindings/Source/Bindings.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="672" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

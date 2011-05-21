@@ -25,7 +25,7 @@ using namespace LikeMagic::Backends::Io;
 
 namespace Interpreter{
 
-void add_protos(IoVM& vm, RuntimeTypeSystem& type_sys)
+void add_protos(IoVM& vm, Namespace const& type_sys)
 {
     //Bindings::Irrlicht::add_protos(vm, type_sys);
     //Bindings::Bullet::add_protos(vm);

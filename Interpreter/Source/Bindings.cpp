@@ -28,7 +28,7 @@ using namespace LikeMagic::Backends::Io;
 
 namespace Interpreter{
 
-void add_bindings(RuntimeTypeSystem& type_sys)
+void add_bindings(LikeMagic::RuntimeTypeSystem& type_sys)
 {
     auto ns_bindings = Namespace::global(type_sys).subspace("Bindings");
 

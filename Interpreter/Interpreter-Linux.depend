@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1305688532 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
+1305956234 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
 	"Interpreter/Bindings.hpp"
 	"Bindings/Irrlicht/Bindings.hpp"
 	"Bindings/Bullet/Bindings.hpp"
@@ -9,7 +9,7 @@
 	"Bindings/RakNet/Protos.hpp"
 	"LikeMagic/Utility/UserMacros.hpp"
 
-1292730679 /home/dennis/code/LikeMagic-All/Interpreter/Include/Interpreter/Bindings.hpp
+1305956497 /home/dennis/code/LikeMagic-All/Interpreter/Include/Interpreter/Bindings.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 
 1305424626 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/RuntimeTypeSystem.hpp
@@ -5816,15 +5816,15 @@
 
 1292730773 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Utility/DLLHelper.hpp
 
-1292730843 /home/dennis/code/LikeMagic-All/BulletBindings/Include/Bindings/Bullet/Bindings.hpp
+1305956317 /home/dennis/code/LikeMagic-All/BulletBindings/Include/Bindings/Bullet/Bindings.hpp
 	"LikeMagic/Utility/DLLHelper.hpp"
-	"LikeMagic/RuntimeTypeSystem.hpp"
+	"LikeMagic/Namespace.hpp"
 
 1292730797 /home/dennis/code/LikeMagic-All/CustomBindings/Include/Bindings/Custom/Bindings.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 	"LikeMagic/Utility/DLLHelper.hpp"
 
-1292730928 /home/dennis/code/LikeMagic-All/IrrKlangBindings/Include/Bindings/IrrKlang/Bindings.hpp
+1305954792 /home/dennis/code/LikeMagic-All/IrrKlangBindings/Include/Bindings/IrrKlang/Bindings.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 
 1300595418 /home/dennis/code/LikeMagic-All/RakNetBindings/Include/Bindings/RakNet/Bindings.hpp
@@ -5848,7 +5848,7 @@
 	<boost/preprocessor/tuple/elem.hpp>
 	<boost/preprocessor/tuple/rem.hpp>
 
-1305688627 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Protos.cpp
+1305954792 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Protos.cpp
 	"Interpreter/Protos.hpp"
 	"Bindings/Irrlicht/Protos.hpp"
 	"Bindings/Bullet/Protos.hpp"
@@ -5856,7 +5856,8 @@
 	"Bindings/IrrKlang/Protos.hpp"
 	"Bindings/RakNet/Protos.hpp"
 
-1303872564 /home/dennis/code/LikeMagic-All/Interpreter/Include/Interpreter/Protos.hpp
+1305956497 /home/dennis/code/LikeMagic-All/Interpreter/Include/Interpreter/Protos.hpp
+	"LikeMagic/Namespace.hpp"
 
 1305427746 /home/dennis/code/LikeMagic-All/LikeMagic/Include/LikeMagic/Backends/Io/IoVM.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
@@ -6195,7 +6196,7 @@
 1292730967 /home/dennis/code/LikeMagic-All/boost/boost/algorithm/string/predicate_facade.hpp
 	<boost/algorithm/string/config.hpp>
 
-1292730928 source:/home/dennis/code/LikeMagic-All/IrrKlangBindings/Source/Bindings.cpp
+1305954792 source:/home/dennis/code/LikeMagic-All/IrrKlangBindings/Source/Bindings.cpp
 	"Bindings/Irrlicht/Bindings.hpp"
 	"LikeMagic/Utility/UserMacros.hpp"
 	"irrKlang.h"
@@ -6768,7 +6769,7 @@
 	<vector>
 	"../Marshaling/ICustomField.hpp"
 
-1304913445 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Namespace.hpp
+1305956613 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Namespace.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 
 1305595503 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Backends/Io/IoVM.hpp

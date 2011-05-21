@@ -8,6 +8,8 @@
 
 #pragma once
 
+#include "LikeMagic/Namespace.hpp"
+
 namespace LikeMagic {
     class RuntimeTypeSystem;
     namespace Backends {
