@@ -19,6 +19,5 @@
 		</Project>
 		<Project filename="Irrliscope/Client/IrrliscopeClient-Linux.cbp" />
 		<Project filename="Irrliscope/Server/IrrliscopeServer.cbp" />
-		<Project filename="../wayup/WayUp.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
