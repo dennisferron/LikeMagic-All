@@ -42,7 +42,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
-				<Option parameters="../../wayup/Script/wayup.io --runCLI" />
+				<Option parameters="../../wayup/Script/wayup.io" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
