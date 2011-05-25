@@ -47,7 +47,7 @@
 					<Add option="-g" />
 				</Compiler>
 				<ExtraCommands>
-					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild   ../RakNetBindings/libRakNetBindings-Linux.a ../BulletBindings/libBulletBindings-Linux.a ../IrrlichtBindings/libIrrlichtBindings-Linux.a ../CustomBindings/libCustomBindings-Linux.a ../raknet/build-gcc-linux/Lib/LibStatic/libRakNetStatic.a ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
+					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../RakNetBindings/libRakNetBindings-Linux.a ../BulletBindings/libBulletBindings-Linux.a ../IrrlichtBindings/libIrrlichtBindings-Linux.a ../CustomBindings/libCustomBindings-Linux.a ../raknet/build-gcc-linux/Lib/LibStatic/libRakNetStatic.a ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
 					<Add after="cp -R -f ../LikeMagic/Script/Io/* ../../wayup/Script/LikeMagic" />
 					<Add after="cp -R -f ../BulletBindings/Script/* ../../wayup/Script/LikeMagic" />
 					<Add after="cp -R -f ../CustomBindings/Script/* ../../wayup/Script/LikeMagic" />
@@ -80,6 +80,7 @@
 			<Add directory="../irrlicht/include" />
 			<Add directory="../IrrKlangBindings/Include" />
 			<Add directory="../RakNetBindings/Include" />
+			<Add directory="../desteer/bindings/Include" />
 		</Compiler>
 		<Linker>
 			<Add option="-L/usr/X11R6/lib" />
@@ -100,6 +101,8 @@
 			<Add library="../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
 			<Add library="../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
 			<Add library="../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
+			<Add library="../desteer/bindings/libDESteerBindings.a" />
+			<Add library="../desteer/lib/libdesteer.a" />
 			<Add library="../LikeMagic/libLikeMagic-Linux.a" />
 			<Add library="../io/_build/lib/libiovmall_static.a" />
 		</Linker>

@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1305956234 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
+1306295075 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
 	"Interpreter/Bindings.hpp"
 	"Bindings/Irrlicht/Bindings.hpp"
 	"Bindings/Bullet/Bindings.hpp"
 	"Bindings/Custom/Bindings.hpp"
+	"Bindings/DESteer/Bindings.hpp"
 	"Bindings/IrrKlang/Bindings.hpp"
 	"Bindings/RakNet/Bindings.hpp"
 	"Bindings/RakNet/Protos.hpp"
@@ -6792,4 +6793,8 @@
 1304793773 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Backends/Io/API_Io.hpp
 	"LikeMagic/SFMO/AbstractCppObjProxy.hpp"
 	"LikeMagic/Utility/BetterTypeInfo.hpp"
+
+1306294322 /home/dennis/code/LikeMagic-All/desteer/bindings/Include/Bindings/DESteer/Bindings.hpp
+	"LikeMagic/RuntimeTypeSystem.hpp"
+	"LikeMagic/Utility/DLLHelper.hpp"
 

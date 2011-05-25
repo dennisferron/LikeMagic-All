@@ -19,5 +19,7 @@
 		</Project>
 		<Project filename="Irrliscope/Client/IrrliscopeClient-Linux.cbp" />
 		<Project filename="Irrliscope/Server/IrrliscopeServer.cbp" />
+		<Project filename="desteer/DESteer.cbp" />
+		<Project filename="desteer/bindings/DESteerBindings.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

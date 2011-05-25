@@ -24,15 +24,15 @@ do
 	fi
 
 	checkTime=`date -r $checkFile +%s`
-	echo "Time of file" $checkFile "is" $checkTime
+	#echo "Time of file" $checkFile "is" $checkTime
 
 	if [ $delTime -ne $checkTime ]; then
 		if [ $delTime -lt $checkTime ]; then
 			echo "File" $delFile "is older, deleting."
 			rm $delFile
 			exit
-		else
-			echo "File" $delFile "is newer."
+		#else
+			#echo "File" $delFile "is newer."
 		fi
 	else
 		echo "File times are equal."
