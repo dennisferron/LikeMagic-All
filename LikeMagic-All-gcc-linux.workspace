@@ -3,7 +3,7 @@
 	<Workspace title="Workspace">
 		<Project filename="BulletBindings/BulletBindings-Linux.cbp" />
 		<Project filename="CustomBindings/CustomBindings-Linux.cbp" />
-		<Project filename="Interpreter/Interpreter-Linux.cbp" active="1">
+		<Project filename="Interpreter/Interpreter-Linux.cbp">
 			<Depends filename="BulletBindings/BulletBindings-Linux.cbp" />
 			<Depends filename="CustomBindings/CustomBindings-Linux.cbp" />
 			<Depends filename="IrrlichtBindings/IrrlichtBindings-Linux.cbp" />
@@ -20,6 +20,7 @@
 		<Project filename="Irrliscope/Client/IrrliscopeClient-Linux.cbp" />
 		<Project filename="Irrliscope/Server/IrrliscopeServer.cbp" />
 		<Project filename="desteer/DESteer.cbp" />
-		<Project filename="desteer/bindings/DESteerBindings.cbp" />
+		<Project filename="desteer/bindings/DESteerBindings.cbp" active="1" />
+		<Project filename="desteer/examples/ExampleWithIrrlicht/Example With Irrlicht.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
