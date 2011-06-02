@@ -52,6 +52,7 @@
 					<Add after="cp -R -f ../BulletBindings/Script/* ../../wayup/Script/LikeMagic" />
 					<Add after="cp -R -f ../CustomBindings/Script/* ../../wayup/Script/LikeMagic" />
 					<Add after="cp -R -f ../IrrlichtBindings/Script/* ../../wayup/Script/LikeMagic" />
+					<Add after="cp -R -f ../desteer/bindings/Script/* ../../wayup/Script/LikeMagic" />
 					<Add after="play /usr/share/sounds/ubuntu/stereo/system-ready.ogg 2&gt; /dev/null" />
 					<Mode after="always" />
 				</ExtraCommands>
