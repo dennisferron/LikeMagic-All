@@ -10,6 +10,8 @@
 			<Depends filename="LikeMagic/LikeMagic-Linux.cbp" />
 			<Depends filename="RakNetBindings/RakNetBindings-Linux.cbp" />
 			<Depends filename="Irrliscope/Server/IrrliscopeServer.cbp" />
+			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
+			<Depends filename="desteer/DESteer.cbp" />
 		</Project>
 		<Project filename="IrrlichtBindings/IrrlichtBindings-Linux.cbp" />
 		<Project filename="LikeMagic/LikeMagic-Linux.cbp" />
