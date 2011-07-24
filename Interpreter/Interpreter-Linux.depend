@@ -5821,7 +5821,7 @@
 	"LikeMagic/Utility/DLLHelper.hpp"
 	"LikeMagic/Namespace.hpp"
 
-1308455770 /home/dennis/code/LikeMagic-All/CustomBindings/Include/Bindings/Custom/Bindings.hpp
+1308505362 /home/dennis/code/LikeMagic-All/CustomBindings/Include/Bindings/Custom/Bindings.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 	"LikeMagic/Utility/DLLHelper.hpp"
 
@@ -5892,7 +5892,7 @@
 	"LikeMagic/Backends/Io/IoVM.hpp"
 	"LikeMagic/Utility/DLLHelper.hpp"
 
-1308455771 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/main.cpp
+1311465450 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/main.cpp
 	"Interpreter/Bindings.hpp"
 	"Interpreter/Protos.hpp"
 	<sstream>
@@ -5900,6 +5900,7 @@
 	"boost/algorithm/string/trim.hpp"
 	"LikeMagic/Utility/UserMacros.hpp"
 	"LikeMagic/Backends/Io/IoVM.hpp"
+	"dmalloc.h"
 
 1292730967 /home/dennis/code/LikeMagic-All/boost/boost/algorithm/string/trim.hpp
 	<boost/algorithm/string/config.hpp>
@@ -6266,7 +6267,7 @@
 	<vector>
 	<string>
 
-1308455775 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/RuntimeTypeSystem.hpp
+1311473957 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/RuntimeTypeSystem.hpp
 	"boost/type_traits/is_enum.hpp"
 	"LikeMagic/Utility/EnumHelper.hpp"
 	"LikeMagic/AbstractTypeSystem.hpp"
@@ -6280,11 +6281,11 @@
 	"LikeMagic/TypeConv/AddrOfConv.hpp"
 	"LikeMagic/TypeConv/PtrDerefConv.hpp"
 
-1308455828 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/EnumHelper.hpp
+1311474182 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/EnumHelper.hpp
 	<iostream>
 	"boost/lexical_cast.hpp"
 
-1308455767 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/AbstractTypeSystem.hpp
+1310092759 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/AbstractTypeSystem.hpp
 	"LikeMagic/TypeConv/TypeConvGraph.hpp"
 	"LikeMagic/TypeConv/ImplicitConv.hpp"
 	"LikeMagic/SFMO/NullExpr.hpp"
@@ -6319,7 +6320,7 @@
 	"boost/intrusive_ptr.hpp"
 	<string>
 
-1308455828 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/BetterTypeInfo.hpp
+1309754909 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/BetterTypeInfo.hpp
 	"boost/type_traits.hpp"
 	<typeinfo>
 	<stdexcept>
@@ -6333,7 +6334,7 @@
 
 1308455829 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/StripModifiers.hpp
 
-1308455828 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/AbstractTypeInfo.hpp
+1309754917 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/AbstractTypeInfo.hpp
 	<typeinfo>
 	<stdexcept>
 	<iostream>
@@ -6399,12 +6400,13 @@
 	<iostream>
 	<stdexcept>
 
-1308455828 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/FuncPtrTraits.hpp
+1309745086 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/FuncPtrTraits.hpp
 	<tuple>
 	<vector>
-	"IndexPack.hpp"
-	"TypePack.hpp"
-	"BetterTypeInfo.hpp"
+	"LikeMagic/Utility/IndexPack.hpp"
+	"LikeMagic/Utility/TypePack.hpp"
+	"LikeMagic/Utility/BetterTypeInfo.hpp"
+	"LikeMagic/Utility/DelegateFunc.hpp"
 	"boost/type_traits/is_same.hpp"
 
 1308455828 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/IndexPack.hpp
@@ -6419,30 +6421,31 @@
 	<tuple>
 	"IndexPack.hpp"
 
-1308455774 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/ITypeSystemObserver.hpp
+1310093747 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/ITypeSystemObserver.hpp
 	"LikeMagic/Utility/TypeInfoCache.hpp"
 	<string>
 
-1308455774 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/Class.hpp
-	"AbstractClass.hpp"
-	"LikeMagic/Marshaling/MethodCallGenerator.hpp"
-	"ConstructorCallTarget.hpp"
-	"DestructorCallTarget.hpp"
+1310097930 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/Class.hpp
+	"LikeMagic/Marshaling/AbstractClass.hpp"
+	"LikeMagic/Generators/GeneratorPolicy.hpp"
+	"LikeMagic/CallTargets/ConstructorCallTarget.hpp"
+	"LikeMagic/CallTargets/DestructorCallTarget.hpp"
 	"LikeMagic/TypeConv/NumberConv.hpp"
 	"LikeMagic/TypeConv/ImplicitConv.hpp"
 	"LikeMagic/TypeConv/BaseConv.hpp"
 	"LikeMagic/TypeConv/AddrOfConv.hpp"
-	"FieldGetterTarget.hpp"
-	"FieldSetterTarget.hpp"
-	"FieldReferenceTarget.hpp"
-	"ArrayFieldGetterTarget.hpp"
-	"ArrayFieldSetterTarget.hpp"
-	"ArrayFieldReferenceTarget.hpp"
-	"CustomFieldGetterTarget.hpp"
-	"CustomFieldSetterTarget.hpp"
+	"LikeMagic/TypeConv/NoChangeConv.hpp"
+	"LikeMagic/CallTargets/FieldGetterTarget.hpp"
+	"LikeMagic/CallTargets/FieldSetterTarget.hpp"
+	"LikeMagic/CallTargets/FieldReferenceTarget.hpp"
+	"LikeMagic/CallTargets/ArrayFieldGetterTarget.hpp"
+	"LikeMagic/CallTargets/ArrayFieldSetterTarget.hpp"
+	"LikeMagic/CallTargets/ArrayFieldReferenceTarget.hpp"
+	"LikeMagic/CallTargets/CustomFieldGetterTarget.hpp"
+	"LikeMagic/CallTargets/CustomFieldSetterTarget.hpp"
 	"LikeMagic/SFMO/ClassExpr.hpp"
 
-1308455774 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/AbstractClass.hpp
+1310093210 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/AbstractClass.hpp
 	<string>
 	<stdexcept>
 	<typeinfo>
@@ -6477,7 +6480,7 @@
 	"LikeMagic/Utility/MakeCall.hpp"
 	"LikeMagic/SFMO/methodcall_args.hpp"
 
-1308455828 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/MakeCall.hpp
+1309818751 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/MakeCall.hpp
 	"FuncPtrTraits.hpp"
 
 1308455827 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/SFMO/methodcall_args.hpp
@@ -6512,7 +6515,7 @@
 	<vector>
 	<set>
 
-1308455775 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/SFMO/AbstractCppObjProxy.hpp
+1310093308 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/SFMO/AbstractCppObjProxy.hpp
 	"LikeMagic/IMarkable.hpp"
 	"LikeMagic/SFMO/Expression.hpp"
 	"LikeMagic/AbstractTypeSystem.hpp"
@@ -6621,8 +6624,9 @@
 	"BetterTypeInfo.hpp"
 	"boost/type_traits/is_same.hpp"
 
-1308455774 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/MarkableObjGraph.hpp
+1308507262 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/MarkableObjGraph.hpp
 	"LikeMagic/IMarkable.hpp"
+	"LikeMagic/DebugInfo.hpp"
 	<set>
 	"boost/type_traits.hpp"
 	"boost/utility/enable_if.hpp"
@@ -6706,27 +6710,27 @@
 	<iostream>
 	<stdexcept>
 
-1308455775 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/StaticMethods.hpp
-	"AbstractClass.hpp"
-	"MethodCallGenerator.hpp"
+1310097572 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/StaticMethods.hpp
+	"LikeMagic/Marshaling/AbstractClass.hpp"
+	"LikeMagic/Generators/GeneratorPolicy.hpp"
 	"LikeMagic/SFMO/ClassExpr.hpp"
 	"LikeMagic/Marshaling/DummyClass.hpp"
-	"NamespaceTypeInfo.hpp"
+	"LikeMagic/Marshaling/NamespaceTypeInfo.hpp"
 
-1308455774 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/DummyClass.hpp
-	"AbstractClass.hpp"
-	"CallTargetSelector.hpp"
-	"ConstructorCallTarget.hpp"
+1310093632 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/DummyClass.hpp
+	"LikeMagic/Marshaling/AbstractClass.hpp"
+	"LikeMagic/CallTargets/CallTargetSelector.hpp"
+	"LikeMagic/CallTargets/ConstructorCallTarget.hpp"
 	"LikeMagic/TypeConv/NumberConv.hpp"
 	"LikeMagic/TypeConv/ImplicitConv.hpp"
 	"LikeMagic/TypeConv/BaseConv.hpp"
 	"LikeMagic/TypeConv/AddrOfConv.hpp"
-	"FieldGetterTarget.hpp"
-	"FieldSetterTarget.hpp"
-	"ArrayFieldGetterTarget.hpp"
-	"ArrayFieldSetterTarget.hpp"
-	"CustomFieldGetterTarget.hpp"
-	"CustomFieldSetterTarget.hpp"
+	"LikeMagic/CallTargets/FieldGetterTarget.hpp"
+	"LikeMagic/CallTargets/FieldSetterTarget.hpp"
+	"LikeMagic/CallTargets/ArrayFieldGetterTarget.hpp"
+	"LikeMagic/CallTargets/ArrayFieldSetterTarget.hpp"
+	"LikeMagic/CallTargets/CustomFieldGetterTarget.hpp"
+	"LikeMagic/CallTargets/CustomFieldSetterTarget.hpp"
 	"LikeMagic/SFMO/ClassExpr.hpp"
 
 1308455767 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/CallTargetSelector.hpp
@@ -6739,9 +6743,9 @@
 1308455775 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/NamespaceTypeInfo.hpp
 	"LikeMagic/Utility/AbstractTypeInfo.hpp"
 
-1308455775 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/ProxyMethods.hpp
-	"AbstractClass.hpp"
-	"ProxyMethodSelector.hpp"
+1310094086 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/ProxyMethods.hpp
+	"LikeMagic/Marshaling/AbstractClass.hpp"
+	"LikeMagic/CallTargets/ProxyMethodSelector.hpp"
 	"LikeMagic/SFMO/ClassExpr.hpp"
 	"LikeMagic/Marshaling/DummyClass.hpp"
 
@@ -6765,18 +6769,18 @@
 
 1292730773 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/DLLHelper.hpp
 
-1308455829 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/UserMacros.hpp
+1310098422 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/UserMacros.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 	"LikeMagic/Namespace.hpp"
 	"boost/preprocessor/seq/for_each.hpp"
 	"boost/preprocessor/stringize.hpp"
 	<vector>
-	"../Marshaling/ICustomField.hpp"
+	"LikeMagic/CallTargets/ICustomField.hpp"
 
 1308455775 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Namespace.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 
-1308455774 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Backends/Io/IoVM.hpp
+1311471666 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Backends/Io/IoVM.hpp
 	"LikeMagic/RuntimeTypeSystem.hpp"
 	"LikeMagic/Backends/Io/IoBlock.hpp"
 	"LikeMagic/Backends/Io/API_Io.hpp"
@@ -6786,7 +6790,7 @@
 	"boost/unordered_map.hpp"
 	"boost/unordered_set.hpp"
 
-1308455767 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Backends/Io/IoBlock.hpp
+1311471666 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Backends/Io/IoBlock.hpp
 	"LikeMagic/Backends/Io/API_Io.hpp"
 	"LikeMagic/AbstractTypeSystem.hpp"
 	"LikeMagic/SFMO/CppObjProxy.hpp"
@@ -6804,4 +6808,190 @@
 
 1308455766 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/DebugInfo.hpp
 	<string>
+
+1309808288 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Utility/DelegateFunc.hpp
+
+1309822331 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/DelegateCallGenerator.hpp
+	"../Utility/FuncPtrTraits.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/DelegateMethodCall.hpp"
+	"LikeMagic/SFMO/StaticMethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+	"LikeMagic/Marshaling/AbstractCallTargetSelector.hpp"
+	"LikeMagic/Marshaling/FuncModifier.hpp"
+	"boost/mpl/if.hpp"
+
+1309754006 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/TypeConv/NoChangeConv.hpp
+	"ConvertibleTo.hpp"
+	"../SFMO/Trampoline.hpp"
+
+1309822921 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/HasCallGenerator.hpp
+	"LikeMagic/Marshaling/WantsCallGenerator.hpp"
+	"LikeMagic/Marshaling/DelegateCallGenerator.hpp"
+
+1309823079 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/WantsCallGenerator.hpp
+	"LikeMagic/Marshaling/AbstractCallTargetSelector.hpp"
+	"LikeMagic/Marshaling/FuncModifier.hpp"
+
+1309822212 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/FuncModifier.hpp
+
+1309821653 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/SFMO/DelegateMethodCall.hpp
+	"Expression.hpp"
+	"LikeMagic/Utility/TypeDescr.hpp"
+	"LikeMagic/SFMO/methodcall_args.hpp"
+
+1310098757 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Generators/GeneratorPolicy.hpp
+	"LikeMagic/Generators/MethodCallGenerator.hpp"
+	"LikeMagic/Generators/DeferredCallGenerator.hpp"
+	"LikeMagic/Generators/DelegateCallGenerator.hpp"
+
+1310098294 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Generators/MethodCallGenerator.hpp
+	"LikeMagic/Utility/FuncPtrTraits.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/StaticMethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"LikeMagic/Generators/MemberKind.hpp"
+
+1310092172 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/AbstractCallTargetSelector.hpp
+	"LikeMagic/Utility/AbstractTypeInfo.hpp"
+	"LikeMagic/DebugInfo.hpp"
+	"LikeMagic/SFMO/AbstractExpression.hpp"
+
+1310098114 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Generators/MemberKind.hpp
+
+1310093209 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Generators/DeferredCallGenerator.hpp
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"LikeMagic/Generators/MemberKind.hpp"
+
+1310099157 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Generators/DelegateCallGenerator.hpp
+	"../Utility/FuncPtrTraits.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/DelegateMethodCall.hpp"
+	"LikeMagic/SFMO/StaticMethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"LikeMagic/Generators/MemberKind.hpp"
+	"boost/mpl/if.hpp"
+
+1310092759 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/ConstructorCallTarget.hpp
+	"LikeMagic/Utility/FuncPtrTraits.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+	"LikeMagic/SFMO/Term.hpp"
+	"LikeMagic/SFMO/Reference.hpp"
+
+1310092759 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/DestructorCallTarget.hpp
+	"LikeMagic/Utility/FuncPtrTraits.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+
+1310093209 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/FieldGetterTarget.hpp
+	"LikeMagic/Utility/SetField.hpp"
+	"AbstractCallTargetSelector.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+
+1310093209 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/FieldSetterTarget.hpp
+	"LikeMagic/Utility/SetField.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"boost/type_traits/is_base_of.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+
+1310093209 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/FieldReferenceTarget.hpp
+	"LikeMagic/Utility/SetField.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+	"LikeMagic/SFMO/Reference.hpp"
+
+1310092759 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/ArrayFieldGetterTarget.hpp
+	"../Utility/SetField.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+
+1310092759 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/ArrayFieldSetterTarget.hpp
+	"LikeMagic/Utility/SetField.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+
+1310092759 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/ArrayFieldReferenceTarget.hpp
+	"LikeMagic/Utility/SetField.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+	"LikeMagic/SFMO/Reference.hpp"
+
+1310093568 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/CustomFieldGetterTarget.hpp
+	"LikeMagic/Utility/StripModifiers.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+	"boost/shared_ptr.hpp"
+	"LikeMagic/CallTargets/ICustomField.hpp"
+
+1308455768 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/ICustomField.hpp
+	<stdexcept>
+
+1310092759 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/CustomFieldSetterTarget.hpp
+	"LikeMagic/Utility/StripModifiers.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+	"LikeMagic/CallTargets/ICustomField.hpp"
+	"boost/shared_ptr.hpp"
+
+1310093520 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/CallTargetSelector.hpp
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"LikeMagic/Generators/MethodCallGenerator.hpp"
+	"LikeMagic/SFMO/AbstractCppObjProxy.hpp"
+	"LikeMagic/Utility/FuncPtrTraits.hpp"
+	<boost/type_traits.hpp>
+
+1310093209 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/CallTargets/ProxyMethodSelector.hpp
+	"LikeMagic/Utility/FuncPtrTraits.hpp"
+	"LikeMagic/CallTargets/AbstractCallTargetSelector.hpp"
+	"boost/utility/enable_if.hpp"
+	"boost/type_traits/is_same.hpp"
+	"boost/type_traits/is_void.hpp"
+	"LikeMagic/SFMO/MethodCall.hpp"
+	"LikeMagic/SFMO/CppObjProxy.hpp"
+
+1310336140 /home/dennis/code/LikeMagic-All/dmalloc/dmalloc.h
+	<sys/types.h>
+	<stdarg.h>
 

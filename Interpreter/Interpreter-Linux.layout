@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="DropEcho-Wayup-Debug" />
-	<File name="../IrrKlangBindings/Include/Bindings/IrrKlang/Bindings.hpp" open="0" top="0" tabpos="0">
-		<Cursor position="69" topLine="0" />
-	</File>
-	<File name="../IrrKlangBindings/Include/Bindings/IrrKlang/Protos.hpp" open="0" top="0" tabpos="0">
-		<Cursor position="69" topLine="0" />
-	</File>
-	<File name="../IrrKlangBindings/Source/Bindings.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="69" topLine="0" />
-	</File>
-	<File name="../IrrKlangBindings/Source/Protos.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="69" topLine="0" />
+	<File name="../Interpreter/Source/main.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1672" topLine="34" />
 	</File>
 </CodeBlocks_layout_file>

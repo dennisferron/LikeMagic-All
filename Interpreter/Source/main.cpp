@@ -22,6 +22,10 @@ using namespace Interpreter;
 #include "LikeMagic/Utility/UserMacros.hpp"
 #include "LikeMagic/Backends/Io/IoVM.hpp"
 
+#ifdef USE_DMALLOC
+#include "dmalloc.h"
+#endif
+
 using namespace std;
 
 // Predicate for trimming characters up to a directory marker.
@@ -51,6 +55,10 @@ void do_file(IoVM& vm, string file_name)
 
 int main(int argc, char const* argv[])
 {
+#ifdef USE_DMALLOC
+    // Starting LikeMagic in codeblocks debug mode doesn't propagate the dmalloc environment settings.  I don't know why.
+    dmalloc_debug_setup("check-blank,log=~/dmalloc.log");
+#endif
     try
     {
         RuntimeTypeSystem type_sys;

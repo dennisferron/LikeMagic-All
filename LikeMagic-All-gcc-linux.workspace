@@ -7,14 +7,12 @@
 			<Depends filename="BulletBindings/BulletBindings-Linux.cbp" />
 			<Depends filename="CustomBindings/CustomBindings-Linux.cbp" />
 			<Depends filename="IrrlichtBindings/IrrlichtBindings-Linux.cbp" />
-			<Depends filename="LikeMagic/LikeMagic-Linux.cbp" />
 			<Depends filename="RakNetBindings/RakNetBindings-Linux.cbp" />
 			<Depends filename="Irrliscope/Server/IrrliscopeServer.cbp" />
 			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
 			<Depends filename="desteer/DESteer.cbp" />
 		</Project>
 		<Project filename="IrrlichtBindings/IrrlichtBindings-Linux.cbp" />
-		<Project filename="LikeMagic/LikeMagic-Linux.cbp" />
 		<Project filename="RakNetBindings/RakNetBindings-Linux.cbp" />
 		<Project filename="Irrliscope/Example/IrrliscopeExample-Linux.cbp">
 			<Depends filename="Irrliscope/Client/IrrliscopeClient-Linux.cbp" />
@@ -25,5 +23,6 @@
 		<Project filename="desteer/examples/ExampleWithIrrlicht/Example With Irrlicht.cbp" />
 		<Project filename="../wayup/WayUp.cbp" />
 		<Project filename="desteer/DESteer.cbp" />
+		<Project filename="LikeMagic/LikeMagic-Linux.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
