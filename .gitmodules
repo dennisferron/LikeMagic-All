@@ -1,36 +1,18 @@
 [submodule "LikeMagic"]
 	path = LikeMagic
 	url = git@github.com:dennisferron/LikeMagic.git
-[submodule "CustomBindings"]
-	path = CustomBindings
-	url = git@github.com:dennisferron/CustomBindings.git
-[submodule "IrrlichtBindings"]
-	path = IrrlichtBindings
-	url = git@github.com:dennisferron/IrrlichtBindings.git
-[submodule "BulletBindings"]
-	path = BulletBindings
-	url = git@github.com:dennisferron/BulletBindings.git
-[submodule "bullet"]
-	path = bullet
-	url = git@github.com:dennisferron/bullet.git
 [submodule "io"]
 	path = io
 	url = git@github.com:dennisferron/io.git
-[submodule "IrrKlangBindings"]
-	path = IrrKlangBindings
-	url = git@github.com:dennisferron/IrrKlangBindings.git
-[submodule "irrlicht"]
-	path = irrlicht
-	url = git@github.com:dennisferron/irrlicht.git
-[submodule "boost"]
-	path = boost
-	url = git@github.com:dennisferron/boost.git
-[submodule "RakNetBindings"]
-	path = RakNetBindings
-	url = git@github.com:dennisferron/RakNetBindings.git
 [submodule "Irrliscope"]
 	path = Irrliscope
 	url = git@github.com:dennisferron/Irrliscope.git
 [submodule "desteer"]
 	path = desteer
 	url = git@github.com:dennisferron/desteer.git
+[submodule "Common"]
+	path = Common
+	url = git@github.com:dennisferron/Common-Dependencies.git
+[submodule "GameBindings"]
+	path = GameBindings
+	url = git@github.com:dennisferron/GameBindings.git
