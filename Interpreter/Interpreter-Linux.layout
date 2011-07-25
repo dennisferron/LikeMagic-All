@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="DropEcho-Wayup-Debug" />
+	<File name="../Interpreter/Source/Bindings.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1756" topLine="11" />
+	</File>
 	<File name="../Interpreter/Source/main.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="1672" topLine="34" />
 	</File>

@@ -5,13 +5,6 @@
 		<Project filename="GameBindings/GameBindings.cbp">
 			<Depends filename="LikeMagic/LikeMagic.cbp" />
 		</Project>
-		<Project filename="Interpreter/Interpreter.cbp" active="1">
-			<Depends filename="LikeMagic/LikeMagic.cbp" />
-			<Depends filename="GameBindings/GameBindings.cbp" />
-			<Depends filename="Irrliscope/Server/IrrliscopeServer.cbp" />
-			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
-			<Depends filename="desteer/DESteer.cbp" />
-		</Project>
 		<Project filename="Irrliscope/Example/IrrliscopeExample-Linux.cbp">
 			<Depends filename="Irrliscope/Client/IrrliscopeClient-Linux.cbp" />
 		</Project>
@@ -21,5 +14,11 @@
 		<Project filename="desteer/examples/ExampleWithIrrlicht/Example With Irrlicht.cbp" />
 		<Project filename="../wayup/WayUp.cbp" />
 		<Project filename="desteer/DESteer.cbp" />
+		<Project filename="Interpreter/Interpreter-Linux.cbp" active="1">
+			<Depends filename="LikeMagic/LikeMagic.cbp" />
+			<Depends filename="GameBindings/GameBindings.cbp" />
+			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
+			<Depends filename="desteer/DESteer.cbp" />
+		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>

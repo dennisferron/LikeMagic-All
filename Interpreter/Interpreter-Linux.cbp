@@ -71,7 +71,7 @@
 			<Add option="-Wno-unused-parameter" />
 			<Add option="-Wno-deprecated" />
 			<Add option="-Wno-ignored-qualifiers" />
-			<Add option="-DUSE_RAKNET" />
+			<Add option="-DNO_USE_RAKNET" />
 			<Add option="-DUSE_DELEGATES_HACK" />
 			<Add directory="../GameBindings/Include" />
 			<Add directory="../Interpreter/Include" />
@@ -92,7 +92,6 @@
 			<Add option="-ldl" />
 			<Add option="-lpthread" />
 			<Add library="../GameBindings/libGameBindings-Linux.a" />
-			<Add library="../GameBindings/Deps/raknet/build-gcc-linux/Lib/LibStatic/libRakNetStatic.a" />
 			<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
 			<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
 			<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
