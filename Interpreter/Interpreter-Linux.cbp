@@ -7,13 +7,13 @@
 		<Option default_target="DropEcho-Wayup-Debug" />
 		<Option compiler="gcc" />
 		<Build>
-			<Target title="Debug">
+			<Target title="Debug Linux">
 				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../Interpreter" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="../Irrliscope/Server/Irrliscope.io" />
+				<Option parameters="../LikeMagic/Script/TestScripts/debugtest.io" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -24,7 +24,7 @@
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>
-			<Target title="Release">
+			<Target title="Release Linux">
 				<Option output="bin/Release/LikeMagic" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../Interpreter" />
 				<Option object_output="obj/Release/" />
@@ -120,7 +120,8 @@
 				<search_path add="../io/libs/coroutine" />
 				<search_path add="../LikeMagic/Include" />
 				<search_path add="../desteer/bindings/Include" />
-				<remote_debugging target="Debug">
+				<search_path add="../GameBindings/Deps/irrlicht/source/Irrlicht" />
+				<remote_debugging target="Debug Linux">
 					<options conn_type="0" serial_baud="115200" additional_cmds_before="directory ~/code/io/libs/iovm&#x0A;directory ~/code/io/libs/garbagecollector&#x0A;directory ~/code/io/libs/basekit&#x0A;directory ~/code/io/libs/coroutine&#x0A;" />
 				</remote_debugging>
 			</debugger>
