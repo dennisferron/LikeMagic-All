@@ -5525,7 +5525,7 @@
 	"LikeMagic/Utility/TypeInfoCache.hpp"
 	<string>
 
-1313289473 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/Class.hpp
+1314148769 /home/dennis/code/LikeMagic-All/Interpreter/Include/LikeMagic/Marshaling/Class.hpp
 	"LikeMagic/Marshaling/AbstractClass.hpp"
 	"LikeMagic/Generators/GeneratorFactory.hpp"
 	"LikeMagic/CallTargets/ConstructorCallTarget.hpp"

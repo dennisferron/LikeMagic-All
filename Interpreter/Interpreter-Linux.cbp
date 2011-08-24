@@ -61,7 +61,7 @@
 					<Add after="cp -R -f ../LikeMagic/Script/Io/* ../../wayup/Script/LikeMagic" />
 					<Add after="cp -R -f ../GameBindings/Script/* ../../wayup/Script/LikeMagic" />
 					<Add after="cp -R -f ../desteer/bindings/Script/* ../../wayup/Script/LikeMagic" />
-					<Add after="play /usr/share/sounds/ubuntu/stereo/system-ready.ogg 2&gt; /dev/null" />
+					<Add after="#play /usr/share/sounds/ubuntu/stereo/system-ready.ogg 2&gt; /dev/null" />
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>
