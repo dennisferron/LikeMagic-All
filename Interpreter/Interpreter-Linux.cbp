@@ -57,6 +57,7 @@
 					<Add option="-DNO_USE_DMALLOC" />
 				</Compiler>
 				<ExtraCommands>
+					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
 					<Add after="cp -R -f ../LikeMagic/Script/Io/* ../../wayup/Engine/LikeMagic" />
 					<Add after="cp -R -f ../GameBindings/Script/* ../../wayup/Engine/LikeMagic" />
 					<Add after="cp -R -f ../desteer/bindings/Script/* ../../wayup/Engine/LikeMagic" />
