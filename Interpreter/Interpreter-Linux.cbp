@@ -7,7 +7,7 @@
 		<Option default_target="DropEcho-Wayup-Debug" />
 		<Option compiler="gcc" />
 		<Build>
-			<Target title="Debug Linux">
+			<Target title="Debug Linux Old">
 				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../Interpreter" />
 				<Option object_output="obj/Debug/" />
@@ -43,7 +43,7 @@
 					<Add after="cp -R -f ../GameBindings/Script/* ../Irrliscope/Server/LikeMagic" />
 				</ExtraCommands>
 			</Target>
-			<Target title="DropEcho-Wayup-Debug">
+			<Target title="Debug Linux">
 				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../Interpreter" />
 				<Option object_output="obj/Debug/" />
@@ -152,7 +152,7 @@
 				<search_path add="../LikeMagic/Include" />
 				<search_path add="../desteer/bindings/Include" />
 				<search_path add="../GameBindings/Deps/irrlicht/source/Irrlicht" />
-				<remote_debugging target="Debug Linux">
+				<remote_debugging target="Debug Linux Old">
 					<options conn_type="0" serial_baud="115200" additional_cmds_before="directory ~/code/io/libs/iovm&#x0A;directory ~/code/io/libs/garbagecollector&#x0A;directory ~/code/io/libs/basekit&#x0A;directory ~/code/io/libs/coroutine&#x0A;" />
 				</remote_debugging>
 			</debugger>

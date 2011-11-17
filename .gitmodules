@@ -16,3 +16,6 @@
 [submodule "GameBindings"]
 	path = GameBindings
 	url = git@github.com:dennisferron/GameBindings.git
+[submodule "Iocaste"]
+	path = Iocaste
+	url = git@github.com:dennisferron/Iocaste.git
