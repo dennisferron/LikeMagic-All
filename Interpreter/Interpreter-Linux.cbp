@@ -7,42 +7,6 @@
 		<Option default_target="DropEcho-Wayup-Debug" />
 		<Option compiler="gcc" />
 		<Build>
-			<Target title="Debug Linux Old">
-				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Option parameters="../LikeMagic/Script/TestScripts/debugtest.io" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-				<ExtraCommands>
-					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a  ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
-					<Add after="cp -R -f ../LikeMagic/Script/Io/* ../Irrliscope/Server/LikeMagic" />
-					<Add after="cp -R -f ../GameBindings/Script/* ../Irrliscope/Server/LikeMagic" />
-					<Mode after="always" />
-				</ExtraCommands>
-			</Target>
-			<Target title="Release Linux">
-				<Option output="bin/Release/LikeMagic" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Option parameters="../../wayup/Script/wayup.io" />
-				<Compiler>
-					<Add option="-Os" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-				<ExtraCommands>
-					<Add before="./delete-if-older.sh bin/Release/LikeMagic  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a  ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
-					<Add after="cp -R -f ../LikeMagic/Script/Io/* ../Irrliscope/Server/LikeMagic" />
-					<Add after="cp -R -f ../GameBindings/Script/* ../Irrliscope/Server/LikeMagic" />
-				</ExtraCommands>
-			</Target>
 			<Target title="Debug Linux">
 				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../Interpreter" />
@@ -63,6 +27,25 @@
 					<Add after="cp -R -f ../desteer/bindings/Script/* ../../wayup/Engine/LikeMagic" />
 					<Add after="#play /usr/share/sounds/ubuntu/stereo/system-ready.ogg 2&gt; /dev/null" />
 					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Linux">
+				<Option output="bin/Release/LikeMagic" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../Interpreter" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="../../wayup/Script/wayup.io" />
+				<Compiler>
+					<Add option="-Os" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="./delete-if-older.sh bin/Release/LikeMagic  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a  ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
+					<Add after="cp -R -f ../LikeMagic/Script/Io/* ../Irrliscope/Server/LikeMagic" />
+					<Add after="cp -R -f ../GameBindings/Script/* ../Irrliscope/Server/LikeMagic" />
 				</ExtraCommands>
 			</Target>
 			<Target title="Debug Windows">
@@ -95,6 +78,23 @@
 					<Add library="../io/_build/dll/libgarbagecollector.dll.a" />
 					<Add library="../io/_build/dll/libiovmall.dll.a" />
 				</Linker>
+			</Target>
+			<Target title="Debug Linux Old">
+				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../Interpreter" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="../LikeMagic/Script/TestScripts/debugtest.io" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<ExtraCommands>
+					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a  ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
+					<Add after="cp -R -f ../LikeMagic/Script/Io/* ../Irrliscope/Server/LikeMagic" />
+					<Add after="cp -R -f ../GameBindings/Script/* ../Irrliscope/Server/LikeMagic" />
+					<Mode after="always" />
+				</ExtraCommands>
 			</Target>
 		</Build>
 		<Compiler>
