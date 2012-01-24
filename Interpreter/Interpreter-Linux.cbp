@@ -162,6 +162,7 @@
 			<Add library="../Iocaste/libIoCaste-Mac.a" />
 		</Linker>
 		<Unit filename="../Interpreter/Include/Interpreter/Bindings.hpp" />
+		<Unit filename="Interpreter-Linux.cbp" />
 		<Unit filename="../Interpreter/Source/Bindings.cpp" />
 		<Unit filename="../Interpreter/Source/main.cpp" />
 		<Extensions>
