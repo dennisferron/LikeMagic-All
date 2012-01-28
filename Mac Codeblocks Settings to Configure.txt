@@ -1,0 +1,15 @@
+Linker Settings
+
+libIoCaste-Linux.a
+-ldl
+-lpthread
+
+
+Settings - Compiler and Debugger - Toolchain Executables
+Compiler directory:  /opt/local
+Additional path: /usr
+C comp:  gcc-mp-4.6
+C++: g++-mp-4.6
+Linker: g++-mp-4.6
+
+Debugger Settings - Uncheck Catch C++ Exceptions

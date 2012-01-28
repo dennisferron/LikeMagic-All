@@ -8,9 +8,9 @@
 
 #include "Interpreter/Protos.hpp"
 
-#include "Bindings/Irrlicht/Protos.hpp"
-#include "Bindings/Bullet/Protos.hpp"
-#include "Bindings/Custom/Protos.hpp"
+//#include "Bindings/Irrlicht/Protos.hpp"
+//#include "Bindings/Bullet/Protos.hpp"
+//#include "Bindings/Custom/Protos.hpp"
 
 #ifdef USE_IRRKLANG
 #include "Bindings/IrrKlang/Protos.hpp"
