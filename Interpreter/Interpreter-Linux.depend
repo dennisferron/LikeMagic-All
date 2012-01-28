@@ -17737,8 +17737,9 @@
 	"LikeMagic/Backends/Io/IoVM.hpp"
 	"LikeMagic/Utility/DLLHelper.hpp"
 
-1311474597 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
+1327729205 source:/home/dennis/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
 	"Interpreter/Bindings.hpp"
+	"LikeMagic/Backends/Io/IoVM.hpp"
 	"Bindings/Irrlicht/Bindings.hpp"
 	"Bindings/Bullet/Bindings.hpp"
 	"Bindings/Custom/Bindings.hpp"

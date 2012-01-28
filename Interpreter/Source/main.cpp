@@ -1,11 +1,3 @@
-// LikeMagic C++ Binding Library
-// Copyright 2008-2011 Dennis Ferron
-// Co-founder DropEcho Studios, LLC.
-// Visit our website at dropecho.com.
-//
-// LikeMagic is BSD-licensed.
-// (See the license file in LikeMagic/Licenses.)
-
 
 #include "Interpreter/Bindings.hpp"
 #include "Interpreter/Protos.hpp"
@@ -26,6 +18,36 @@ using namespace Interpreter;
 #include "dmalloc.h"
 #endif
 
+using namespace std;
+
+
+//#include "IoState.h"
+
+void IoAddonsInit(IoObject *context);
+
+//#define IOBINDINGS
+
+#ifdef IO_CHECK_ALLOC
+#define IO_SHOW_STATS 1
+#endif
+
+#include "Iocaste/Exception.hpp"
+
+#ifdef IO_SHOW_STATS
+#include <time.h>
+#include <sys/time.h>
+#include <sys/resource.h>
+
+double System_UserTime(void)
+{
+	struct rusage u;
+	int r = getrusage(0, &u);
+	return r == -1 ? -1 : u.ru_utime.tv_sec + (((double)u.ru_utime.tv_usec)/1000000);
+}
+
+#endif
+
+#include <iostream>
 using namespace std;
 
 // Predicate for trimming characters up to a directory marker.
@@ -53,9 +75,10 @@ void do_file(IoVM& vm, string file_name)
     vm.do_string(code.str());
 }
 
-int main(int argc, char const* argv[])
+
+int main(int argc, const char *argv[])
 {
-#ifdef USE_DMALLOC
+ #ifdef USE_DMALLOC
     // Starting LikeMagic in codeblocks debug mode doesn't propagate the dmalloc environment settings.  I don't know why.
     dmalloc_debug_setup("check-blank,log=~/dmalloc.log");
 #endif
@@ -68,11 +91,20 @@ int main(int argc, char const* argv[])
 
         for (int i=1; i<argc; ++i)
         {
+            cout << flush;
             if (string(argv[i]) == "--runCLI")
                 do_cli(vm);
             else
                 do_file(vm, argv[i]);
         }
+
+        cout << "Press enter..." << std::endl;
+        std::cin.ignore( 99, '\n' );
+        return 0;
+    }
+    catch (Iocaste::ScriptException const& ex)
+    {
+        cout << "main.cpp caught unhandled script exception: " << ex.what() << endl;
     }
     catch (std::logic_error e)
     {
@@ -80,15 +112,13 @@ int main(int argc, char const* argv[])
     }
     catch (std::exception e)
     {
-        cout << "LikeMagic exited with exception " << e.what() << std::endl;
+        cout << "Exited with exception " << e.what() << std::endl;
     }
     catch (...)
     {
-        cout << "LikeMagic exited with unknown error." << std::endl;
+        cout << "main.cpp caught unhandled unknown exception" << endl;
     }
 
-    cout << "Press enter..." << std::endl;
-    std::cin.ignore( 99, '\n' );
-
-    return 0;
+    cout << "Exiting with error" << endl;
+    return -1;
 }

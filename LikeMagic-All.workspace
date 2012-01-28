@@ -17,7 +17,7 @@
 		</Project>
 		<Project filename="../wayup/WayUp.cbp" />
 		<Project filename="Iocaste/Iocaste.cbp" />
-		<Project filename="Iocaste/IocasteInterpreter.cbp" active="1">
+		<Project filename="Iocaste/IocasteInterpreter.cbp">
 			<Depends filename="LikeMagic/LikeMagic.cbp" />
 			<Depends filename="Iocaste/Iocaste.cbp" />
 		</Project>
