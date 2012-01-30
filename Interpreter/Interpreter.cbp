@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Interpreter" />
+		<Option title="GameInterpreter" />
 		<Option pch_mode="2" />
 		<Option default_target="DropEcho-Wayup-Debug" />
 		<Option compiler="gcc" />
@@ -21,13 +21,13 @@
 					<Add option="-DNO_USE_DMALLOC" />
 				</Compiler>
 				<Linker>
-					<Add library="../Iocaste/libIoCaste-Linux.a" />
-                    <Add library="../GameBindings/libGameBindings-Linux.a" />
-                    <Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
+					<Add library="../Iocaste/libIocaste-Linux.a" />
+					<Add library="../GameBindings/libGameBindings-Linux.a" />
+					<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
@@ -50,12 +50,13 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-                    <Add library="../GameBindings/libGameBindings-Linux.a" />
-                    <Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
+					<Add library="../GameBindings/libGameBindings-Linux.a" />
+					<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
+					<Add library="../Iocaste/Iocaste-Linux.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Release/LikeMagic  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a  ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
@@ -88,10 +89,7 @@
 					<Add library="../desteer/bindings/libDESteerBindings.a" />
 					<Add library="../desteer/lib/libdesteer.a" />
 					<Add library="../LikeMagic/libLikeMagic-Windows.a" />
-					<Add library="../io/_build/dll/libbasekit.dll.a" />
-					<Add library="../io/_build/dll/libcoroutine.dll.a" />
-					<Add library="../io/_build/dll/libgarbagecollector.dll.a" />
-					<Add library="../io/_build/dll/libiovmall.dll.a" />
+					<Add library="../Iocaste/Iocaste-Windows.a" />
 				</Linker>
 			</Target>
 			<Target title="Debug Mac">
@@ -108,13 +106,13 @@
 					<Add option="-DNO_USE_DMALLOC" />
 				</Compiler>
 				<Linker>
-                    <Add library="../GameBindings/libGameBindings-Mac.a" />
-                    <Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletSoftBody/libBulletSoftBody.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletDynamics/libBulletDynamics.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletCollision/libBulletCollision.a" />
-                    <Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/LinearMath/libLinearMath.a" />
-					<Add library="../Iocaste/libIoCaste-Mac.a" />
+					<Add library="../GameBindings/libGameBindings-Mac.a" />
+					<Add library="../GameBindings/Deps/irrlicht/lib/Mac/libIrrlicht.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletSoftBody/libBulletSoftBody.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletDynamics/libBulletDynamics.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletCollision/libBulletCollision.a" />
+					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/LinearMath/libLinearMath.a" />
+					<Add library="../Iocaste/libIocaste-Mac.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
@@ -175,7 +173,7 @@
 				<search_path add="../LikeMagic/Include" />
 				<search_path add="../desteer/bindings/Include" />
 				<search_path add="../GameBindings/Deps/irrlicht/source/Irrlicht" />
-				<remote_debugging target="Debug Linux Old">
+				<remote_debugging>
 					<options conn_type="0" serial_baud="115200" additional_cmds_before="directory ~/code/io/libs/iovm&#x0A;directory ~/code/io/libs/garbagecollector&#x0A;directory ~/code/io/libs/basekit&#x0A;directory ~/code/io/libs/coroutine&#x0A;" />
 				</remote_debugging>
 			</debugger>

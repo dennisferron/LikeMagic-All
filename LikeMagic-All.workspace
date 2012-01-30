@@ -15,6 +15,12 @@
 			<Depends filename="LikeMagic/LikeMagic.cbp" />
 			<Depends filename="Iocaste/Iocaste.cbp" />
 		</Project>
-		<Project filename="Interpreter/Interpreter.cbp" active="1" />
+		<Project filename="Interpreter/Interpreter.cbp" active="1">
+			<Depends filename="LikeMagic/LikeMagic.cbp" />
+			<Depends filename="GameBindings/GameBindings.cbp" />
+			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
+			<Depends filename="desteer/DESteer.cbp" />
+			<Depends filename="Iocaste/Iocaste.cbp" />
+		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>
