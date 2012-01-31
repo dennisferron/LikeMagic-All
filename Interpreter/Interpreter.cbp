@@ -145,6 +145,9 @@
 			<Add directory="../GameBindings/irrlicht/include" />
 			<Add directory="../desteer/bindings/Include" />
 			<Add directory="../Iocaste/Include" />
+			<Add directory="../Iocaste/iovm/source" />
+			<Add directory="../Iocaste/basekit/source" />
+			<Add directory="../Iocaste/garbagecollector/source" />
 		</Compiler>
 		<Linker>
 			<Add option="-L/usr/X11R6/lib" />
