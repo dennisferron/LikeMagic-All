@@ -1,12 +1,6 @@
 [submodule "LikeMagic"]
 	path = LikeMagic
 	url = git@github.com:dennisferron/LikeMagic.git
-[submodule "io"]
-	path = io
-	url = git@github.com:dennisferron/io.git
-[submodule "Irrliscope"]
-	path = Irrliscope
-	url = git@github.com:dennisferron/Irrliscope.git
 [submodule "desteer"]
 	path = desteer
 	url = git@github.com:dennisferron/desteer.git
