@@ -1,9 +1,9 @@
 
 #include "Interpreter/Bindings.hpp"
-#include "Interpreter/Protos.hpp"
+#include "Iocaste/LikeMagicAdapters/IoVM.hpp"
 
 using namespace LikeMagic;
-using namespace LikeMagic::Backends::Io;
+using namespace Iocaste::LikeMagicAdapters;
 
 using namespace Interpreter;
 
@@ -12,7 +12,7 @@ using namespace Interpreter;
 
 #include "boost/algorithm/string/trim.hpp"
 #include "LikeMagic/Utility/UserMacros.hpp"
-#include "LikeMagic/Backends/Io/IoVM.hpp"
+#include "Iocaste/LikeMagicAdapters/IoVM.hpp"
 
 #ifdef USE_DMALLOC
 #include "dmalloc.h"
