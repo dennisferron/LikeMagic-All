@@ -6,8 +6,10 @@
 		<Project filename="desteer/DESteer.cbp" />
 		<Project filename="../wayup/WayUp.cbp" />
 		<Project filename="Iocaste/Iocaste.cbp" />
-		<Project filename="Iocaste/IocasteInterpreter.cbp">
+		<Project filename="Iocaste/IocasteInterpreter.cbp" active="1">
 			<Depends filename="Iocaste/Iocaste.cbp" />
+			<Depends filename="LikeMagic/StdBindings/StdBindings.cbp" />
+			<Depends filename="LikeMagic/LikeMagic.cbp" />
 		</Project>
 		<Project filename="Interpreter/Interpreter.cbp">
 			<Depends filename="GameBindings/GameBindings.cbp" />
@@ -15,7 +17,7 @@
 			<Depends filename="desteer/DESteer.cbp" />
 			<Depends filename="Iocaste/Iocaste.cbp" />
 		</Project>
-		<Project filename="LikeMagic/StdBindings/StdBindings.cbp" active="1" />
+		<Project filename="LikeMagic/StdBindings/StdBindings.cbp" />
 		<Project filename="LikeMagic/LikeMagic.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
