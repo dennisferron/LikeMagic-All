@@ -21,6 +21,10 @@
 					<Add option="-DNO_USE_DMALLOC" />
 				</Compiler>
 				<Linker>
+					<Add library="../desteer/bindings/libDESteerBindings.a" />
+					<Add library="../desteer/lib/libdesteer.a" />
+					<Add library="../LikeMagic/StdBindings/libStdBindings-Linux.a" />
+					<Add library="../LikeMagic/libLikeMagic-Linux.a" />
 					<Add library="../Iocaste/libIocaste-Linux.a" />
 					<Add library="../GameBindings/libGameBindings-Linux.a" />
 					<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
@@ -44,19 +48,23 @@
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="../../wayup/Script/wayup.io" />
+				<Option parameters="../../wayup/Engine/Startup.io" />
 				<Compiler>
 					<Add option="-Os" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="../desteer/bindings/libDESteerBindings.a" />
+					<Add library="../desteer/lib/libdesteer.a" />
+					<Add library="../LikeMagic/libLikeMagic-Linux.a" />
+					<Add library="../Iocaste/libIocaste-Linux.a" />
+					<Add library="../LikeMagic/StdBindings/libStdBindings-Linux.a" />
 					<Add library="../GameBindings/libGameBindings-Linux.a" />
 					<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
-					<Add library="../Iocaste/Iocaste-Linux.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Release/LikeMagic  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a  ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
@@ -158,9 +166,6 @@
 			<Add option="-lX11" />
 			<Add option="-ldl" />
 			<Add option="-lpthread" />
-			<Add library="../desteer/bindings/libDESteerBindings.a" />
-			<Add library="../desteer/lib/libdesteer.a" />
-			<Add library="../LikeMagic/libLikeMagic-Linux.a" />
 		</Linker>
 		<Unit filename="../Interpreter/Include/Interpreter/Bindings.hpp" />
 		<Unit filename="Interpreter-Linux.cbp" />

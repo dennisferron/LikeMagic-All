@@ -11,7 +11,7 @@
 			<Depends filename="LikeMagic/StdBindings/StdBindings.cbp" />
 			<Depends filename="LikeMagic/LikeMagic.cbp" />
 		</Project>
-		<Project filename="Interpreter/Interpreter.cbp">
+		<Project filename="Interpreter/Interpreter.cbp" active="1">
 			<Depends filename="GameBindings/GameBindings.cbp" />
 			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
 			<Depends filename="desteer/DESteer.cbp" />
