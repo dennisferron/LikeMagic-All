@@ -580,20 +580,82 @@ LikeMagic takes a long time to link.  You probably want to test that Bullet is w
 <pre>BuildingOnWindows
 BuildingOnLinux</pre>
 </div>
-<div title="BuildingOnLinux" modifier="DennisFerron" created="201011211708" modified="201102110406" changecount="7">
-<pre>!On Linux
+<div title="BuildingOnLinux" modifier="YourName" created="201011211708" modified="201205060539" changecount="18">
+<pre>
+!Get prereq programs:
+sudo apt-get install gcc g++ git codeblocks cmake cmake-qt-gui  build-essential
 
-Get prereq programs:
-sudo apt-get install gcc g++ git codeblocks cmake build-essential
+!Install OpenGL and GLUT libraries for 3D graphics:
+sudo apt-get install freeglut3-dev libxxf86vm-dev
+(Mainly we want GLUT so it will install libgl1-mesa-dev and libglu1-mesa-dev and other dependencies)
 
-* * *
+!Configure Codeblocks
 
 # '''Important:'''  On all operating systems, you must disable Code::Blocks catching C++ exceptions - if you do not, the program will appear to freeze up in the debugger.  This is because throwing exceptions is part of ''normal operation'' of LikeMagic, but Code::Blocks treats them as errors and interrupts the program!  The Boost Graph Library ''requires an exception to be thrown'' to terminate graph search in a normal fashion; unfortunately Code::Blocks acts strangely and will not show any source location after the exception.  (It's pretty rude of Boost to have chosen to use exceptions in this manner for their graph library just because it is so likely to cause people problems with their IDE/debuggers, but it is what it is.)  It makes the program appear to be frozen although actually it is not.  (It is stuck in an assembly listing which you can't see unless you have the assembly listing window open already, and single stepping steps individual assembly instructions so that you'd have to step 100s of times to get out of it.)  To disable Code::Blocks catching C++ exceptions, click Settings - Compiler and Debugger.  Click the giant icon of an ant with a slashed circle around it (Debugger Settings).  Uncheck &quot;Catch C++ exceptions&quot; and click OK.
 
-* * *
+!Get the Repositories
 
-Special Instructions For Ubuntu 10.10!!
+Clone the LikeMagic-All repo and submodules:
+git clone git@github.com:dennisferron/LikeMagic-All.git
+cd LikeMagic-All
+git submodule init
+git submodule update
 
+!Build Irrlicht:
+cd LikeMagic-All/GameBindings/Deps/irrlicht/source/Irrlicht
+make
+
+(Optional) Test Irrlicht
+To make the examples, you must cd into each directory in irrlicht/examples and type &quot;make&quot;.
+
+!Build Bullet
+
+cd LikeMagic-All/GameBindings/Deps/bullet
+cmake-gui
+
+For &quot;where is the source code&quot; choose:
+LikeMagic-All/GameBindings/Deps/bullet
+Note:  Do #not use &quot;bullet/src&quot;, use &quot;bullet&quot;.
+
+For &quot;where to build the binaries&quot; choose (anything that starts with bullet/build* is ignored in the git repo, and you want to append the compiler and the system to prevent accidentally linking a library built with the wrong os or compiler):
+LikeMagic-All/GameBindings/Deps/bullet/build-gcc-linux
+
+Click &quot;Configure&quot;.
+Say &quot;Yes&quot; to create build directory.
+Choose &quot;Unix Makefiles&quot;
+
+After you configure, it should say among the messages, &quot;OPENCL NOT FOUND&quot; &quot;OPENGL FOUND&quot; and &quot;GLUT FOUND&quot;.  (If opengl and glut are not found, you can just disable it in the bullet build, although if you are missing opengl then you may of course run into problems using Irrlicht!)
+
+Now you must edit some settings to avoid building parts that you don't need that may have errors:
+
+Check &quot;Grouped&quot; and &quot;Advanced&quot;
+
+In the &quot;BUILD&quot; group:
+Uncheck BUILD_EXTRAS
+Uncheck BUILD_CPU_DEMOS
+Optionally uncheck &quot;BUILD_DEMOS&quot;.  (Building the demos may be useful as a test for whether bullet built, but on the other hand if they fail to build you don't need them and should just skip building them.)
+
+In the CMAKE group:
+No changes
+
+In the USE group:
+(These are not even offered in the GameBindings version of Bullet; perhaps they are only in vanilla Bullet?)
+Uncheck USEIRRKLANG, USEMYSQL, USEOGRE3D, USEOIS, USEPORTAUDIO, USEPOSTGRESQL, USESPEEX
+
+When building bullet, we need to tell CMake how to find the copy of boost which is in the &quot;Common&quot; submodule in the LikeMagic-All project.  In CMake-gui, uncheck &quot;grouped&quot; and check &quot;Advanced&quot; so that you can see the Boost_INCLUDE_DIR option.
+Select LikeMagic-All/Common/boost for the include directory.
+
+Click Configure again.  All the red should turn to white.
+
+Click Generate.
+
+cd LikeMagic-All/GameBindings/Deps/bullet/build-gcc-linux
+make
+
+!Optional Sections
+
+!This is no longer needed on newer Linuxes:
+Special Instructions For Ubuntu 10.10
 The gcc 4.4 that is included by default with Ubuntu 10.10 is broken and it segfaults while compiling most C++ programs.  (Seriously Canonical, wtf?)  You can fix this by installing gcc 4.5, but you also need to remove the 4.4 version and create some links to make gcc-4.5 replace the old one:
 sudo apt-get remove g++
 sudo apt-get remore gcc
@@ -602,11 +664,9 @@ sudo rm /usr/bin/gcc
 sudo ln /usr/bin/g++-4.5 /usr/bin/g++
 sudo ln /usr/bin/g++
 
-* * *
+!Set Up Distcc (Optional)
 
-Set Up Distcc (Optional)
-
-LikeMagic takes a long time to compile.  If you have several machines, using distcc is helpful.  However, Ubuntu's distcc package installs it in a broken state by default (lovely).
+LikeMagic takes a long time to compile.  If you have several machines, using distcc is helpful.  However, Ubuntu's distcc package installs it in a broken state by default (this was true in 10.10, is it stil true?).
 Steps to get distcc to work (do this on every machine):
 sudo apt-get install distcc distccmon-gnome
 
@@ -621,7 +681,7 @@ echo &quot;192.168.1.10/4&quot; &gt;&gt; ~/.distcc/hosts
 
 Replace &quot;192.168.1.10&quot; with the IP address of the remote machine.  Repeat that last command for each remote machine you want to add.  The /6 and /4 on the end of the IP address is the number of jobs to distribute to each host.  Set number this equal to the number of cores on each machine.  (Warning:  Once I tried setting this to 2 more than the number of cores on the local machine, and the mouse and GUI became unresponsive during compilation!)
 
-Troubleshooting Distcc
+!Troubleshooting Distcc
 
 No method I tried for getting the distcc daemon to auto start actually resulted in the damn thing running when the server was rebooted!  You may need to ssh into each machine and run &quot;service distcc start&quot; each time you want to run it.
 
@@ -649,34 +709,7 @@ sudo killall distcc
 sudo killall distccd
 distccd ALLOW &amp;
 
-* * * 
-
-Clone the LikeMagic repo and submodules:
-git clone git@github.com:dennisferron/LikeMagic.git
-cd LikeMagic
-git submodule init
-git submodule update
-
-Build the Io submodule:
-cd LikeMagic/io
-make
-
-Install OpenGL and GLUT libraries for Irrlicht:
-sudo apt-get install glutg3-dev libxxf86vm-dev
-
-Build Irrlicht:
-cd LikeMagic/irrlicht/source/Irrlicht
-make
-
-Build the bullet submodule in LikeMagic/bullet/bullet-build:
-cd LikeMagic/bullet
-mkdir bullet-build
-cd bullet-build
-cmake .. -G &quot;Unix Makefiles&quot;
-make
-
-
-Build RakNet (optional)
+!Build RakNet (no longer used in GameBindings)
 
 Install RakNet dependencies:
 sudo apt-get install libbz2-dev
@@ -694,18 +727,7 @@ patch -p0 -i linux-fix.patch
 Run CMake-gui
 Select LikeMagic-All/raknet as the source folder.
 Create a new folder LikeMagic-All/raknet/build-gcc-linux and select it as the CMake build directory.
-Click &quot;Configure&quot;.
-
-We need to tell CMake how to find the copy of boost which is in a submodule in the LikeMagic-All project
-In CMake-gui, uncheck &quot;grouped&quot; and check &quot;Advanced&quot; so that you can see the Boost_INCLUDE_DIR option.
-Select LikeMagic-All/boost for the include directory.
-
-Disable the following (by unchecking them) if you don't have them installed:
-USEIRRKLANG, USEMYSQL, USEOGRE3D, USEOIS, USEPORTAUDIO, USEPOSTGRESQL, USESPEEX
-
-Click Generate.
-In terminal, cd LikeMagic-All/raknet/build-gcc-linux
-</pre>
+Click &quot;Configure&quot;.</pre>
 </div>
 <div title="BuildingOnWindows" modifier="DennisFerron" created="201011211706" modified="201012052202" changecount="31">
 <pre>!Building On Windows
