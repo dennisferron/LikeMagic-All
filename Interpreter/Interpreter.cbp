@@ -21,14 +21,15 @@
 					<Add option="-DNO_USE_DMALLOC" />
 				</Compiler>
 				<Linker>
-					<Add option="-L/usr/X11R6/lib" />
-					<Add option="-L../../lib/Linux" />
+					<Add option="-Xlinker --copy-dt-needed-entries" />
+					<Add option="-Xlinker --no-as-needed" />
 					<Add option="-lGL" />
 					<Add option="-lXxf86vm" />
 					<Add option="-lXext" />
 					<Add option="-lX11" />
 					<Add option="-ldl" />
 					<Add option="-lpthread" />
+					<Add option="-v" />
 					<Add library="../desteer/bindings/libDESteerBindings.a" />
 					<Add library="../desteer/lib/libdesteer.a" />
 					<Add library="../LikeMagic/StdBindings/libStdBindings-Linux.a" />
