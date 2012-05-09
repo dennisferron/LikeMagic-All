@@ -141,15 +141,14 @@
 					<Add option="-F/Users/dennisferron/code/LikeMagic-All/Interpreter/bin/Debug" />
 					<Add option="-framework Foundation" />
 					<Add option="-framework AppKit" />
-					<Add option="-lIrrlicht" />
 					<Add option="-framework Cocoa" />
 					<Add option="-framework OpenGL" />
 					<Add option="-framework Carbon" />
 					<Add option="-framework IOKit" />
+					<Add option="-v" />
 					<Add library="../GameBindings/libGameBindings-Mac.a" />
 					<Add library="../desteer/bindings/libDESteerBindings-Mac.a" />
 					<Add library="../desteer/lib/libdesteer.a" />
-					<Add library="../../irrlicht-1.8-unstable/source/Irrlicht/MacOSX/build/Debug/libIrrlicht.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletSoftBody/libBulletSoftBody.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletDynamics/libBulletDynamics.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletCollision/libBulletCollision.a" />
@@ -157,9 +156,11 @@
 					<Add library="../LikeMagic/libLikeMagic-Mac.a" />
 					<Add library="../LikeMagic/StdBindings/libStdBindings-Mac.a" />
 					<Add library="../Iocaste/libIocaste-Mac.a" />
+					<Add library="../GameBindings/IrrlichtObjFiles/libIrrlichtObjFiles.a" />
+					<Add library="../../irrlicht-1.8-unstable/lib/libIrrlicht-Mac.a" />
 				</Linker>
 				<ExtraCommands>
-					<Add before="#./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
+					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
 					<Add after="#cp -R -f ../LikeMagic/Script/Io/* ../../wayup/Engine/LikeMagic" />
 					<Add after="#cp -R -f ../GameBindings/Script/* ../../wayup/Engine/LikeMagic" />
 					<Add after="#cp -R -f ../desteer/bindings/Script/* ../../wayup/Engine/LikeMagic" />
@@ -186,7 +187,6 @@
 			<Add directory="../LikeMagic/Include" />
 			<Add directory="../Common/boost" />
 			<Add directory="../GameBindings/bullet/src" />
-			<Add directory="../GameBindings/irrlicht/include" />
 			<Add directory="../desteer/bindings/Include" />
 			<Add directory="../Iocaste/Include" />
 			<Add directory="../Iocaste/iovm/source" />
@@ -198,7 +198,6 @@
 			<Add directory="/usr/X11R6/lib" />
 		</Linker>
 		<Unit filename="../Interpreter/Include/Interpreter/Bindings.hpp" />
-		<Unit filename="Interpreter-Linux.cbp" />
 		<Unit filename="../Interpreter/Source/Bindings.cpp" />
 		<Unit filename="../Interpreter/Source/main.cpp" />
 		<Extensions>
@@ -210,7 +209,6 @@
 				<search_path add="../Iocaste/Source" />
 				<search_path add="../LikeMagic/Source" />
 				<search_path add="../LikeMagic/Include/LikeMagic" />
-				<search_path add="../LikeMagic/Include" />
 				<search_path add="../LikeMagic/Include/LikeMagic/CallTargets" />
 				<remote_debugging target="Debug Mac">
 					<options conn_type="0" serial_baud="115200" skip_ld_path="1" />
