@@ -33633,13 +33633,14 @@
 	<stdexcept>
 	<vector>
 
-1329011947 source:/Users/dennisferron/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
+1336668860 source:/Users/dennisferron/code/LikeMagic-All/Interpreter/Source/Bindings.cpp
 	"Interpreter/Bindings.hpp"
 	"Iocaste/LikeMagicAdapters/IoVM.hpp"
 	"Bindings/Irrlicht/Bindings.hpp"
 	"Bindings/Bullet/Bindings.hpp"
 	"Bindings/Custom/Bindings.hpp"
 	"Bindings/DESteer/Bindings.hpp"
+	"Bindings/IrrlichtTest/Bindings.hpp"
 	"Bindings/IrrKlang/Bindings.hpp"
 	"Bindings/RakNet/Bindings.hpp"
 	"Bindings/RakNet/Protos.hpp"
@@ -39567,7 +39568,7 @@
 	<boost/preprocessor/tuple/elem.hpp>
 	<boost/preprocessor/tuple/rem.hpp>
 
-1332566813 source:/Users/dennisferron/code/LikeMagic-All/Interpreter/Source/main.cpp
+1337218621 source:/Users/dennisferron/code/LikeMagic-All/Interpreter/Source/main.cpp
 	"Interpreter/Bindings.hpp"
 	"Iocaste/LikeMagicAdapters/IoVM.hpp"
 	<sstream>
@@ -39575,6 +39576,9 @@
 	"boost/algorithm/string/trim.hpp"
 	"LikeMagic/Utility/UserMacros.hpp"
 	"Iocaste/LikeMagicAdapters/IoVM.hpp"
+	"Iocaste/Exception.hpp"
+	"boost/exception/info.hpp"
+	"boost/exception/get_error_info.hpp"
 	"dmalloc.h"
 	"Iocaste/Exception.hpp"
 	<time.h>
@@ -39878,8 +39882,181 @@
 1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/predicate_facade.hpp
 	<boost/algorithm/string/config.hpp>
 
-1334981614 /Users/dennisferron/code/LikeMagic-All/Iocaste/Include/Iocaste/Exception.hpp
+1337225095 /Users/dennisferron/code/LikeMagic-All/Iocaste/Include/Iocaste/Exception.hpp
 	"boost/exception/exception.hpp"
 	<stdexcept>
 	<vector>
+
+1336668729 /Users/dennisferron/code/LikeMagic-All/GameBindings/IrrlichtTest/Bindings/IrrlichtTest/Bindings.hpp
+	"LikeMagic/Utility/DLLHelper.hpp"
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/exception/info.hpp
+	<boost/exception/exception.hpp>
+	<boost/exception/to_string_stub.hpp>
+	<boost/exception/detail/error_info_impl.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/config.hpp>
+	<map>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/exception/to_string_stub.hpp
+	<boost/exception/to_string.hpp>
+	<boost/exception/detail/object_hex_dump.hpp>
+	<boost/assert.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/exception/to_string.hpp
+	<boost/utility/enable_if.hpp>
+	<boost/exception/detail/is_output_streamable.hpp>
+	<sstream>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/exception/detail/is_output_streamable.hpp
+	<ostream>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/exception/detail/object_hex_dump.hpp
+	<boost/exception/detail/type_info.hpp>
+	<iomanip>
+	<ios>
+	<string>
+	<sstream>
+	<cstdlib>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/exception/detail/type_info.hpp
+	<boost/detail/sp_typeinfo.hpp>
+	<boost/current_function.hpp>
+	<boost/config.hpp>
+	<boost/units/detail/utility.hpp>
+	<string>
+
+1317693740 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/units/detail/utility.hpp
+	<cstdlib>
+	<typeinfo>
+	<string>
+	<cxxabi.h>
+	<boost/algorithm/string/replace.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/replace.hpp
+	<boost/algorithm/string/config.hpp>
+	<boost/range/iterator_range.hpp>
+	<boost/range/begin.hpp>
+	<boost/range/end.hpp>
+	<boost/range/iterator.hpp>
+	<boost/range/const_iterator.hpp>
+	<boost/algorithm/string/find_format.hpp>
+	<boost/algorithm/string/finder.hpp>
+	<boost/algorithm/string/formatter.hpp>
+	<boost/algorithm/string/compare.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/find_format.hpp
+	<deque>
+	<boost/detail/iterator.hpp>
+	<boost/range/iterator_range.hpp>
+	<boost/range/begin.hpp>
+	<boost/range/end.hpp>
+	<boost/range/const_iterator.hpp>
+	<boost/range/as_literal.hpp>
+	<boost/algorithm/string/concept.hpp>
+	<boost/algorithm/string/detail/find_format.hpp>
+	<boost/algorithm/string/detail/find_format_all.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/concept.hpp
+	<boost/concept_check.hpp>
+	<boost/range/iterator_range.hpp>
+	<boost/range/begin.hpp>
+	<boost/range/end.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/detail/find_format.hpp
+	<boost/algorithm/string/config.hpp>
+	<boost/range/iterator_range.hpp>
+	<boost/range/const_iterator.hpp>
+	<boost/range/iterator.hpp>
+	<boost/algorithm/string/detail/find_format_store.hpp>
+	<boost/algorithm/string/detail/replace_storage.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/detail/find_format_store.hpp
+	<boost/algorithm/string/config.hpp>
+	<boost/range/iterator_range.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/detail/replace_storage.hpp
+	<boost/algorithm/string/config.hpp>
+	<algorithm>
+	<boost/mpl/bool.hpp>
+	<boost/algorithm/string/sequence_traits.hpp>
+	<boost/algorithm/string/detail/sequence.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/sequence_traits.hpp
+	<boost/config.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/algorithm/string/yes_no_type.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/yes_no_type.hpp
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/detail/sequence.hpp
+	<boost/algorithm/string/config.hpp>
+	<boost/mpl/bool.hpp>
+	<boost/mpl/logical.hpp>
+	<boost/range/begin.hpp>
+	<boost/range/end.hpp>
+	<boost/algorithm/string/sequence_traits.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/detail/find_format_all.hpp
+	<boost/algorithm/string/config.hpp>
+	<boost/range/iterator_range.hpp>
+	<boost/range/const_iterator.hpp>
+	<boost/range/value_type.hpp>
+	<boost/algorithm/string/detail/find_format_store.hpp>
+	<boost/algorithm/string/detail/replace_storage.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/finder.hpp
+	<boost/algorithm/string/config.hpp>
+	<boost/range/iterator_range.hpp>
+	<boost/range/begin.hpp>
+	<boost/range/end.hpp>
+	<boost/range/iterator.hpp>
+	<boost/range/const_iterator.hpp>
+	<boost/algorithm/string/constants.hpp>
+	<boost/algorithm/string/detail/finder.hpp>
+	<boost/algorithm/string/compare.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/constants.hpp
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/detail/finder.hpp
+	<boost/algorithm/string/config.hpp>
+	<boost/algorithm/string/constants.hpp>
+	<boost/detail/iterator.hpp>
+	<boost/range/iterator_range.hpp>
+	<boost/range/begin.hpp>
+	<boost/range/end.hpp>
+	<boost/range/empty.hpp>
+	<boost/range/as_literal.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/compare.hpp
+	<boost/algorithm/string/config.hpp>
+	<locale>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/formatter.hpp
+	<boost/detail/iterator.hpp>
+	<boost/range/value_type.hpp>
+	<boost/range/iterator_range.hpp>
+	<boost/range/as_literal.hpp>
+	<boost/algorithm/string/detail/formatter.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/detail/formatter.hpp
+	<boost/range/iterator_range.hpp>
+	<boost/range/begin.hpp>
+	<boost/range/end.hpp>
+	<boost/range/const_iterator.hpp>
+	<boost/algorithm/string/detail/util.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/algorithm/string/detail/util.hpp
+	<boost/algorithm/string/config.hpp>
+	<functional>
+	<boost/range/iterator_range.hpp>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/exception/detail/error_info_impl.hpp
+	<string>
+
+1317693739 /Users/dennisferron/code/LikeMagic-All/Common/boost/boost/exception/get_error_info.hpp
+	<boost/exception/exception.hpp>
+	<boost/exception/detail/error_info_impl.hpp>
+	<boost/exception/detail/type_info.hpp>
+	<boost/shared_ptr.hpp>
 

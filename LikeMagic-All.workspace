@@ -17,5 +17,6 @@
 		<Project filename="GameBindings/Deps/bullet/build-gcc-mac/BULLET_PHYSICS.cbp" />
 		<Project filename="../irrlicht-1.8-unstable/source/Irrlicht/Irrlicht-gcc.cbp" />
 		<Project filename="GameBindings/IrrlichtObjFiles/IrrlichtObjFiles.cbp" />
+		<Project filename="GameBindings/IrrlichtTest/IrrlichtTest.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

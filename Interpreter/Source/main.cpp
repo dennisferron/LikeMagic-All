@@ -14,6 +14,10 @@ using namespace Interpreter;
 #include "LikeMagic/Utility/UserMacros.hpp"
 #include "Iocaste/LikeMagicAdapters/IoVM.hpp"
 
+#include "Iocaste/Exception.hpp"
+#include "boost/exception/info.hpp"
+#include "boost/exception/get_error_info.hpp"
+
 #ifdef USE_DMALLOC
 #include "dmalloc.h"
 #endif
@@ -75,7 +79,6 @@ void do_file(IoVM& vm, string file_name)
     vm.do_string(code.str());
 }
 
-
 int main(int argc, const char *argv[])
 {
  #ifdef USE_DMALLOC
@@ -83,13 +86,12 @@ int main(int argc, const char *argv[])
     dmalloc_debug_setup("check-blank,log=~/dmalloc.log");
 #endif
 
-
-        // If the IoVM object is declared inside the try catch as a stack variable,
-        // it gets destructed when there's an exception and then is unavailable for e.g.
-        // printing the error message or the stack.  Should maybe create with new and/or
-        // use an intrusive_ptr to track references to the IoVM object.
-        IoVM* vm=NULL;
-        RuntimeTypeSystem* type_sys=NULL;
+    // If the IoVM object is declared inside the try catch as a stack variable,
+    // it gets destructed when there's an exception and then is unavailable for e.g.
+    // printing the error message or the stack.  Should maybe create with new and/or
+    // use an intrusive_ptr to track references to the IoVM object.
+    IoVM* vm=NULL;
+    RuntimeTypeSystem* type_sys=NULL;
 
     try
     {
@@ -117,14 +119,29 @@ int main(int argc, const char *argv[])
     }
     catch (Iocaste::ScriptException const& ex)
     {
-        // Attempting to access ex.what() here is stepping back into Io and never coming out ??
         cout << "main.cpp caught unhandled script exception: " << ex.what() << endl << flush;
+
+        if( auto err=boost::get_error_info<Iocaste::Exception::file_name_info>(ex) )
+        {
+            for (size_t i=0; i<err->size(); ++i)
+                std::cout << std::string(i, '\t')  << "via file: " << (*err)[i] << endl << flush;
+        }
     }
-    catch (std::logic_error e)
+    catch (Iocaste::Exception const& iex)
+    {
+        cout << "main.cpp caught unhandled boost exception: " << iex.what() << endl << flush;
+
+        if( auto err=boost::get_error_info<Iocaste::Exception::file_name_info>(iex) )
+        {
+            for (size_t i=0; i<err->size(); ++i)
+                std::cout << std::string(i, '\t')  << "via file: " << (*err)[i] << endl << flush;
+        }
+    }
+    catch (std::logic_error const& e)
     {
         cout << "LikeMagic exited with exception '" << e.what() << "'" << std::endl;
     }
-    catch (std::exception e)
+    catch (std::exception const& e)
     {
         cout << "Exited with exception " << e.what() << std::endl;
     }

@@ -13,6 +13,7 @@
 #include "Bindings/Bullet/Bindings.hpp"
 #include "Bindings/Custom/Bindings.hpp"
 #include "Bindings/DESteer/Bindings.hpp"
+#include "Bindings/IrrlichtTest/Bindings.hpp"
 
 #ifdef USE_IRRKLANG
 #include "Bindings/IrrKlang/Bindings.hpp"
@@ -32,6 +33,9 @@ namespace Interpreter{
 
 void add_bindings(LikeMagic::RuntimeTypeSystem& type_sys)
 {
+    // Debug testing
+    Bindings::IrrlichtTest::add_bindings(type_sys);
+
     auto ns_bindings = Namespace::global(type_sys).subspace("Bindings");
 
     auto ns_irrlicht = ns_bindings.subspace("Irrlicht");
