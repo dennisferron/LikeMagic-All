@@ -21,7 +21,6 @@
 					<Add option="-DNO_USE_DMALLOC" />
 				</Compiler>
 				<Linker>
-					<Add option="-Xlinker --copy-dt-needed-entries" />
 					<Add option="-Xlinker --no-as-needed" />
 					<Add option="-lGL" />
 					<Add option="-lXxf86vm" />
