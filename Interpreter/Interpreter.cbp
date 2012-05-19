@@ -4,10 +4,11 @@
 	<Project>
 		<Option title="GameInterpreter" />
 		<Option pch_mode="2" />
-		<Option default_target="DropEcho-Wayup-Debug" />
+		<Option default_target="Debug Mac" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug Linux">
+				<Option platforms="Unix;" />
 				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../Interpreter" />
 				<Option object_output="obj/Debug/" />
@@ -51,6 +52,7 @@
 				</ExtraCommands>
 			</Target>
 			<Target title="Release Linux">
+				<Option platforms="Unix;" />
 				<Option output="bin/Release/LikeMagic" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../Interpreter" />
 				<Option object_output="obj/Release/" />
@@ -89,6 +91,7 @@
 				</ExtraCommands>
 			</Target>
 			<Target title="Debug Windows">
+				<Option platforms="Windows;" />
 				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../Interpreter" />
 				<Option object_output="obj/Debug/" />
@@ -118,37 +121,50 @@
 				</Linker>
 			</Target>
 			<Target title="Debug Mac">
+				<Option platforms="Mac;" />
 				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../Interpreter" />
 				<Option object_output="obj/Debug/" />
-				<Option external_deps="../LikeMagic/libLikeMagic-Linux.a;" />
+				<Option external_deps="../LikeMagic/libLikeMagic-Mac.a;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
-				<Option parameters="../../wayup/Engine/Startup.io" />
+				<Option parameters="/Users/dennisferron/code/wayup/Engine/Startup.io" />
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-DNO_USE_DMALLOC" />
 				</Compiler>
 				<Linker>
-					<Add option="-framework Carbon" />
-					<Add option="-framework Cocoa" />
-					<Add option="-framework IOKit" />
 					<Add option="-ldl" />
 					<Add option="-lpthread" />
+					<Add option="-L/Users/dennisferron/code/LikeMagic-All/Interpreter/bin/Debug" />
+					<Add option="-F/Users/dennisferron/code/LikeMagic-All/Interpreter/bin/Debug" />
+					<Add option="-framework Foundation" />
+					<Add option="-framework AppKit" />
+					<Add option="-framework Cocoa" />
+					<Add option="-framework OpenGL" />
+					<Add option="-framework Carbon" />
+					<Add option="-framework IOKit" />
+					<Add option="-v" />
 					<Add library="../GameBindings/libGameBindings-Mac.a" />
-					<Add library="../GameBindings/Deps/irrlicht/lib/Mac/libIrrlicht.a" />
+					<Add library="../desteer/bindings/libDESteerBindings-Mac.a" />
+					<Add library="../desteer/lib/libdesteer.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletSoftBody/libBulletSoftBody.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletDynamics/libBulletDynamics.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletCollision/libBulletCollision.a" />
 					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/LinearMath/libLinearMath.a" />
+					<Add library="../LikeMagic/libLikeMagic-Mac.a" />
+					<Add library="../LikeMagic/StdBindings/libStdBindings-Mac.a" />
 					<Add library="../Iocaste/libIocaste-Mac.a" />
+					<Add library="../GameBindings/IrrlichtTest/libIrrlichtTest.a" />
+					<Add library="../GameBindings/IrrlichtObjFiles/libIrrlichtObjFiles.a" />
+					<Add library="../../irrlicht-1.8-unstable/lib/libIrrlicht-Mac.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
-					<Add after="cp -R -f ../LikeMagic/Script/Io/* ../../wayup/Engine/LikeMagic" />
-					<Add after="cp -R -f ../GameBindings/Script/* ../../wayup/Engine/LikeMagic" />
-					<Add after="cp -R -f ../desteer/bindings/Script/* ../../wayup/Engine/LikeMagic" />
+					<Add after="#cp -R -f ../LikeMagic/Script/Io/* ../../wayup/Engine/LikeMagic" />
+					<Add after="#cp -R -f ../GameBindings/Script/* ../../wayup/Engine/LikeMagic" />
+					<Add after="#cp -R -f ../desteer/bindings/Script/* ../../wayup/Engine/LikeMagic" />
 					<Add after="#play /usr/share/sounds/ubuntu/stereo/system-ready.ogg 2&gt; /dev/null" />
 					<Mode after="always" />
 				</ExtraCommands>
@@ -172,29 +188,32 @@
 			<Add directory="../LikeMagic/Include" />
 			<Add directory="../Common/boost" />
 			<Add directory="../GameBindings/bullet/src" />
-			<Add directory="../GameBindings/irrlicht/include" />
 			<Add directory="../desteer/bindings/Include" />
 			<Add directory="../Iocaste/Include" />
 			<Add directory="../Iocaste/iovm/source" />
 			<Add directory="../Iocaste/basekit/source" />
 			<Add directory="../Iocaste/garbagecollector/source" />
+			<Add directory="/usr/X11R6/include" />
+			<Add directory="../GameBindings/IrrlichtTest" />
 		</Compiler>
+		<Linker>
+			<Add directory="/usr/X11R6/lib" />
+		</Linker>
 		<Unit filename="../Interpreter/Include/Interpreter/Bindings.hpp" />
-		<Unit filename="Interpreter-Linux.cbp" />
 		<Unit filename="../Interpreter/Source/Bindings.cpp" />
 		<Unit filename="../Interpreter/Source/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger>
-				<search_path add="../io/libs/iovm" />
-				<search_path add="../io/libs/garbagecollector" />
-				<search_path add="../io/libs/basekit" />
-				<search_path add="../io/libs/coroutine" />
 				<search_path add="../LikeMagic/Include" />
 				<search_path add="../desteer/bindings/Include" />
 				<search_path add="../GameBindings/Deps/irrlicht/source/Irrlicht" />
-				<remote_debugging>
-					<options conn_type="0" serial_baud="115200" additional_cmds_before="directory ~/code/io/libs/iovm&#x0A;directory ~/code/io/libs/garbagecollector&#x0A;directory ~/code/io/libs/basekit&#x0A;directory ~/code/io/libs/coroutine&#x0A;" />
+				<search_path add="../Iocaste/Source" />
+				<search_path add="../LikeMagic/Source" />
+				<search_path add="../LikeMagic/Include/LikeMagic" />
+				<search_path add="../LikeMagic/Include/LikeMagic/CallTargets" />
+				<remote_debugging target="Debug Mac">
+					<options conn_type="0" serial_baud="115200" skip_ld_path="1" />
 				</remote_debugging>
 			</debugger>
 			<envvars />
