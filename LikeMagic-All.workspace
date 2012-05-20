@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
-		<Project filename="GameBindings/GameBindings.cbp" />
+		<Project filename="GameBindings/GameBindings.cbp" active="1" />
 		<Project filename="desteer/bindings/DESteerBindings.cbp" />
 		<Project filename="desteer/DESteer.cbp" />
 		<Project filename="../wayup/WayUp.cbp" />
-		<Project filename="Interpreter/Interpreter.cbp" active="1">
+		<Project filename="Interpreter/Interpreter.cbp">
 			<Depends filename="GameBindings/GameBindings.cbp" />
 			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
 			<Depends filename="desteer/DESteer.cbp" />
@@ -13,10 +13,5 @@
 		<Project filename="LikeMagic/StdBindings/StdBindings.cbp" />
 		<Project filename="LikeMagic/LikeMagic.cbp" />
 		<Project filename="Iocaste/Iocaste.cbp" />
-		<Project filename="Iocaste/IocasteInterpreter.cbp" />
-		<Project filename="GameBindings/Deps/bullet/build-gcc-mac/BULLET_PHYSICS.cbp" />
-		<Project filename="../irrlicht-1.8-unstable/source/Irrlicht/Irrlicht-gcc.cbp" />
-		<Project filename="GameBindings/IrrlichtObjFiles/IrrlichtObjFiles.cbp" />
-		<Project filename="GameBindings/IrrlichtTest/IrrlichtTest.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
