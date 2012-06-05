@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
-		<Project filename="GameBindings/GameBindings.cbp" active="1" />
+		<Project filename="GameBindings/GameBindings.cbp" />
 		<Project filename="desteer/bindings/DESteerBindings.cbp" />
 		<Project filename="desteer/DESteer.cbp" />
 		<Project filename="../wayup/WayUp.cbp" />
-		<Project filename="Interpreter/Interpreter.cbp">
+		<Project filename="Interpreter/Interpreter.cbp" active="1">
 			<Depends filename="GameBindings/GameBindings.cbp" />
 			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
 			<Depends filename="desteer/DESteer.cbp" />
