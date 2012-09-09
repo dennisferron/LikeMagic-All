@@ -13,8 +13,13 @@
 		<Project filename="LikeMagic/StdBindings/StdBindings.cbp" />
 		<Project filename="LikeMagic/LikeMagic.cbp" />
 		<Project filename="Iocaste/Iocaste.cbp" />
+<<<<<<< HEAD
 		<Project filename="Iocaste/Debugger/Debugger.cbp" active="1" />
 		<Project filename="Iocaste/Debugger/TestProject/TestProject.cbp" />
 		<Project filename="../Knife/Knife.cbp" />
+=======
+		<Project filename="Iocaste/Debugger/Debugger.cbp" />
+		<Project filename="Iocaste/Debugger/TestProject/TestProject.cbp" />
+>>>>>>> 88a67423835f5e98b91fbebb008a693b8858c068
 	</Workspace>
 </CodeBlocks_workspace_file>
