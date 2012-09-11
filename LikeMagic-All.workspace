@@ -12,9 +12,9 @@
 		</Project>
 		<Project filename="LikeMagic/StdBindings/StdBindings.cbp" />
 		<Project filename="LikeMagic/LikeMagic.cbp" />
-		<Project filename="Iocaste/Iocaste.cbp" />
+		<Project filename="Iocaste/Iocaste.cbp" active="1" />
 		<Project filename="Iocaste/Debugger/Debugger.cbp" />
 		<Project filename="Iocaste/Debugger/TestProject/TestProject.cbp" />
-		<Project filename="Iocaste/IocasteInterpreter.cbp" active="1" />
+		<Project filename="Iocaste/IocasteInterpreter.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
