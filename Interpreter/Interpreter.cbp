@@ -16,7 +16,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
-				<Option parameters="../Iocaste/Debugger/TestProject/Test.io.inl" />
+				<Option parameters="/home/dennis/code/wayup/TestScripts/IrrlichtHello.io.inl" />
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-DNO_USE_DMALLOC" />
@@ -88,8 +88,8 @@
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Release/LikeMagic  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a  ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
-					<Add after="cp -R -f ../LikeMagic/Script/Io/* ../Irrliscope/Server/LikeMagic" />
-					<Add after="cp -R -f ../GameBindings/Script/* ../Irrliscope/Server/LikeMagic" />
+					<Add after="#cp -R -f ../LikeMagic/Script/Io/* ../Irrliscope/Server/LikeMagic" />
+					<Add after="#cp -R -f ../GameBindings/Script/* ../Irrliscope/Server/LikeMagic" />
 				</ExtraCommands>
 			</Target>
 			<Target title="Debug Windows">
@@ -206,6 +206,7 @@
 			<Add directory="../Iocaste/basekit/source" />
 			<Add directory="../Iocaste/garbagecollector/source" />
 			<Add directory="/usr/X11R6/include" />
+			<Add directory="../Iocaste/Include/Iocaste/CShims" />
 		</Compiler>
 		<Linker>
 			<Add directory="/usr/X11R6/lib" />
@@ -223,6 +224,9 @@
 				<search_path add="../LikeMagic/Source" />
 				<search_path add="../LikeMagic/Include/LikeMagic" />
 				<search_path add="../LikeMagic/Include/LikeMagic/CallTargets" />
+				<search_path add="../GameBindings/Deps/irrlicht/include" />
+				<search_path add="../GameBindings/Deps/irrlicht/source" />
+				<search_path add="../GameBindings/Deps/irrlicht" />
 				<remote_debugging target="Debug Mac">
 					<options conn_type="0" serial_baud="115200" skip_ld_path="1" />
 				</remote_debugging>
