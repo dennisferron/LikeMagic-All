@@ -581,8 +581,7 @@ LikeMagic takes a long time to link.  You probably want to test that Bullet is w
 BuildingOnLinux</pre>
 </div>
 <div title="BuildingOnLinux" modifier="YourName" created="201011211708" modified="201205060539" changecount="18">
-<pre>
-!Get prereq programs:
+<pre>!Get prereq programs:
 sudo apt-get install gcc g++ git codeblocks cmake cmake-qt-gui  build-essential
 
 !Install OpenGL and GLUT libraries for 3D graphics:
@@ -729,7 +728,7 @@ Select LikeMagic-All/raknet as the source folder.
 Create a new folder LikeMagic-All/raknet/build-gcc-linux and select it as the CMake build directory.
 Click &quot;Configure&quot;.</pre>
 </div>
-<div title="BuildingOnWindows" modifier="DennisFerron" created="201011211706" modified="201012052202" changecount="31">
+<div title="BuildingOnWindows" modifier="YourName" created="201011211706" modified="201207222015" changecount="33">
 <pre>!Building On Windows
 
 Building on Windows is a pain in the ass because several things need to be installed to get Windows ready for git, gcc, C++0x, and CMake, Makefiles and a bash prompt, and Windows has no package management system so each piece is installed via a different method than the other pieces.  If you have a choice of operating system to use, building LikeMagic on Ubuntu is much easier.
@@ -763,6 +762,21 @@ Note:  You can follow the instructions on http://www.mingw.org/wiki/MSYS or just
 # Direct link for MSYS Installer:  http://downloads.sourceforge.net/mingw/MSYS-1.0.11.exe
 #* Say &quot;y&quot; to the post install process.  Give &quot;&quot;&quot;C:/MinGW&quot;&quot;&quot; as the location of your &quot;&quot;&quot;MinGW&quot;&quot;&quot; directory (or where ever you installed &quot;&quot;&quot;MinGW&quot;&quot;&quot;).
 # Direct link for MSYS DTK - http://downloads.sourceforge.net/mingw/msysDTK-1.0.1.exe
+
+!!Boost
+
+Many of the libraries used by LikeMagic are header-only.  The only concern for those is that the include path match the filesystem path where installed, which will be &quot;LikeMagic-All/Common/boost&quot; or &quot;LikeMagic-All/Common/boost_version_number&quot;.  However, the Iocaste Debugger in particular depends on some boost libraries which must be separately compiled.  To build on Windows:
+# Open a Windows command prompt (Start - Run - &quot;cmd&quot;) and type:
+## {{{ cd \code\LikeMagic-All\Common\boost_1_49_0 }}}
+## {{{ bootstrap gcc }}}
+## {{{ .\b2 toolset=gcc }}}
+#When boost finishes building, you must then move and rename the libraries files to a folder the Iocaste Debugger project is set to look for them in.  Boost names the libraries and their paths differently depending on compiler, OS, etc., and to make the codeblocks project simpler I just have you move &amp; rename them.
+## Create a folder called &quot;LikeMagic-All/Common/boost_1_49_0/build-gcc&quot;
+## Open build output folder &quot;LikeMagic-All/Common/boost_1_49_0/stage/lib&quot; and copy and rename the following files to &quot;.../build-gcc&quot;:
+### &quot;libboost_exception-mgw46-mt-d-1_49.a&quot; -&gt; &quot;libboost_exception.a&quot;
+### &quot;libboost_filesystem-mgw46-mt-d-1_49.a&quot; -&gt; &quot;libboost_filesystem.a&quot;
+### &quot;libboost_system-mgw46-mt-d-1_49.a&quot; -&gt; &quot;libboost_system.a&quot;
+### &quot;libboost_thread-mgw46-mt-d-1_49.a&quot; -&gt; &quot;libboost_thread.a&quot;
 
 !!Bullet Physics
 *The easy way:  Manually copy the four *.a files from bullet/prebuilt-gcc-win32/lib to bullet/build-win32-gcc/lib.
@@ -800,7 +814,7 @@ You can't use LM_FUNC for overloaded functions.  Use LM_FUNC_OVERLOAD instead.  
 (FYI:  Whether the function is virtual or not shouldn't have anything to do with getting this error message with LikeMagic.)
 
 
-// &quot;error: ‘BOOST_PP_IIF_0’ was not declared in this scope&quot; //
+// &quot;error: &#8216;BOOST_PP_IIF_0&#8217; was not declared in this scope&quot; //
 
 This can be caused by leaving off the parenthesis inside function lists for LM_FUNC (or for LM_FIELD).  The syntax for LM_FUNC is &quot;LM_FUNC(class_name, (func1)(func2)(func3)(etc.))&quot;.  Even if you are only declaring one function, you still need the parenthesis around its name, e.g. &quot;LM_FUNC(class_name, (func))&quot;.  Note that you do not put commas between the function names.  Spaces and line breaks are ok though.
 
@@ -828,9 +842,9 @@ Resolution:  One of the parameter types isn't being recognized as a type.  Figur
 See also // &quot;error: cannot declare pointer to 'void' member&quot; //
 
 
-//  &quot;error: ‘f’ cannot be used as a member pointer, since it is of type ‘const return_type&amp; (*)()’&quot; //
+//  &quot;error: &#8216;f&#8217; cannot be used as a member pointer, since it is of type &#8216;const return_type&amp; (*)()&#8217;&quot; //
 
-This can be caused by trying to bind a static function as if it were a member function.  (Note the lack of a class name in the signature; if it were a pointer-to-member-function, it should say ‘const return_type&amp; (ClassName::*)()’.)  Unfortunately due to GCC's horrible error reporting, it doesn't tell you WHICH function name that was bound was the one that caused the error, and the line number it reports will be the last line in the binding file.  This is exemplary of what is wrong with all of GCC's error reporting:  it reports the error deep down in the code where a problem was first encountered, but doesn't give you the higher level information that is actually useful.  And I say GCC, not C++ in general, because although it is difficult to give good error reporting for C++ and template code, it is not impossible, as the Clang project is currently demonstrating.
+This can be caused by trying to bind a static function as if it were a member function.  (Note the lack of a class name in the signature; if it were a pointer-to-member-function, it should say &#8216;const return_type&amp; (ClassName::*)()&#8217;.)  Unfortunately due to GCC's horrible error reporting, it doesn't tell you WHICH function name that was bound was the one that caused the error, and the line number it reports will be the last line in the binding file.  This is exemplary of what is wrong with all of GCC's error reporting:  it reports the error deep down in the code where a problem was first encountered, but doesn't give you the higher level information that is actually useful.  And I say GCC, not C++ in general, because although it is difficult to give good error reporting for C++ and template code, it is not impossible, as the Clang project is currently demonstrating.
 
 OK, enough ranting:  what you'll need to do is examine the function signature carefully and make a guess which function it might be.  Then, you can use LM_STATIC_FUNC(type_sys, class_name, func_name) to bind that function.
 
