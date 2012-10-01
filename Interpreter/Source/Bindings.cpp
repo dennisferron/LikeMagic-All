@@ -44,16 +44,16 @@ void add_bindings(LikeMagic::RuntimeTypeSystem& type_sys)
     auto ns_bindings = Namespace::global(type_sys).subspace("Bindings");
 
     auto ns_irrlicht = ns_bindings.subspace("Irrlicht");
-    LM_STATIC_FUNC(ns_irrlicht, Bindings::Irrlicht, add_bindings)
+    //LM_STATIC_FUNC(ns_irrlicht, Bindings::Irrlicht, add_bindings)
 
     auto ns_bullet = ns_bindings.subspace("Bullet");
-    LM_STATIC_FUNC(ns_bullet, Bindings::Bullet, add_bindings)
+    //LM_STATIC_FUNC(ns_bullet, Bindings::Bullet, add_bindings)
 
     auto ns_custom = ns_bindings.subspace("Custom");
-    LM_STATIC_FUNC(ns_custom, Bindings::Custom, add_bindings)
+    //LM_STATIC_FUNC(ns_custom, Bindings::Custom, add_bindings)
 
     auto ns_desteer = ns_bindings.subspace("DESteer");
-    LM_STATIC_FUNC(ns_desteer, Bindings::DESteer, add_bindings)
+    //LM_STATIC_FUNC(ns_desteer, Bindings::DESteer, add_bindings)
 
 #ifdef USE_IRRKLANG
     auto ns_irrklang = ns_bindings.subspace("IrrKlang");
