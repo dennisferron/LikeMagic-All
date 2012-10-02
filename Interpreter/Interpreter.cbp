@@ -168,7 +168,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
-				<Option parameters="/Users/dennisferron/code/wayup/Engine/Startup.io.inl" />
+				<Option parameters="/Users/dennisferron/code/LikeMagic-All/Iocaste/Debugger/TestProject/Test.io.inl" />
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-DNO_USE_DMALLOC" />
