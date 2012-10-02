@@ -44,7 +44,7 @@ void add_bindings(LikeMagic::RuntimeTypeSystem& type_sys)
     auto ns_bindings = Namespace::global(type_sys).subspace("Bindings");
 
     auto ns_irrlicht = ns_bindings.subspace("Irrlicht");
-    //LM_STATIC_FUNC(ns_irrlicht, Bindings::Irrlicht, add_bindings)
+    LM_STATIC_FUNC(ns_irrlicht, Bindings::Irrlicht, add_bindings)
 
     auto ns_bullet = ns_bindings.subspace("Bullet");
     //LM_STATIC_FUNC(ns_bullet, Bindings::Bullet, add_bindings)
