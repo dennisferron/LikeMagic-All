@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
-		<Project filename="GameBindings/GameBindings.cbp" />
-		<Project filename="desteer/bindings/DESteerBindings.cbp" />
+		<Project filename="GameBindings/GameBindings.cbp">
+			<Depends filename="LikeMagic/LikeMagic.cbp" />
+			<Depends filename="Iocaste/Iocaste.cbp" />
+		</Project>
+		<Project filename="desteer/bindings/DESteerBindings.cbp">
+			<Depends filename="desteer/DESteer.cbp" />
+			<Depends filename="LikeMagic/LikeMagic.cbp" />
+			<Depends filename="Iocaste/Iocaste.cbp" />
+		</Project>
 		<Project filename="desteer/DESteer.cbp" />
 		<Project filename="Interpreter/Interpreter.cbp" active="1">
 			<Depends filename="GameBindings/GameBindings.cbp" />
@@ -12,9 +19,14 @@
 			<Depends filename="LikeMagic/LikeMagic.cbp" />
 			<Depends filename="Iocaste/Iocaste.cbp" />
 		</Project>
-		<Project filename="LikeMagic/StdBindings/StdBindings.cbp" />
+		<Project filename="LikeMagic/StdBindings/StdBindings.cbp">
+			<Depends filename="LikeMagic/LikeMagic.cbp" />
+			<Depends filename="Iocaste/Iocaste.cbp" />
+		</Project>
 		<Project filename="LikeMagic/LikeMagic.cbp" />
-		<Project filename="Iocaste/Iocaste.cbp" />
+		<Project filename="Iocaste/Iocaste.cbp">
+			<Depends filename="LikeMagic/LikeMagic.cbp" />
+		</Project>
 		<Project filename="Iocaste/Debugger/Debugger.cbp" />
 		<Project filename="Iocaste/Debugger/TestProject/TestProject.cbp" />
 		<Project filename="Iocaste/IocasteInterpreter.cbp" />

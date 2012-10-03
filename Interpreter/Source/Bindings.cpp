@@ -36,6 +36,8 @@ namespace Interpreter{
 
 void add_bindings(LikeMagic::RuntimeTypeSystem& type_sys)
 {
+    LM_SET_TYPE_INFO(type_sys)
+
     #ifdef IRR_1_8
     // Debug testing
     Bindings::IrrlichtTest::add_bindings(type_sys);
@@ -47,13 +49,13 @@ void add_bindings(LikeMagic::RuntimeTypeSystem& type_sys)
     LM_STATIC_FUNC(ns_irrlicht, Bindings::Irrlicht, add_bindings)
 
     auto ns_bullet = ns_bindings.subspace("Bullet");
-    //LM_STATIC_FUNC(ns_bullet, Bindings::Bullet, add_bindings)
+    LM_STATIC_FUNC(ns_bullet, Bindings::Bullet, add_bindings)
 
     auto ns_custom = ns_bindings.subspace("Custom");
-    //LM_STATIC_FUNC(ns_custom, Bindings::Custom, add_bindings)
+    LM_STATIC_FUNC(ns_custom, Bindings::Custom, add_bindings)
 
     auto ns_desteer = ns_bindings.subspace("DESteer");
-    //LM_STATIC_FUNC(ns_desteer, Bindings::DESteer, add_bindings)
+    LM_STATIC_FUNC(ns_desteer, Bindings::DESteer, add_bindings)
 
 #ifdef USE_IRRKLANG
     auto ns_irrklang = ns_bindings.subspace("IrrKlang");
