@@ -29,7 +29,11 @@
 		</Project>
 		<Project filename="Iocaste/Debugger/Debugger.cbp" />
 		<Project filename="Iocaste/Debugger/TestProject/TestProject.cbp" />
-		<Project filename="Iocaste/IocasteInterpreter.cbp" />
+		<Project filename="Iocaste/IocasteInterpreter.cbp">
+			<Depends filename="LikeMagic/StdBindings/StdBindings.cbp" />
+			<Depends filename="LikeMagic/LikeMagic.cbp" />
+			<Depends filename="Iocaste/Iocaste.cbp" />
+		</Project>
 		<Project filename="../wayup/WayUp.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

@@ -9,10 +9,10 @@
 		<Build>
 			<Target title="Debug Linux">
 				<Option platforms="Unix;" />
-				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Debug/" />
-				<Option external_deps="../LikeMagic/libLikeMagic-Linux.a;" />
+				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Interpreter" />
+				<Option object_output="obj\Debug\" />
+				<Option external_deps="..\LikeMagic\libLikeMagic-Linux.a;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
@@ -20,7 +20,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-DNO_USE_DMALLOC" />
-					<Add directory="../GameBindings/Deps/irrlicht/include" />
+					<Add directory="..\GameBindings\Deps\irrlicht\include" />
 				</Compiler>
 				<Linker>
 					<Add option="-Xlinker --no-as-needed" />
@@ -31,17 +31,17 @@
 					<Add option="-ldl" />
 					<Add option="-lpthread" />
 					<Add option="-v" />
-					<Add library="../desteer/bindings/libDESteerBindings.a" />
-					<Add library="../desteer/lib/libdesteer.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Linux.a" />
-					<Add library="../LikeMagic/libLikeMagic-Linux.a" />
-					<Add library="../Iocaste/libIocaste-Linux.a" />
-					<Add library="../GameBindings/libGameBindings-Linux.a" />
-					<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
+					<Add library="..\desteer\bindings\libDESteerBindings.a" />
+					<Add library="..\desteer\lib\libdesteer.a" />
+					<Add library="..\LikeMagic\StdBindings\libStdBindings-Linux.a" />
+					<Add library="..\LikeMagic\libLikeMagic-Linux.a" />
+					<Add library="..\Iocaste\libIocaste-Linux.a" />
+					<Add library="..\GameBindings\libGameBindings-Linux.a" />
+					<Add library="..\GameBindings\Deps\irrlicht\lib\Linux\libIrrlicht.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletSoftBody\libBulletSoftBody.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletDynamics\libBulletDynamics.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletCollision\libBulletCollision.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\LinearMath\libLinearMath.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
@@ -54,15 +54,15 @@
 			</Target>
 			<Target title="Release Linux">
 				<Option platforms="Unix;" />
-				<Option output="bin/Release/LikeMagic" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Release/" />
+				<Option output="bin\Release\LikeMagic" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Interpreter" />
+				<Option object_output="obj\Release\" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option parameters="../../wayup/Engine/Startup.io" />
 				<Compiler>
 					<Add option="-Os" />
-					<Add directory="../GameBindings/Deps/irrlicht/include" />
+					<Add directory="..\GameBindings\Deps\irrlicht\include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -74,17 +74,17 @@
 					<Add option="-lX11" />
 					<Add option="-ldl" />
 					<Add option="-lpthread" />
-					<Add library="../desteer/bindings/libDESteerBindings.a" />
-					<Add library="../desteer/lib/libdesteer.a" />
-					<Add library="../LikeMagic/libLikeMagic-Linux.a" />
-					<Add library="../Iocaste/libIocaste-Linux.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Linux.a" />
-					<Add library="../GameBindings/libGameBindings-Linux.a" />
-					<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
+					<Add library="..\desteer\bindings\libDESteerBindings.a" />
+					<Add library="..\desteer\lib\libdesteer.a" />
+					<Add library="..\LikeMagic\libLikeMagic-Linux.a" />
+					<Add library="..\Iocaste\libIocaste-Linux.a" />
+					<Add library="..\LikeMagic\StdBindings\libStdBindings-Linux.a" />
+					<Add library="..\GameBindings\libGameBindings-Linux.a" />
+					<Add library="..\GameBindings\Deps\irrlicht\lib\Linux\libIrrlicht.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletSoftBody\libBulletSoftBody.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletDynamics\libBulletDynamics.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletCollision\libBulletCollision.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\LinearMath\libLinearMath.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Release/LikeMagic  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a  ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
@@ -94,10 +94,10 @@
 			</Target>
 			<Target title="Debug Windows">
 				<Option platforms="Windows;" />
-				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Debug/" />
-				<Option external_deps="../LikeMagic/libLikeMagic-Linux.a;" />
+				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Interpreter" />
+				<Option object_output="obj\Debug\" />
+				<Option external_deps="..\LikeMagic\libLikeMagic-Linux.a;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
@@ -110,11 +110,11 @@
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
-					<Add library="../GameBindings/libGameBindings-Windows.dll.a" />
-					<Add library="../desteer/bindings/libDESteerBindings-Windows.dll.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Windows.dll.a" />
-					<Add library="../Iocaste/libIocaste-Windows.a" />
-					<Add library="../LikeMagic/libLikeMagic-Windows.a" />
+					<Add library="..\GameBindings\libGameBindings-Windows.dll.a" />
+					<Add library="..\desteer\bindings\libDESteerBindings-Windows.dll.a" />
+					<Add library="..\LikeMagic\StdBindings\libStdBindings-Windows.dll.a" />
+					<Add library="..\Iocaste\libIocaste-Windows.a" />
+					<Add library="..\LikeMagic\libLikeMagic-Windows.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add after="PostBuild-Windows.bat" />
@@ -123,17 +123,17 @@
 			</Target>
 			<Target title="Debug Windows Broken">
 				<Option platforms="Windows;" />
-				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Debug/" />
-				<Option external_deps="../LikeMagic/libLikeMagic-Linux.a;" />
+				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Interpreter" />
+				<Option object_output="obj\Debug\" />
+				<Option external_deps="..\LikeMagic\libLikeMagic-Linux.a;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
 				<Option parameters="../../wayup/Engine/Startup.io" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="../GameBindings/Deps/irrlicht/include" />
+					<Add directory="..\GameBindings\Deps\irrlicht\include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -145,25 +145,25 @@
 					<Add option="-lX11" />
 					<Add option="-ldl" />
 					<Add option="-lpthread" />
-					<Add library="../desteer/bindings/libDESteerBindings.a" />
-					<Add library="../desteer/lib/libdesteer.a" />
-					<Add library="../LikeMagic/libLikeMagic-Linux.a" />
-					<Add library="../Iocaste/libIocaste-Linux.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Linux.a" />
-					<Add library="../GameBindings/libGameBindings-Linux.a" />
-					<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
+					<Add library="..\desteer\bindings\libDESteerBindings.a" />
+					<Add library="..\desteer\lib\libdesteer.a" />
+					<Add library="..\LikeMagic\libLikeMagic-Linux.a" />
+					<Add library="..\Iocaste\libIocaste-Linux.a" />
+					<Add library="..\LikeMagic\StdBindings\libStdBindings-Linux.a" />
+					<Add library="..\GameBindings\libGameBindings-Linux.a" />
+					<Add library="..\GameBindings\Deps\irrlicht\lib\Linux\libIrrlicht.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletSoftBody\libBulletSoftBody.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletDynamics\libBulletDynamics.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletCollision\libBulletCollision.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\LinearMath\libLinearMath.a" />
 				</Linker>
 			</Target>
 			<Target title="Debug Mac">
 				<Option platforms="Mac;" />
-				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Debug/" />
-				<Option external_deps="../LikeMagic/libLikeMagic-Mac.a;" />
+				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Interpreter" />
+				<Option object_output="obj\Debug\" />
+				<Option external_deps="..\LikeMagic\libLikeMagic-Mac.a;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
@@ -171,7 +171,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-DNO_USE_DMALLOC" />
-					<Add directory="../GameBindings/IrrlichtTest" />
+					<Add directory="..\GameBindings\IrrlichtTest" />
 				</Compiler>
 				<Linker>
 					<Add option="-ldl" />
@@ -185,19 +185,19 @@
 					<Add option="-framework Carbon" />
 					<Add option="-framework IOKit" />
 					<Add option="-v" />
-					<Add library="../GameBindings/libGameBindings-Mac.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletSoftBody/libBulletSoftBody.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletDynamics/libBulletDynamics.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/BulletCollision/libBulletCollision.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-mac/src/LinearMath/libLinearMath.a" />
-					<Add library="../LikeMagic/libLikeMagic-Mac.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Mac.a" />
-					<Add library="../Iocaste/libIocaste-Mac.a" />
-					<Add library="../GameBindings/IrrlichtTest/libIrrlichtTest.a" />
-					<Add library="../GameBindings/IrrlichtObjFiles/libIrrlichtObjFiles.a" />
-					<Add library="../../irrlicht-1.8-unstable/lib/libIrrlicht-Mac.a" />
-					<Add library="../desteer/bindings/libDESteerBindings-Mac.a" />
-					<Add library="../desteer/lib/libdesteer.a" />
+					<Add library="..\GameBindings\libGameBindings-Mac.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-mac\src\BulletSoftBody\libBulletSoftBody.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-mac\src\BulletDynamics\libBulletDynamics.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-mac\src\BulletCollision\libBulletCollision.a" />
+					<Add library="..\GameBindings\Deps\bullet\build-gcc-mac\src\LinearMath\libLinearMath.a" />
+					<Add library="..\LikeMagic\libLikeMagic-Mac.a" />
+					<Add library="..\LikeMagic\StdBindings\libStdBindings-Mac.a" />
+					<Add library="..\Iocaste\libIocaste-Mac.a" />
+					<Add library="..\GameBindings\IrrlichtTest\libIrrlichtTest.a" />
+					<Add library="..\GameBindings\IrrlichtObjFiles\libIrrlichtObjFiles.a" />
+					<Add library="..\..\irrlicht-1.8-unstable\lib\libIrrlicht-Mac.a" />
+					<Add library="..\desteer\bindings\libDESteerBindings-Mac.a" />
+					<Add library="..\desteer\lib\libdesteer.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
@@ -220,25 +220,25 @@
 			<Add option="-Wno-unused-parameter" />
 			<Add option="-Wno-deprecated" />
 			<Add option="-Wno-ignored-qualifiers" />
-			<Add directory="../GameBindings/Include" />
-			<Add directory="../Interpreter/Include" />
-			<Add directory="../LikeMagic/StdBindings/Include" />
-			<Add directory="../LikeMagic/Include" />
-			<Add directory="../Common/boost" />
-			<Add directory="../desteer/bindings/Include" />
-			<Add directory="../Iocaste/Include" />
-			<Add directory="../Iocaste/iovm/source" />
-			<Add directory="../Iocaste/basekit/source" />
-			<Add directory="../Iocaste/garbagecollector/source" />
-			<Add directory="/usr/X11R6/include" />
-			<Add directory="../Iocaste/Include/Iocaste/CShims" />
+			<Add directory="..\GameBindings\Include" />
+			<Add directory="..\Interpreter\Include" />
+			<Add directory="..\LikeMagic\StdBindings\Include" />
+			<Add directory="..\LikeMagic\Include" />
+			<Add directory="..\Common\boost_1_49_0" />
+			<Add directory="..\desteer\bindings\Include" />
+			<Add directory="..\Iocaste\Include" />
+			<Add directory="..\Iocaste\iovm\source" />
+			<Add directory="..\Iocaste\basekit\source" />
+			<Add directory="..\Iocaste\garbagecollector\source" />
+			<Add directory="\usr\X11R6\include" />
+			<Add directory="..\Iocaste\Include\Iocaste\CShims" />
 		</Compiler>
 		<Linker>
-			<Add directory="/usr/X11R6/lib" />
+			<Add directory="\usr\X11R6\lib" />
 		</Linker>
-		<Unit filename="../Interpreter/Include/Interpreter/Bindings.hpp" />
-		<Unit filename="../Interpreter/Source/Bindings.cpp" />
-		<Unit filename="../Interpreter/Source/main.cpp" />
+		<Unit filename="..\Interpreter\Include\Interpreter\Bindings.hpp" />
+		<Unit filename="..\Interpreter\Source\Bindings.cpp" />
+		<Unit filename="..\Interpreter\Source\main.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger>
