@@ -18,6 +18,8 @@
 			<Depends filename="LikeMagic/StdBindings/StdBindings.cbp" />
 			<Depends filename="LikeMagic/LikeMagic.cbp" />
 			<Depends filename="Iocaste/Iocaste.cbp" />
+			<Depends filename="GameBindings/Bullet.cbp" />
+			<Depends filename="GameBindings/Deps/irrlicht-1.8-unstable/source/Irrlicht/Irrlicht-gcc.cbp" />
 		</Project>
 		<Project filename="LikeMagic/StdBindings/StdBindings.cbp">
 			<Depends filename="LikeMagic/LikeMagic.cbp" />
@@ -37,5 +39,6 @@
 		<Project filename="../wayup/WayUp.cbp" />
 		<Project filename="GameBindings/Bullet.cbp" />
 		<Project filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
+		<Project filename="GameBindings/Deps/irrlicht-1.8-unstable/source/Irrlicht/Irrlicht-gcc.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
