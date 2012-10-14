@@ -177,7 +177,8 @@
 				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="..\Interpreter" />
 				<Option object_output="obj\Debug\" />
-				<Option external_deps="..\LikeMagic\libLikeMagic-Linux.a;" />
+				<Option external_deps="..\LikeMagic\libLikeMagic-Linux.a;..\GameBindings\Deps\irrlicht-1.7.3\lib\Win32-gcc\libIrrlicht.a;" />
+				<Option additional_output="bin\Debug\LikeMagicDebugBuild.exe;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
