@@ -35,5 +35,8 @@
 			<Depends filename="Iocaste/Iocaste.cbp" />
 		</Project>
 		<Project filename="../wayup/WayUp.cbp" />
+		<Project filename="../../Users/dennis/Downloads/irrlicht-1.7.3/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
+		<Project filename="../../Users/dennis/Downloads/irrlicht-1.7.3/irrlicht-1.7.3/examples/01.HelloWorld/HelloWorld.cbp" />
+		<Project filename="GameBindings/Bullet.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

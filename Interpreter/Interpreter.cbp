@@ -92,8 +92,8 @@
 					<Add after="#cp -R -f ../GameBindings/Script/* ../Irrliscope/Server/LikeMagic" />
 				</ExtraCommands>
 			</Target>
-			<Target title="Debug Windows">
-				<Option platforms="Windows;" />
+			<Target title="Debug Windows Shared Broken">
+				<Option platforms="" />
 				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="..\Interpreter" />
 				<Option object_output="obj\Debug\" />
@@ -101,7 +101,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
-				<Option parameters="../../wayup/TestScripts/IrrlichtHello.io.inl" />
+				<Option parameters="../../wayup/Engine/Startup.io.inl" />
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-g" />
@@ -110,6 +110,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
+					<Add option="-shared-libgcc" />
 					<Add library="..\GameBindings\libGameBindings-Windows.dll.a" />
 					<Add library="..\desteer\bindings\libDESteerBindings-Windows.dll.a" />
 					<Add library="..\LikeMagic\StdBindings\libStdBindings-Windows.dll.a" />
@@ -120,43 +121,6 @@
 					<Add after="PostBuild-Windows.bat" />
 					<Mode after="always" />
 				</ExtraCommands>
-			</Target>
-			<Target title="Debug Windows Broken">
-				<Option platforms="Windows;" />
-				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="..\Interpreter" />
-				<Option object_output="obj\Debug\" />
-				<Option external_deps="..\LikeMagic\libLikeMagic-Linux.a;" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Option use_console_runner="0" />
-				<Option parameters="../../wayup/Engine/Startup.io" />
-				<Compiler>
-					<Add option="-g" />
-					<Add directory="..\GameBindings\Deps\irrlicht\include" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-					<Add option="-L/usr/X11R6/lib" />
-					<Add option="-L../../lib/Linux" />
-					<Add option="-lGL" />
-					<Add option="-lXxf86vm" />
-					<Add option="-lXext" />
-					<Add option="-lX11" />
-					<Add option="-ldl" />
-					<Add option="-lpthread" />
-					<Add library="..\desteer\bindings\libDESteerBindings.a" />
-					<Add library="..\desteer\lib\libdesteer.a" />
-					<Add library="..\LikeMagic\libLikeMagic-Linux.a" />
-					<Add library="..\Iocaste\libIocaste-Linux.a" />
-					<Add library="..\LikeMagic\StdBindings\libStdBindings-Linux.a" />
-					<Add library="..\GameBindings\libGameBindings-Linux.a" />
-					<Add library="..\GameBindings\Deps\irrlicht\lib\Linux\libIrrlicht.a" />
-					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletSoftBody\libBulletSoftBody.a" />
-					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletDynamics\libBulletDynamics.a" />
-					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\BulletCollision\libBulletCollision.a" />
-					<Add library="..\GameBindings\Deps\bullet\build-gcc-linux\src\LinearMath\libLinearMath.a" />
-				</Linker>
 			</Target>
 			<Target title="Debug Mac">
 				<Option platforms="Mac;" />
@@ -208,6 +172,46 @@
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>
+			<Target title="Debug Windows Static">
+				<Option platforms="Windows;" />
+				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Interpreter" />
+				<Option object_output="obj\Debug\" />
+				<Option external_deps="..\LikeMagic\libLikeMagic-Linux.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Option parameters="../../wayup/Engine/Startup.io.inl" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DNO_USE_DMALLOC" />
+					<Add option="-DNO_USE_DLL_BUILD" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+					<Add library="..\GameBindings\libGameBindings-Windows.a" />
+					<Add library="..\desteer\bindings\libDESteerBindings-Windows.a" />
+					<Add library="..\LikeMagic\StdBindings\libStdBindings-Windows.a" />
+					<Add library="..\Iocaste\libIocaste-Windows.a" />
+					<Add library="..\LikeMagic\libLikeMagic-Windows.a" />
+					<Add library="..\desteer\lib\libdesteer.a" />
+					<Add library="..\GameBindings\Deps\irrlicht-1.7.3\lib\Win32-gcc\libIrrlicht.a" />
+					<Add library="..\GameBindings\libBullet.a" />
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="opengl32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wextra" />
@@ -220,6 +224,12 @@
 			<Add option="-Wno-unused-parameter" />
 			<Add option="-Wno-deprecated" />
 			<Add option="-Wno-ignored-qualifiers" />
+			<Add option="-DWIN32" />
+			<Add option="-D_DEBUG" />
+			<Add option="-D_WINDOWS" />
+			<Add option="-D_IRR_STATIC_LIB_" />
+			<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+			<Add option="-D__GNUWIN32__" />
 			<Add directory="..\GameBindings\Include" />
 			<Add directory="..\Interpreter\Include" />
 			<Add directory="..\LikeMagic\StdBindings\Include" />
