@@ -19,7 +19,7 @@
 			<Depends filename="LikeMagic/LikeMagic.cbp" />
 			<Depends filename="Iocaste/Iocaste.cbp" />
 			<Depends filename="GameBindings/Bullet.cbp" />
-			<Depends filename="GameBindings/Deps/irrlicht-1.8-unstable/source/Irrlicht/Irrlicht-gcc.cbp" />
+			<Depends filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
 		</Project>
 		<Project filename="LikeMagic/StdBindings/StdBindings.cbp">
 			<Depends filename="LikeMagic/LikeMagic.cbp" />

@@ -16,14 +16,15 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
-				<Option parameters="/home/dennis/code/wayup/TestScripts/IrrlichtHello.io.inl" />
+				<Option parameters="/home/dennis/code/wayup/Engine/Startup.io.inl" />
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-DNO_USE_DMALLOC" />
+					<Add option="-D_IRR_STATIC_LIB_" />
+					<Add option="-D_DEBUG" />
 					<Add directory="../GameBindings/Deps/irrlicht/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-Xlinker --no-as-needed" />
 					<Add option="-lGL" />
 					<Add option="-lXxf86vm" />
 					<Add option="-lXext" />
@@ -37,11 +38,8 @@
 					<Add library="../LikeMagic/libLikeMagic-Linux.a" />
 					<Add library="../Iocaste/libIocaste-Linux.a" />
 					<Add library="../GameBindings/libGameBindings-Linux.a" />
-					<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
+					<Add library="../GameBindings/libBullet-Linux.a" />
+					<Add library="../GameBindings/Deps/irrlicht-1.7.3/lib/Linux/libIrrlicht-Linux.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
@@ -50,46 +48,6 @@
 					<Add after="#cp -R -f ../desteer/bindings/Script/* ../../wayup/Engine/LikeMagic" />
 					<Add after="#play /usr/share/sounds/ubuntu/stereo/system-ready.ogg 2&gt; /dev/null" />
 					<Mode after="always" />
-				</ExtraCommands>
-			</Target>
-			<Target title="Release Linux">
-				<Option platforms="Unix;" />
-				<Option output="bin/Release/LikeMagic" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Option parameters="../../wayup/Engine/Startup.io" />
-				<Compiler>
-					<Add option="-Os" />
-					<Add directory="../GameBindings/Deps/irrlicht/include" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-					<Add option="-L/usr/X11R6/lib" />
-					<Add option="-L../../lib/Linux" />
-					<Add option="-lGL" />
-					<Add option="-lXxf86vm" />
-					<Add option="-lXext" />
-					<Add option="-lX11" />
-					<Add option="-ldl" />
-					<Add option="-lpthread" />
-					<Add library="../desteer/bindings/libDESteerBindings.a" />
-					<Add library="../desteer/lib/libdesteer.a" />
-					<Add library="../LikeMagic/libLikeMagic-Linux.a" />
-					<Add library="../Iocaste/libIocaste-Linux.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Linux.a" />
-					<Add library="../GameBindings/libGameBindings-Linux.a" />
-					<Add library="../GameBindings/Deps/irrlicht/lib/Linux/libIrrlicht.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a" />
-					<Add library="../GameBindings/Deps/bullet/build-gcc-linux/src/LinearMath/libLinearMath.a" />
-				</Linker>
-				<ExtraCommands>
-					<Add before="./delete-if-older.sh bin/Release/LikeMagic  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a  ../irrlicht/lib/Linux/libIrrlicht.a ../bullet/build-gcc-linux/src/BulletSoftBody/libBulletSoftBody.a ../bullet/build-gcc-linux/src/BulletDynamics/libBulletDynamics.a ../bullet/build-gcc-linux/src/BulletCollision/libBulletCollision.a ../bullet/build-gcc-linux/src/LinearMath/libLinearMath.a ../LikeMagic/libLikeMagic-Linux.a ../io/_build/lib/libiovmall_static.a" />
-					<Add after="#cp -R -f ../LikeMagic/Script/Io/* ../Irrliscope/Server/LikeMagic" />
-					<Add after="#cp -R -f ../GameBindings/Script/* ../Irrliscope/Server/LikeMagic" />
 				</ExtraCommands>
 			</Target>
 			<Target title="Debug Windows Shared Broken">
