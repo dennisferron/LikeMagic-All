@@ -25,6 +25,8 @@
 					<Add directory="../GameBindings/Deps/irrlicht/include" />
 				</Compiler>
 				<Linker>
+					<Add option="-Xlinker -no-as-needed" />
+					<Add option="-ldl" />
 					<Add option="-lGL" />
 					<Add option="-lXxf86vm" />
 					<Add option="-lXext" />
