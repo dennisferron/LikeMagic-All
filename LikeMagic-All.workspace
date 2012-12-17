@@ -11,7 +11,7 @@
 			<Depends filename="Iocaste/Iocaste.cbp" />
 		</Project>
 		<Project filename="desteer/DESteer.cbp" />
-		<Project filename="Interpreter/Interpreter.cbp" active="1">
+		<Project filename="Interpreter/Interpreter.cbp">
 			<Depends filename="GameBindings/GameBindings.cbp" />
 			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
 			<Depends filename="desteer/DESteer.cbp" />
@@ -40,5 +40,7 @@
 		<Project filename="GameBindings/Bullet.cbp" />
 		<Project filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
 		<Project filename="GameBindings/Deps/irrlicht-1.8-unstable/source/Irrlicht/Irrlicht-gcc.cbp" />
+		<Project filename="GameBindings/Deps/tps-1.2/ThinPlateSpline/ThinPlateSpline.cbp" active="1" />
+		<Project filename="../Knife/Knife.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

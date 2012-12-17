@@ -113,6 +113,7 @@
 					<Add library="../GameBindings/Deps/irrlicht-1.8-unstable/lib/libIrrlicht-Mac.a" />
 					<Add library="../desteer/bindings/libDESteerBindings-Mac.a" />
 					<Add library="../LikeMagic/StdBindings/libStdBindings-Mac.a" />
+					<Add library="../GameBindings/Deps/tps-1.2/ThinPlateSpline/bin/Debug/libThinPlateSpline.a" />
 					<Add library="../desteer/lib/libdesteer.a" />
 					<Add library="../Iocaste/libIocaste-Mac.a" />
 					<Add library="../LikeMagic/libLikeMagic-Mac.a" />

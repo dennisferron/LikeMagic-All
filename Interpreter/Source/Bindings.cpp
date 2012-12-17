@@ -13,6 +13,7 @@
 #include "Bindings/Bullet/Bindings.hpp"
 #include "Bindings/Custom/Bindings.hpp"
 #include "Bindings/DESteer/Bindings.hpp"
+#include "Bindings/ThinPlateSpline/Bindings.hpp"
 
 #ifdef IRR_1_8
 #include "Bindings/IrrlichtTest/Bindings.hpp"
@@ -56,6 +57,9 @@ void add_bindings(LikeMagic::RuntimeTypeSystem& type_sys)
 
     auto ns_desteer = ns_bindings.subspace("DESteer");
     LM_STATIC_FUNC(ns_desteer, Bindings::DESteer, add_bindings)
+
+    auto ns_tps = ns_bindings.subspace("ThinPlateSpline");
+    LM_STATIC_FUNC(ns_tps, Bindings::ThinPlateSpline, add_bindings)
 
 #ifdef USE_IRRKLANG
     auto ns_irrklang = ns_bindings.subspace("IrrKlang");
