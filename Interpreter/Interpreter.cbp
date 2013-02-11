@@ -39,6 +39,7 @@
 					<Add library="../LikeMagic/libLikeMagic-Linux.a" />
 					<Add library="../Iocaste/libIocaste-Linux.a" />
 					<Add library="../GameBindings/libGameBindings-Linux.a" />
+					<Add library="../GameBindings/Deps/tps-1.2/ThinPlateSpline/bin/Debug/libThinPlateSpline.a" />
 					<Add library="../GameBindings/libBullet-Linux.a" />
 					<Add library="../GameBindings/Deps/irrlicht-1.7.3/lib/Linux/libIrrlicht-Linux.a" />
 				</Linker>
