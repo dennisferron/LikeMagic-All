@@ -9,10 +9,10 @@
 		<Build>
 			<Target title="Debug Linux">
 				<Option platforms="Unix;" />
-				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Debug/" />
-				<Option external_deps="../LikeMagic/libLikeMagic-Linux.a;" />
+				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Interpreter" />
+				<Option object_output="obj\Debug\" />
+				<Option external_deps="..\LikeMagic\libLikeMagic-Linux.a;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
@@ -22,7 +22,7 @@
 					<Add option="-DNO_USE_DMALLOC" />
 					<Add option="-D_IRR_STATIC_LIB_" />
 					<Add option="-D_DEBUG" />
-					<Add directory="../GameBindings/Deps/irrlicht/include" />
+					<Add directory="..\GameBindings\Deps\irrlicht\include" />
 				</Compiler>
 				<Linker>
 					<Add option="-Xlinker --no-as-needed" />
@@ -33,15 +33,15 @@
 					<Add option="-ldl" />
 					<Add option="-lpthread" />
 					<Add option="-v" />
-					<Add library="../desteer/bindings/libDESteerBindings.a" />
-					<Add library="../desteer/lib/libdesteer.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Linux.a" />
-					<Add library="../LikeMagic/libLikeMagic-Linux.a" />
-					<Add library="../Iocaste/libIocaste-Linux.a" />
-					<Add library="../GameBindings/libGameBindings-Linux.a" />
-					<Add library="../GameBindings/Deps/tps-1.2/ThinPlateSpline/bin/Debug/libThinPlateSpline.a" />
-					<Add library="../GameBindings/libBullet-Linux.a" />
-					<Add library="../GameBindings/Deps/irrlicht-1.7.3/lib/Linux/libIrrlicht-Linux.a" />
+					<Add library="..\desteer\bindings\libDESteerBindings.a" />
+					<Add library="..\desteer\lib\libdesteer.a" />
+					<Add library="..\LikeMagic\StdBindings\libStdBindings-Linux.a" />
+					<Add library="..\LikeMagic\libLikeMagic-Linux.a" />
+					<Add library="..\Iocaste\libIocaste-Linux.a" />
+					<Add library="..\GameBindings\libGameBindings-Linux.a" />
+					<Add library="..\GameBindings\Deps\tps-1.2\ThinPlateSpline\bin\Debug\libThinPlateSpline.a" />
+					<Add library="..\GameBindings\libBullet-Linux.a" />
+					<Add library="..\GameBindings\Deps\irrlicht-1.7.3\lib\Linux\libIrrlicht-Linux.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
@@ -52,42 +52,12 @@
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>
-			<Target title="Debug Windows Shared Broken">
-				<Option platforms="" />
-				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Debug/" />
-				<Option external_deps="../LikeMagic/libLikeMagic-Linux.a;" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Option use_console_runner="0" />
-				<Option parameters="../../wayup/Engine/Startup.io.inl" />
-				<Option projectLinkerOptionsRelation="1" />
-				<Compiler>
-					<Add option="-g" />
-					<Add option="-DNO_USE_DMALLOC" />
-					<Add option="-DUSE_DLL_BUILD" />
-				</Compiler>
-				<Linker>
-					<Add option="-m32" />
-					<Add option="-shared-libgcc" />
-					<Add library="../GameBindings/libGameBindings-Windows.dll.a" />
-					<Add library="../desteer/bindings/libDESteerBindings-Windows.dll.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Windows.dll.a" />
-					<Add library="../Iocaste/libIocaste-Windows.a" />
-					<Add library="../LikeMagic/libLikeMagic-Windows.a" />
-				</Linker>
-				<ExtraCommands>
-					<Add after="PostBuild-Windows.bat" />
-					<Mode after="always" />
-				</ExtraCommands>
-			</Target>
 			<Target title="Debug Mac">
 				<Option platforms="Mac;" />
-				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Debug/" />
-				<Option external_deps="../LikeMagic/libLikeMagic-Mac.a;" />
+				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Interpreter" />
+				<Option object_output="obj\Debug\" />
+				<Option external_deps="..\LikeMagic\libLikeMagic-Mac.a;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
@@ -95,7 +65,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-DNO_USE_DMALLOC" />
-					<Add directory="../GameBindings/IrrlichtTest" />
+					<Add directory="..\GameBindings\IrrlichtTest" />
 				</Compiler>
 				<Linker>
 					<Add option="-ldl" />
@@ -109,16 +79,16 @@
 					<Add option="-framework Carbon" />
 					<Add option="-framework IOKit" />
 					<Add option="-v" />
-					<Add library="../GameBindings/libGameBindings-Mac.a" />
-					<Add library="../GameBindings/libBullet-Mac.a" />
-					<Add library="../GameBindings/Deps/irrlicht-1.8-unstable/lib/libIrrlichtObjFiles-Mac.a" />
-					<Add library="../GameBindings/Deps/irrlicht-1.8-unstable/lib/libIrrlicht-Mac.a" />
-					<Add library="../desteer/bindings/libDESteerBindings-Mac.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Mac.a" />
-					<Add library="../GameBindings/Deps/tps-1.2/ThinPlateSpline/bin/Debug/libThinPlateSpline.a" />
-					<Add library="../desteer/lib/libdesteer.a" />
-					<Add library="../Iocaste/libIocaste-Mac.a" />
-					<Add library="../LikeMagic/libLikeMagic-Mac.a" />
+					<Add library="..\GameBindings\libGameBindings-Mac.a" />
+					<Add library="..\GameBindings\libBullet-Mac.a" />
+					<Add library="..\GameBindings\Deps\irrlicht-1.8-unstable\lib\libIrrlichtObjFiles-Mac.a" />
+					<Add library="..\GameBindings\Deps\irrlicht-1.8-unstable\lib\libIrrlicht-Mac.a" />
+					<Add library="..\desteer\bindings\libDESteerBindings-Mac.a" />
+					<Add library="..\LikeMagic\StdBindings\libStdBindings-Mac.a" />
+					<Add library="..\GameBindings\Deps\tps-1.2\ThinPlateSpline\bin\Debug\libThinPlateSpline.a" />
+					<Add library="..\desteer\lib\libdesteer.a" />
+					<Add library="..\Iocaste\libIocaste-Mac.a" />
+					<Add library="..\LikeMagic\libLikeMagic-Mac.a" />
 				</Linker>
 				<ExtraCommands>
 					<Add before="./delete-if-older.sh bin/Debug/LikeMagicDebugBuild  ../desteer/lib/libdesteer.a ../desteer/bindings/libDESteerBindings.a   ../GameBindings/libGameBindings-Linux.a" />
@@ -129,13 +99,13 @@
 					<Mode after="always" />
 				</ExtraCommands>
 			</Target>
-			<Target title="Debug Windows Static">
+			<Target title="Debug Windows">
 				<Option platforms="Windows;" />
-				<Option output="bin/Debug/LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="../Interpreter" />
-				<Option object_output="obj/Debug/" />
-				<Option external_deps="../LikeMagic/libLikeMagic-Linux.a;../GameBindings/Deps/irrlicht-1.7.3/lib/Win32-gcc/libIrrlicht.a;" />
-				<Option additional_output="bin/Debug/LikeMagicDebugBuild.exe;" />
+				<Option output="bin\Debug\LikeMagicDebugBuild" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\Interpreter" />
+				<Option object_output="obj\Debug\" />
+				<Option external_deps="..\LikeMagic\libLikeMagic-Linux.a;..\GameBindings\Deps\irrlicht-1.7.3\lib\Win32-gcc\libIrrlicht.a;" />
+				<Option additional_output="bin\Debug\LikeMagicDebugBuild.exe;" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option use_console_runner="0" />
@@ -154,14 +124,15 @@
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
-					<Add library="../GameBindings/libGameBindings-Windows.a" />
-					<Add library="../desteer/bindings/libDESteerBindings-Windows.a" />
-					<Add library="../LikeMagic/StdBindings/libStdBindings-Windows.a" />
-					<Add library="../Iocaste/libIocaste-Windows.a" />
-					<Add library="../LikeMagic/libLikeMagic-Windows.a" />
-					<Add library="../desteer/lib/libdesteer.a" />
-					<Add library="../GameBindings/Deps/irrlicht-1.7.3/lib/Win32-gcc/libIrrlicht.a" />
-					<Add library="../GameBindings/libBullet.a" />
+					<Add library="..\GameBindings\libGameBindings-Windows.a" />
+					<Add library="..\desteer\bindings\libDESteerBindings-Windows.a" />
+					<Add library="..\LikeMagic\StdBindings\libStdBindings-Windows.a" />
+					<Add library="..\Iocaste\libIocaste-Windows.a" />
+					<Add library="..\LikeMagic\libLikeMagic-Windows.a" />
+					<Add library="..\desteer\lib\libdesteer.a" />
+					<Add library="..\GameBindings\Deps\tps-1.2\ThinPlateSpline\bin\Debug\libThinPlateSpline.a" />
+					<Add library="..\GameBindings\Deps\irrlicht-1.7.3\lib\Win32-gcc\libIrrlicht.a" />
+					<Add library="..\GameBindings\libBullet.a" />
 					<Add library="kernel32" />
 					<Add library="user32" />
 					<Add library="gdi32" />
@@ -188,25 +159,25 @@
 			<Add option="-Wno-unused-parameter" />
 			<Add option="-Wno-deprecated" />
 			<Add option="-Wno-ignored-qualifiers" />
-			<Add directory="../GameBindings/Include" />
-			<Add directory="../Interpreter/Include" />
-			<Add directory="../LikeMagic/StdBindings/Include" />
-			<Add directory="../LikeMagic/Include" />
-			<Add directory="../Common/boost_1_49_0" />
-			<Add directory="../desteer/bindings/Include" />
-			<Add directory="../Iocaste/Include" />
-			<Add directory="../Iocaste/iovm/source" />
-			<Add directory="../Iocaste/basekit/source" />
-			<Add directory="../Iocaste/garbagecollector/source" />
-			<Add directory="/usr/X11R6/include" />
-			<Add directory="../Iocaste/Include/Iocaste/CShims" />
+			<Add directory="..\GameBindings\Include" />
+			<Add directory="..\Interpreter\Include" />
+			<Add directory="..\LikeMagic\StdBindings\Include" />
+			<Add directory="..\LikeMagic\Include" />
+			<Add directory="..\Common\boost_1_49_0" />
+			<Add directory="..\desteer\bindings\Include" />
+			<Add directory="..\Iocaste\Include" />
+			<Add directory="..\Iocaste\iovm\source" />
+			<Add directory="..\Iocaste\basekit\source" />
+			<Add directory="..\Iocaste\garbagecollector\source" />
+			<Add directory="\usr\X11R6\include" />
+			<Add directory="..\Iocaste\Include\Iocaste\CShims" />
 		</Compiler>
 		<Linker>
-			<Add directory="/usr/X11R6/lib" />
+			<Add directory="\usr\X11R6\lib" />
 		</Linker>
-		<Unit filename="../Interpreter/Include/Interpreter/Bindings.hpp" />
-		<Unit filename="../Interpreter/Source/Bindings.cpp" />
-		<Unit filename="../Interpreter/Source/main.cpp" />
+		<Unit filename="..\Interpreter\Include\Interpreter\Bindings.hpp" />
+		<Unit filename="..\Interpreter\Source\Bindings.cpp" />
+		<Unit filename="..\Interpreter\Source\main.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger>
