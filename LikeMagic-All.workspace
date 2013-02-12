@@ -42,5 +42,9 @@
 		<Project filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
 		<Project filename="GameBindings/Deps/irrlicht-1.8-unstable/source/Irrlicht/Irrlicht-gcc.cbp" />
 		<Project filename="GameBindings/Deps/tps-1.2/ThinPlateSpline/ThinPlateSpline.cbp" />
+<<<<<<< HEAD
+		<Project filename="../Knife/Knife.cbp" />
+=======
+>>>>>>> 7d815642bec844ad52d9467d6d03bec3ced925bb
 	</Workspace>
 </CodeBlocks_workspace_file>
