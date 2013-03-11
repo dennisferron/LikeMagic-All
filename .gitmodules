@@ -1,15 +1,7 @@
-[submodule "LikeMagic"]
-	path = LikeMagic
-	url = git@github.com:dennisferron/LikeMagic.git
 [submodule "desteer"]
 	path = desteer
 	url = git@github.com:dennisferron/desteer.git
-[submodule "Common"]
-	path = Common
-	url = git@github.com:dennisferron/Common-Dependencies.git
 [submodule "GameBindings"]
 	path = GameBindings
 	url = git@github.com:dennisferron/GameBindings.git
-[submodule "Iocaste"]
-	path = Iocaste
-	url = git@github.com:dennisferron/Iocaste.git
+
