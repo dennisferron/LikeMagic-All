@@ -5,3 +5,6 @@
 	path = GameBindings
 	url = git@github.com:dennisferron/GameBindings.git
 
+[submodule "7drl"]
+	path = 7drl
+	url = git@github.com:dennisferron/7drl.git
