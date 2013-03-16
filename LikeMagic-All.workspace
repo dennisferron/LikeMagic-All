@@ -29,5 +29,6 @@
 			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
 			<Depends filename="GameBindings/Iocaste/Iocaste.cbp" />
 		</Project>
+		<Project filename="GameBindings/Deps/libtcod/libtcod.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
