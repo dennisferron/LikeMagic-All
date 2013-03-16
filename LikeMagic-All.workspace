@@ -18,6 +18,16 @@
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
 		</Project>
 		<Project filename="GameBindings/Iocaste/Debugger/Debugger.cbp" />
-		<Project filename="GameBindings/GameBindingsAndInterpreter.cbp" active="1" />
+		<Project filename="GameBindings/GameBindingsAndInterpreter.cbp">
+			<Depends filename="desteer/bindings/DESteerBindings.cbp" />
+			<Depends filename="desteer/DESteer.cbp" />
+			<Depends filename="GameBindings/Bullet.cbp" />
+			<Depends filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
+			<Depends filename="GameBindings/Deps/tps-1.2/ThinPlateSpline/ThinPlateSpline.cbp" />
+			<Depends filename="GameBindings/Engine/Engine.cbp" />
+			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
+			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
+			<Depends filename="GameBindings/Iocaste/Iocaste.cbp" />
+		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>
