@@ -3,7 +3,7 @@
 	url = git@github.com:dennisferron/desteer.git
 [submodule "GameBindings"]
 	path = GameBindings
-	url = git@github.com:dennisferron/GameBindings.git
+	url = git@github.com:dennisferron/LikeMagic-GameEngine.git
 
 [submodule "7drl"]
 	path = 7drl
