@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
-	<Workspace title="Workspace">
+	<Workspace title="LikeMagic-Reduced">
 		<Project filename="GameBindings/LikeMagic/LikeMagic.cbp" />
-		<Project filename="desteer/DESteer.cbp" />
-		<Project filename="GameBindings/Bullet.cbp" />
-		<Project filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
-		<Project filename="GameBindings/Deps/tps-1.2/ThinPlateSpline/ThinPlateSpline.cbp" />
 		<Project filename="GameBindings/Engine/Engine.cbp" />
 		<Project filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp">
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
@@ -13,25 +9,17 @@
 		<Project filename="GameBindings/Iocaste/Iocaste.cbp">
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
 		</Project>
-		<Project filename="GameBindings/Iocaste/Debugger/Debugger.cbp" />
 		<Project filename="GameBindings/GameBindingsAndInterpreter.cbp">
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
-			<Depends filename="desteer/DESteer.cbp" />
-			<Depends filename="GameBindings/Bullet.cbp" />
-			<Depends filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
-			<Depends filename="GameBindings/Deps/tps-1.2/ThinPlateSpline/ThinPlateSpline.cbp" />
 			<Depends filename="GameBindings/Engine/Engine.cbp" />
 			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
 			<Depends filename="GameBindings/Iocaste/Iocaste.cbp" />
 		</Project>
 		<Project filename="GameBindings/LikeMagic/InterprocessTest/InterprocessTest.cbp" />
-		<Project filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
-		<Project filename="GameBindings/Common/UnitTest++/TestUnitTest++.cbp">
-			<Depends filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
-		</Project>
 		<Project filename="GameBindings/LikeMagic/UnitTests/LikeMagicUnitTests.cbp">
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
 			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
 		</Project>
+		<Project filename="../LanguageTests/LanguageTests.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

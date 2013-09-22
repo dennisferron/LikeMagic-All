@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="LikeMagic-Deps">
+		<Project filename="desteer/DESteer.cbp" />
+		<Project filename="GameBindings/Bullet.cbp" />
+		<Project filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
+		<Project filename="GameBindings/Deps/tps-1.2/ThinPlateSpline/ThinPlateSpline.cbp" />
+		<Project filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
+		<Project filename="GameBindings/Common/UnitTest++/TestUnitTest++.cbp">
+			<Depends filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
+		</Project>
+	</Workspace>
+</CodeBlocks_workspace_file>
