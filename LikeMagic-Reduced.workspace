@@ -24,8 +24,6 @@
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
 			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
 		</Project>
-		<Project filename="../LanguageTests/LanguageTests.cbp" />
-		<Project filename="../DLL Test Project/DLL Test Project.cbp" />
 		<Project filename="GameBindings/BulletBindings.cbp" />
 		<Project filename="GameBindings/DESteerBindings.cbp" />
 		<Project filename="GameBindings/IrrKlangBindings.cbp" />

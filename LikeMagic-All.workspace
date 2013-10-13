@@ -4,7 +4,6 @@
 		<Project filename="GameBindings/LikeMagic/LikeMagic.cbp" />
 		<Project filename="desteer/DESteer.cbp" />
 		<Project filename="GameBindings/Bullet.cbp" />
-		<Project filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
 		<Project filename="GameBindings/Deps/tps-1.2/ThinPlateSpline/ThinPlateSpline.cbp" />
 		<Project filename="GameBindings/Engine/Engine.cbp" />
 		<Project filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp">
@@ -18,7 +17,6 @@
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
 			<Depends filename="desteer/DESteer.cbp" />
 			<Depends filename="GameBindings/Bullet.cbp" />
-			<Depends filename="GameBindings/Deps/irrlicht-1.7.3/source/Irrlicht/Irrlicht-gcc.cbp" />
 			<Depends filename="GameBindings/Deps/tps-1.2/ThinPlateSpline/ThinPlateSpline.cbp" />
 			<Depends filename="GameBindings/Engine/Engine.cbp" />
 			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
@@ -26,7 +24,7 @@
 		</Project>
 		<Project filename="GameBindings/LikeMagic/InterprocessTest/InterprocessTest.cbp" />
 		<Project filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
-		<Project filename="GameBindings/Common/UnitTest++/TestUnitTest++.cbp">
+		<Project filename="GameBindings/Common/UnitTest++/TestUnitTest++.cbp" active="1">
 			<Depends filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
 		</Project>
 		<Project filename="GameBindings/LikeMagic/UnitTests/LikeMagicUnitTests.cbp">
