@@ -29,5 +29,6 @@
 		<Project filename="GameBindings/IrrKlangBindings.cbp" />
 		<Project filename="GameBindings/IrrlichtBindings.cbp" />
 		<Project filename="GameBindings/MeshToolsBindings.cbp" />
+		<Project filename="../LikeMagic-All (copy)/GameBindings/Interpreter/Interpreter.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

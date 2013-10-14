@@ -21,15 +21,27 @@
 			<Depends filename="GameBindings/Engine/Engine.cbp" />
 			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
 			<Depends filename="GameBindings/Iocaste/Iocaste.cbp" />
+			<Depends filename="GameBindings/MeshToolsBindings.cbp" />
+			<Depends filename="GameBindings/IrrlichtBindings.cbp" />
+			<Depends filename="GameBindings/IrrKlangBindings.cbp" />
+			<Depends filename="GameBindings/DESteerBindings.cbp" />
+			<Depends filename="GameBindings/BulletBindings.cbp" />
+			<Depends filename="GameBindings/Deps/irrlicht-1.8/source/Irrlicht/Irrlicht-gcc.cbp" />
 		</Project>
 		<Project filename="GameBindings/LikeMagic/InterprocessTest/InterprocessTest.cbp" />
 		<Project filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
-		<Project filename="GameBindings/Common/UnitTest++/TestUnitTest++.cbp" active="1">
+		<Project filename="GameBindings/Common/UnitTest++/TestUnitTest++.cbp">
 			<Depends filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
 		</Project>
 		<Project filename="GameBindings/LikeMagic/UnitTests/LikeMagicUnitTests.cbp">
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
 			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
 		</Project>
+		<Project filename="GameBindings/MeshToolsBindings.cbp" />
+		<Project filename="GameBindings/IrrlichtBindings.cbp" />
+		<Project filename="GameBindings/IrrKlangBindings.cbp" />
+		<Project filename="GameBindings/DESteerBindings.cbp" />
+		<Project filename="GameBindings/BulletBindings.cbp" />
+		<Project filename="GameBindings/Deps/irrlicht-1.8/source/Irrlicht/Irrlicht-gcc.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
