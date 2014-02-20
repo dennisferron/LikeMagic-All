@@ -36,6 +36,8 @@
 		<Project filename="GameBindings/LikeMagic/UnitTests/LikeMagicUnitTests.cbp">
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
 			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
+			<Depends filename="GameBindings/Iocaste/Iocaste.cbp" />
+			<Depends filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
 		</Project>
 		<Project filename="GameBindings/MeshToolsBindings.cbp" />
 		<Project filename="GameBindings/IrrlichtBindings.cbp" />
@@ -43,5 +45,7 @@
 		<Project filename="GameBindings/DESteerBindings.cbp" />
 		<Project filename="GameBindings/BulletBindings.cbp" />
 		<Project filename="GameBindings/Deps/irrlicht-1.8/source/Irrlicht/Irrlicht-gcc.cbp" />
+		<Project filename="GameBindings/Common/segvcatch-0.9.1/segvcatch.cbp" />
+		<Project filename="../wayup/WayUp.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
