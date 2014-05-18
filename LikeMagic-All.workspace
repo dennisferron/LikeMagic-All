@@ -47,5 +47,21 @@
 		<Project filename="GameBindings/Deps/irrlicht-1.8/source/Irrlicht/Irrlicht-gcc.cbp" />
 		<Project filename="GameBindings/Common/segvcatch-0.9.1/segvcatch.cbp" />
 		<Project filename="../wayup/WayUp.cbp" />
+		<Project filename="GameBindings/GameBindingsInterfaceGenerator.cbp">
+			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
+			<Depends filename="desteer/DESteer.cbp" />
+			<Depends filename="GameBindings/Bullet.cbp" />
+			<Depends filename="GameBindings/Deps/tps-1.2/ThinPlateSpline/ThinPlateSpline.cbp" />
+			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
+			<Depends filename="GameBindings/Iocaste/Iocaste.cbp" />
+			<Depends filename="GameBindings/MeshToolsBindings.cbp" />
+			<Depends filename="GameBindings/IrrlichtBindings.cbp" />
+			<Depends filename="GameBindings/IrrKlangBindings.cbp" />
+			<Depends filename="GameBindings/DESteerBindings.cbp" />
+			<Depends filename="GameBindings/BulletBindings.cbp" />
+			<Depends filename="GameBindings/Deps/irrlicht-1.8/source/Irrlicht/Irrlicht-gcc.cbp" />
+			<Depends filename="GameBindings/Common/segvcatch-0.9.1/segvcatch.cbp" />
+		</Project>
+		<Project filename="GameBindings/Common/sqlite/sqlite.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
