@@ -27,6 +27,8 @@
 			<Depends filename="GameBindings/DESteerBindings.cbp" />
 			<Depends filename="GameBindings/BulletBindings.cbp" />
 			<Depends filename="GameBindings/Deps/irrlicht-1.8/source/Irrlicht/Irrlicht-gcc.cbp" />
+			<Depends filename="GameBindings/Common/segvcatch-0.9.1/segvcatch.cbp" />
+			<Depends filename="GameBindings/Common/sqlite/sqlite.cbp" />
 		</Project>
 		<Project filename="GameBindings/LikeMagic/InterprocessTest/InterprocessTest.cbp" />
 		<Project filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
@@ -38,6 +40,8 @@
 			<Depends filename="GameBindings/LikeMagic/StdBindings/StdBindings.cbp" />
 			<Depends filename="GameBindings/Iocaste/Iocaste.cbp" />
 			<Depends filename="GameBindings/Common/UnitTest++/UnitTest++.cbp" />
+			<Depends filename="GameBindings/Common/segvcatch-0.9.1/segvcatch.cbp" />
+			<Depends filename="GameBindings/Common/sqlite/sqlite.cbp" />
 		</Project>
 		<Project filename="GameBindings/MeshToolsBindings.cbp" />
 		<Project filename="GameBindings/IrrlichtBindings.cbp" />
@@ -61,6 +65,7 @@
 			<Depends filename="GameBindings/BulletBindings.cbp" />
 			<Depends filename="GameBindings/Deps/irrlicht-1.8/source/Irrlicht/Irrlicht-gcc.cbp" />
 			<Depends filename="GameBindings/Common/segvcatch-0.9.1/segvcatch.cbp" />
+			<Depends filename="GameBindings/Common/sqlite/sqlite.cbp" />
 		</Project>
 		<Project filename="GameBindings/Common/sqlite/sqlite.cbp" />
 	</Workspace>
