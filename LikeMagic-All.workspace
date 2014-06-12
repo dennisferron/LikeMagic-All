@@ -50,7 +50,6 @@
 		<Project filename="GameBindings/BulletBindings.cbp" />
 		<Project filename="GameBindings/Deps/irrlicht-1.8/source/Irrlicht/Irrlicht-gcc.cbp" />
 		<Project filename="GameBindings/Common/segvcatch-0.9.1/segvcatch.cbp" />
-		<Project filename="../wayup/WayUp.cbp" />
 		<Project filename="GameBindings/GameBindingsInterfaceGenerator.cbp">
 			<Depends filename="GameBindings/LikeMagic/LikeMagic.cbp" />
 			<Depends filename="desteer/DESteer.cbp" />
@@ -68,5 +67,7 @@
 			<Depends filename="GameBindings/Common/sqlite/sqlite.cbp" />
 		</Project>
 		<Project filename="GameBindings/Common/sqlite/sqlite.cbp" />
+		<Project filename="../wayup/WayUp.cbp" />
+		<Project filename="../superstition/superstition.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
